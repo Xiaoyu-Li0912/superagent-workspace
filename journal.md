@@ -115,3 +115,5 @@
 - 用户创建 Xiaoyu-Li0912/superagent-workspace 后授权继续发布，提供 print-666 与 LiQingfeng111，并确认允许两位同学提交代码。只读核验目标为同名空私有仓库，Git HTTPS 身份为 Xiaoyu-Li0912，具有 push/admin 权限，无已有远程分支。
 - 个人私有仓库 API 不支持只读协作者，首次 read 邀请返回 422，没有成功创建；随后两位标准 write 协作者邀请均成功发出，当前为 pending，需本人接受。不配置管理员权限、公开可见性或额外服务。
 - README 补入真实仓库链接、克隆命令和私有访问说明，移除尚无远程的过时描述；AGENTS 同步协作目标与授权边界。准备首次提交与推送，结果以后续验证为准；历史 runs、源码逻辑和 human.md 不改。
+- 首次提交 e3cfc3ce5fed328cfd4e563ec26eb45bb3150c7b 已成功推送至 origin/main。GitHub API 核验仓库 private、默认分支 main、远程提交一致，递归树未截断；1049 个普通文件的路径和 blob 哈希逐一与本地提交一致，其中 runs 926 个、MLEvolve 78 个，没有 gitlink。原始 runs SHA256 复核全部不变，真实 .env 未入库，没有单文件达到 100 MiB。
+- 两位同学的标准 write 邀请已发送，发布核验时均为待接受；共享入口为 https://github.com/Xiaoyu-Li0912/superagent-workspace ，邀请入口为该仓库的 /invitations。没有执行收费调用、搜索或最终评测；此前 45 项离线测试通过，本次仅发布与文档变动未重跑算法测试。
