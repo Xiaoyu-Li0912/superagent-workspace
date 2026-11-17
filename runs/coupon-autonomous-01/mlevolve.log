@@ -1,0 +1,9 @@
+INFO:MLEvolve:[AgentSearch] Global memory is disabled by config
+INFO:MLEvolve:📊 Exploration mode (weight=100.00%, time=0.0%)
+INFO:MLEvolve:[reached_child_limit] node cb238652e57946b3809527239186eeba regular_draft_count=0, in_flight=0, limit=2
+INFO:MLEvolve:[select] → node cb238652e57946b3809527239186eeba (method=expand)
+INFO:MLEvolve:[reached_child_limit] node cb238652e57946b3809527239186eeba regular_draft_count=0, in_flight=0, limit=2
+INFO:MLEvolve:fetch_child_memory
+WARNING:MLEvolve:Step failed for parent cb238652e57946b3809527239186eeba, rolling back expected child count and propagating zero reward.
+INFO:MLEvolve:[backprop] node cb238652e57946b3809527239186eeba, reward=0
+INFO:MLEvolve:current cb238652e57946b3809527239186eeba expected_child_count is -1.

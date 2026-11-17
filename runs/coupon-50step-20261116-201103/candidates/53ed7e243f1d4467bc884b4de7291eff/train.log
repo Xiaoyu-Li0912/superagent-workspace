@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/solution.py", line 440, in <module>
+    main()
+  File "/solution.py", line 436, in main
+    args.func(args)
+  File "/solution.py", line 278, in train
+    stacker = LogisticRegression(
+              ^^^^^^^^^^^^^^^^^^^
+TypeError: LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'

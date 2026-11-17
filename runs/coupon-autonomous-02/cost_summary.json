@@ -1,0 +1,19 @@
+{
+  "cap_rmb": 30.0,
+  "charged_or_reserved_rmb": 0.019365,
+  "input_tokens": 5041,
+  "output_tokens": 3581,
+  "unresolved_calls": 0,
+  "calls": [
+    {
+      "id": "5d38779e8ec24a4b9e7852cc4d85f3c8",
+      "created": 1794731083.2767541,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 19365000,
+      "input_tokens": 5041,
+      "output_tokens": 3581,
+      "usage": "{\"completion_tokens\": 3581, \"prompt_tokens\": 5041, \"total_tokens\": 8622, \"completion_tokens_details\": {\"reasoning_tokens\": 3580}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    }
+  ]
+}

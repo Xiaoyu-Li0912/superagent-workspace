@@ -1,0 +1,31 @@
+handbook.local.md
+.env
+.env.*
+!.env.example
+*.local.*
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+datasets/
+outputs/
+models/
+artifacts/
+*.npy
+*.npz
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.safetensors
+*.log
+
+# Share complete historical experiments, including models, data and logs.
+!/runs/
+!/runs/**
+
+# Credentials remain private, even inside an experiment directory.
+.env
+.env.*
+!.env.example

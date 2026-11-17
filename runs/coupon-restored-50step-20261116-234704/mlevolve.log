@@ -1,0 +1,41 @@
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: d7bba6f4-0dd2-4f41-b51d-53b6ceadaba4)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/./modules.json
+WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 7a17b4af-a158-4bac-a222-28358ba8628d)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/./modules.json
+WARNING:huggingface_hub.utils._http:Retrying in 2s [Retry 2/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 5036df3e-86de-472c-af17-c51feba98146)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/./modules.json
+WARNING:huggingface_hub.utils._http:Retrying in 4s [Retry 3/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 1e1076c6-2f8b-4d49-ac3f-28a8781b52bb)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/./modules.json
+WARNING:huggingface_hub.utils._http:Retrying in 8s [Retry 4/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 4efaad1c-db09-4fb9-a9ee-12f02633d0fc)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/./modules.json
+WARNING:huggingface_hub.utils._http:Retrying in 8s [Retry 5/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 51d8068e-2ed0-4014-9596-2104046f1152)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/./modules.json
+WARNING:sentence_transformers.SentenceTransformer:No sentence-transformers model found with name BAAI/bge-base-en-v1.5. Creating a new one with mean pooling.
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 4e2339a8-96cf-467a-97f5-fc7465bf832a)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json
+WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: ee374287-5f69-41bd-98e7-4e0d50839e38)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json
+WARNING:huggingface_hub.utils._http:Retrying in 2s [Retry 2/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: f7f3085f-bc5e-49f0-975a-899be5903137)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json
+WARNING:huggingface_hub.utils._http:Retrying in 4s [Retry 3/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 81f43bd6-0c85-4cc6-a2b5-88c34998d8a2)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json
+WARNING:huggingface_hub.utils._http:Retrying in 8s [Retry 4/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 358a5154-6167-4e8b-b651-18323247fdb0)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json
+WARNING:huggingface_hub.utils._http:Retrying in 8s [Retry 5/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 0697a732-8454-492c-ad12-78f9846c9f4a)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 8ae7e286-f763-4a1a-ad20-a020416c7726)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json
+WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: ff82ab83-6ea1-4ab3-95c7-27fbf5db2d6f)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json
+WARNING:huggingface_hub.utils._http:Retrying in 2s [Retry 2/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 8d02d4b6-6a5f-4935-805d-d2f02e811d6e)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json
+WARNING:huggingface_hub.utils._http:Retrying in 4s [Retry 3/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: dddbe99b-a603-4d1c-a675-e3585e40bd45)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json
+WARNING:huggingface_hub.utils._http:Retrying in 8s [Retry 4/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 5d39a84e-4916-458e-82c3-c6f85cbe06b6)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json
+WARNING:huggingface_hub.utils._http:Retrying in 8s [Retry 5/5].
+WARNING:huggingface_hub.utils._http:'(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: 55e2d406-9f36-4678-86c1-41870ecbe760)')' thrown while requesting HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-7cacae03-f63d-4f28-8c71-3b279b38cdfa",
+  "created": 1794845056,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Predict acceptance of a coupon from categorical customer and trip features.",
+        "role": "assistant",
+        "reasoning_content": "We need answer only cleaned task description text. Need infer original task description is just \"Predict acceptance of a coupon from categorical customer and trip features.\" Nothing to remove. Need return ONLY cleaned task description. Since no useless env info. Output same text. Ensure no explanations.",
+        "provider_specific_fields": {
+          "reasoning": "We need answer only cleaned task description text. Need infer original task description is just \"Predict acceptance of a coupon from categorical customer and trip features.\" Nothing to remove. Need return ONLY cleaned task description. Since no useless env info. Output same text. Ensure no explanations.",
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "token_ids": null,
+        "stop_reason": null,
+        "routed_experts": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 669,
+    "total_tokens": 737,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

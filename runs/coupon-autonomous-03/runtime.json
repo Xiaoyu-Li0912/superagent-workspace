@@ -1,0 +1,12 @@
+{
+  "steps": 6,
+  "time_limit_seconds": 3600,
+  "candidate_timeout_seconds": 300,
+  "candidate_memory_mb": 4096,
+  "candidate_cpus": 2,
+  "max_output_tokens": 8192,
+  "max_calls": 24,
+  "budget_rmb": 29.980635,
+  "seed": 42,
+  "model": "DeepSeek-V4.1-Flash"
+}

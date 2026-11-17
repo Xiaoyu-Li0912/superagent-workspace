@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-16a77a8e-5b6c-49f1-8256-fc6df225e0e6",
+  "created": 1794852113,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training completed successfully and a fresh-process reload passed, indicating the saved artifact is usable for prediction. The trusted validation accuracy reported was 0.76551724.\", \"metric\": 0.76551724, \"lower_is_better\": false, \"code_summary\": \"The solution loads features, labels, and schema, then builds leakage-safe engineered features including ordinal mappings, missing-frequency counts, coupon affinity, distance level, and coupon-time interactions. It trains an ensemble of LightGBM, CatBoost with native categorical handling, and an entity-embedding MLP, tunes ensemble weights and a decision threshold on a stratified training holdout, and optionally adds per-coupon specialist models with an alpha blend. The final pipeline and label mapping are persisted, then prediction reloads the artifact in a fresh process and writes row_id,prediction outputs.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need evaluate execution output: Trusted validation accuracy=0.76551724; fresh-process reload passed. No bug. Metric accuracy 0.76551724, lower_is_better false. Summary concise. Code summary methods. Need ensure valid JSON only.",
+        "provider_specific_fields": {
+          "reasoning": "We need answer only JSON. Need evaluate execution output: Trusted validation accuracy=0.76551724; fresh-process reload passed. No bug. Metric accuracy 0.76551724, lower_is_better false. Summary concise. Code summary methods. Need ensure valid JSON only.",
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 244,
+    "prompt_tokens": 10183,
+    "total_tokens": 10427,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

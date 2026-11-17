@@ -1,0 +1,837 @@
+{
+  "status": "frozen",
+  "stop_reason": "budget_or_uncertain_usage",
+  "candidates": 13,
+  "valid_candidates": 5,
+  "best_candidate": "212059b436824622a3dfb3d2226ae464",
+  "validation_accuracy": 0.7655172413793103,
+  "cost": {
+    "cap_rmb": 10.0,
+    "charged_or_reserved_rmb": 3.180659,
+    "input_tokens": 799883,
+    "output_tokens": 316666,
+    "unresolved_calls": 1,
+    "calls": [
+      {
+        "id": "6fc5059b62734de494c14e3a996aa4fe",
+        "created": 1794846533.7551749,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 977000,
+        "input_tokens": 669,
+        "output_tokens": 77,
+        "usage": "{\"completion_tokens\": 77, \"prompt_tokens\": 669, \"total_tokens\": 746, \"completion_tokens_details\": {\"reasoning_tokens\": 63}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "71dd662a39d948aba77428a2cc54b847",
+        "created": 1794846537.1522644,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 2549000,
+        "input_tokens": 1493,
+        "output_tokens": 264,
+        "usage": "{\"completion_tokens\": 264, \"prompt_tokens\": 1493, \"total_tokens\": 1757, \"completion_tokens_details\": {\"reasoning_tokens\": 214}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "d3732ab74ea9426889602770a05da0cd",
+        "created": 1794846546.2635908,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 70082000,
+        "input_tokens": 4546,
+        "output_tokens": 16384,
+        "usage": "{\"completion_tokens\": 16384, \"prompt_tokens\": 4546, \"total_tokens\": 20930, \"completion_tokens_details\": {\"reasoning_tokens\": 11991}}"
+      },
+      {
+        "id": "53be3f1c715d48aea59e129a5b1a36c1",
+        "created": 1794847087.2317522,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 42006000,
+        "input_tokens": 4546,
+        "output_tokens": 9365,
+        "usage": "{\"completion_tokens\": 9365, \"prompt_tokens\": 4546, \"total_tokens\": 13911, \"completion_tokens_details\": {\"reasoning_tokens\": 5829}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "f9c84a5b958e44359dff41a4d8c7c60c",
+        "created": 1794847428.322259,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 35186000,
+        "input_tokens": 8078,
+        "output_tokens": 6777,
+        "usage": "{\"completion_tokens\": 6777, \"prompt_tokens\": 8078, \"total_tokens\": 14855, \"completion_tokens_details\": {\"reasoning_tokens\": 3676}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "9df9d8524fdf4d4f8a4384b47915f662",
+        "created": 1794847660.6820612,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 62455000,
+        "input_tokens": 11703,
+        "output_tokens": 12688,
+        "usage": "{\"completion_tokens\": 12688, \"prompt_tokens\": 11703, \"total_tokens\": 24391, \"completion_tokens_details\": {\"reasoning_tokens\": 8891}}"
+      },
+      {
+        "id": "e44e0104e7cb4a48b904e366bd463c9e",
+        "created": 1794848085.1022122,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 48806000,
+        "input_tokens": 15010,
+        "output_tokens": 8449,
+        "usage": "{\"completion_tokens\": 8449, \"prompt_tokens\": 15010, \"total_tokens\": 23459, \"completion_tokens_details\": {\"reasoning_tokens\": 1810}}"
+      },
+      {
+        "id": "d2338605e0e248ec87b8b214e84c9db2",
+        "created": 1794848290.1644485,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 43130000,
+        "input_tokens": 10222,
+        "output_tokens": 8227,
+        "usage": "{\"completion_tokens\": 8227, \"prompt_tokens\": 10222, \"total_tokens\": 18449, \"completion_tokens_details\": {\"reasoning_tokens\": 8146}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "d67ddfad180c47b9836b8987db9da275",
+        "created": 1794848613.4837744,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 43100000,
+        "input_tokens": 4776,
+        "output_tokens": 9581,
+        "usage": "{\"completion_tokens\": 9581, \"prompt_tokens\": 4776, \"total_tokens\": 14357, \"completion_tokens_details\": {\"reasoning_tokens\": 6299}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "b042f8eefb5943cb859c0061d584f0d2",
+        "created": 1794848948.3057876,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 31430000,
+        "input_tokens": 8046,
+        "output_tokens": 5846,
+        "usage": "{\"completion_tokens\": 5846, \"prompt_tokens\": 8046, \"total_tokens\": 13892, \"completion_tokens_details\": {\"reasoning_tokens\": 2248}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "7ac2f7f32f784aca96dee802b5516d38",
+        "created": 1794849153.037789,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 40884000,
+        "input_tokens": 12220,
+        "output_tokens": 7166,
+        "usage": "{\"completion_tokens\": 7166, \"prompt_tokens\": 12220, \"total_tokens\": 19386, \"completion_tokens_details\": {\"reasoning_tokens\": 4525}}"
+      },
+      {
+        "id": "ad879e22a1d54a4787bf9d856d34d6a5",
+        "created": 1794849383.2362301,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 49865000,
+        "input_tokens": 14277,
+        "output_tokens": 8897,
+        "usage": "{\"completion_tokens\": 8897, \"prompt_tokens\": 14277, \"total_tokens\": 23174, \"completion_tokens_details\": {\"reasoning_tokens\": 1191}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "1d6e7edc9b3b465aae46ff1a0cc3535c",
+        "created": 1794849587.226418,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 45887000,
+        "input_tokens": 11339,
+        "output_tokens": 8637,
+        "usage": "{\"completion_tokens\": 8637, \"prompt_tokens\": 11339, \"total_tokens\": 19976, \"completion_tokens_details\": {\"reasoning_tokens\": 8510}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "c68098443674464c86647157851f5e80",
+        "created": 1794849976.8856554,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 41621000,
+        "input_tokens": 4929,
+        "output_tokens": 9173,
+        "usage": "{\"completion_tokens\": 9173, \"prompt_tokens\": 4929, \"total_tokens\": 14102, \"completion_tokens_details\": {\"reasoning_tokens\": 5342}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "4ec0c8f64d524eb0a4ebbcf8a8f18d7d",
+        "created": 1794850244.482739,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 8618000,
+        "input_tokens": 7458,
+        "output_tokens": 290,
+        "usage": "{\"completion_tokens\": 290, \"prompt_tokens\": 7458, \"total_tokens\": 7748, \"completion_tokens_details\": {\"reasoning_tokens\": 18}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "3e6e4c30312f482bb959f6c8bc8c0304",
+        "created": 1794850250.003621,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10358000,
+        "input_tokens": 8574,
+        "output_tokens": 446,
+        "usage": "{\"completion_tokens\": 446, \"prompt_tokens\": 8574, \"total_tokens\": 9020, \"completion_tokens_details\": {\"reasoning_tokens\": 168}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "4dd1bf664da641a290d7b04908bbfd6a",
+        "created": 1794850255.5247455,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 8618000,
+        "input_tokens": 7458,
+        "output_tokens": 290,
+        "usage": "{\"completion_tokens\": 290, \"prompt_tokens\": 7458, \"total_tokens\": 7748, \"completion_tokens_details\": {\"reasoning_tokens\": 18}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "23d1a4d8301844d7810d7cb06886ffc1",
+        "created": 1794850256.4858341,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 8618000,
+        "input_tokens": 7458,
+        "output_tokens": 290,
+        "usage": "{\"completion_tokens\": 290, \"prompt_tokens\": 7458, \"total_tokens\": 7748, \"completion_tokens_details\": {\"reasoning_tokens\": 18}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "6d90e40c8e874ce39416df86d5271653",
+        "created": 1794850256.911703,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 22898000,
+        "input_tokens": 10898,
+        "output_tokens": 3000,
+        "usage": "{\"completion_tokens\": 3000, \"prompt_tokens\": 10898, \"total_tokens\": 13898, \"completion_tokens_details\": {\"reasoning_tokens\": 213}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "cc0634b7690b426ba6219b14d0ecadf9",
+        "created": 1794850271.7252307,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10358000,
+        "input_tokens": 8574,
+        "output_tokens": 446,
+        "usage": "{\"completion_tokens\": 446, \"prompt_tokens\": 8574, \"total_tokens\": 9020, \"completion_tokens_details\": {\"reasoning_tokens\": 168}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "08ac28c8c0c041519394e35d385c7019",
+        "created": 1794850272.1220772,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10358000,
+        "input_tokens": 8574,
+        "output_tokens": 446,
+        "usage": "{\"completion_tokens\": 446, \"prompt_tokens\": 8574, \"total_tokens\": 9020, \"completion_tokens_details\": {\"reasoning_tokens\": 168}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "56347a9b6de143dfa05daf83bce83695",
+        "created": 1794850272.650393,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 13178000,
+        "input_tokens": 12014,
+        "output_tokens": 291,
+        "usage": "{\"completion_tokens\": 291, \"prompt_tokens\": 12014, \"total_tokens\": 12305, \"completion_tokens_details\": {\"reasoning_tokens\": 290}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "c6a4e1159a084c658ba973c6a9a2f2be",
+        "created": 1794850288.257485,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 28740000,
+        "input_tokens": 12104,
+        "output_tokens": 4159,
+        "usage": "{\"completion_tokens\": 4159, \"prompt_tokens\": 12104, \"total_tokens\": 16263, \"completion_tokens_details\": {\"reasoning_tokens\": 574}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "12dcb4bc0d3f40ae9f84f1bfe8f8fc69",
+        "created": 1794850299.6352189,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 29016000,
+        "input_tokens": 8720,
+        "output_tokens": 5074,
+        "usage": "{\"completion_tokens\": 5074, \"prompt_tokens\": 8720, \"total_tokens\": 13794, \"completion_tokens_details\": {\"reasoning_tokens\": 2551}}"
+      },
+      {
+        "id": "7d70a875154642f1a91b6076dc199e86",
+        "created": 1794850336.3587234,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 13528000,
+        "input_tokens": 10036,
+        "output_tokens": 873,
+        "usage": "{\"completion_tokens\": 873, \"prompt_tokens\": 10036, \"total_tokens\": 10909, \"completion_tokens_details\": {\"reasoning_tokens\": 765}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "5fcf417a07bb426a868b5eb7c37ec963",
+        "created": 1794850387.0599575,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 8338000,
+        "input_tokens": 7278,
+        "output_tokens": 265,
+        "usage": "{\"completion_tokens\": 265, \"prompt_tokens\": 7278, \"total_tokens\": 7543, \"completion_tokens_details\": {\"reasoning_tokens\": 67}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "db910a1bac6249b68facf964deaa57fe",
+        "created": 1794850400.0971727,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 20861000,
+        "input_tokens": 11413,
+        "output_tokens": 2362,
+        "usage": "{\"completion_tokens\": 2362, \"prompt_tokens\": 11413, \"total_tokens\": 13775, \"completion_tokens_details\": {\"reasoning_tokens\": 1472}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "9ec3d29c56884e4ab8f6a970dd578fd2",
+        "created": 1794850402.9601743,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 43121000,
+        "input_tokens": 11821,
+        "output_tokens": 7825,
+        "usage": "{\"completion_tokens\": 7825, \"prompt_tokens\": 11821, \"total_tokens\": 19646, \"completion_tokens_details\": {\"reasoning_tokens\": 7270}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "f61720a03ab5455abeb8423a592d24f2",
+        "created": 1794850472.070523,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 50532000,
+        "input_tokens": 11760,
+        "output_tokens": 9693,
+        "usage": "{\"completion_tokens\": 9693, \"prompt_tokens\": 11760, \"total_tokens\": 21453, \"completion_tokens_details\": {\"reasoning_tokens\": 6366}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "a4d3c3828cae42359e7481112948a232",
+        "created": 1794850518.119286,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 18885000,
+        "input_tokens": 11053,
+        "output_tokens": 1958,
+        "usage": "{\"completion_tokens\": 1958, \"prompt_tokens\": 11053, \"total_tokens\": 13011, \"completion_tokens_details\": {\"reasoning_tokens\": 687}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "c55bce1db59d411695110e4720f4ea51",
+        "created": 1794850601.0144274,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 18450000,
+        "input_tokens": 10738,
+        "output_tokens": 1928,
+        "usage": "{\"completion_tokens\": 1928, \"prompt_tokens\": 10738, \"total_tokens\": 12666, \"completion_tokens_details\": {\"reasoning_tokens\": 1927}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "8c32f8ed8a7845bb946a9490b7a8c9aa",
+        "created": 1794850642.7673287,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 50408000,
+        "input_tokens": 11252,
+        "output_tokens": 9789,
+        "usage": "{\"completion_tokens\": 9789, \"prompt_tokens\": 11252, \"total_tokens\": 21041, \"completion_tokens_details\": {\"reasoning_tokens\": 2068}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "d6ded339ab5b4242b7323abb95b9551a",
+        "created": 1794850726.8237946,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10195000,
+        "input_tokens": 9135,
+        "output_tokens": 265,
+        "usage": "{\"completion_tokens\": 265, \"prompt_tokens\": 9135, \"total_tokens\": 9400, \"completion_tokens_details\": {\"reasoning_tokens\": 67}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "25a7d990ebeb4fe19d59b2466811a793",
+        "created": 1794850739.3551993,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 13502000,
+        "input_tokens": 13270,
+        "output_tokens": 58,
+        "usage": "{\"completion_tokens\": 58, \"prompt_tokens\": 13270, \"total_tokens\": 13328, \"completion_tokens_details\": {\"reasoning_tokens\": 57}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "09ffa27579e246a08679c2a46f351b5b",
+        "created": 1794850743.8674219,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 78645000,
+        "input_tokens": 13109,
+        "output_tokens": 16384,
+        "usage": "{\"completion_tokens\": 16384, \"prompt_tokens\": 13109, \"total_tokens\": 29493, \"completion_tokens_details\": {\"reasoning_tokens\": 9554}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "f4de26b4e24d496eafc1d38e11846c05",
+        "created": 1794850803.1624725,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 50276000,
+        "input_tokens": 14516,
+        "output_tokens": 8940,
+        "usage": "{\"completion_tokens\": 8940, \"prompt_tokens\": 14516, \"total_tokens\": 23456, \"completion_tokens_details\": {\"reasoning_tokens\": 1538}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "66a42e325cb24a67bf54e3ec97c7acea",
+        "created": 1794850909.8428848,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 21192000,
+        "input_tokens": 10856,
+        "output_tokens": 2584,
+        "usage": "{\"completion_tokens\": 2584, \"prompt_tokens\": 10856, \"total_tokens\": 13440, \"completion_tokens_details\": {\"reasoning_tokens\": 2472}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "ff056b5ce8d94240bdced23a2da013eb",
+        "created": 1794851001.1466765,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 27739000,
+        "input_tokens": 11023,
+        "output_tokens": 4179,
+        "usage": "{\"completion_tokens\": 4179, \"prompt_tokens\": 11023, \"total_tokens\": 15202, \"completion_tokens_details\": {\"reasoning_tokens\": 4094}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "58606648500b4ce482776a6a52cfb811",
+        "created": 1794851034.0655189,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9026000,
+        "input_tokens": 8098,
+        "output_tokens": 232,
+        "usage": "{\"completion_tokens\": 232, \"prompt_tokens\": 8098, \"total_tokens\": 8330, \"completion_tokens_details\": {\"reasoning_tokens\": 57}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "11de6b4e58524578942001f68c06fc10",
+        "created": 1794851043.3814664,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 16469000,
+        "input_tokens": 12233,
+        "output_tokens": 1059,
+        "usage": "{\"completion_tokens\": 1059, \"prompt_tokens\": 12233, \"total_tokens\": 13292, \"completion_tokens_details\": {\"reasoning_tokens\": 1058}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "b839329a563a48cba31dafd628f35aab",
+        "created": 1794851097.171378,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 59756000,
+        "input_tokens": 12072,
+        "output_tokens": 11921,
+        "usage": "{\"completion_tokens\": 11921, \"prompt_tokens\": 12072, \"total_tokens\": 23993, \"completion_tokens_details\": {\"reasoning_tokens\": 6803}}"
+      },
+      {
+        "id": "a79c08349f2b42e295b9f0c757f6d4b9",
+        "created": 1794851180.9311445,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 12185000,
+        "input_tokens": 12157,
+        "output_tokens": 7,
+        "usage": "{\"completion_tokens\": 7, \"prompt_tokens\": 12157, \"total_tokens\": 12164, \"completion_tokens_details\": {\"reasoning_tokens\": 6}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "3ecd88b20ccf47dc91eb2689eee64847",
+        "created": 1794851183.3840663,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 75743000,
+        "input_tokens": 12011,
+        "output_tokens": 15933,
+        "usage": "{\"completion_tokens\": 15933, \"prompt_tokens\": 12011, \"total_tokens\": 27944, \"completion_tokens_details\": {\"reasoning_tokens\": 7520}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "e2989d57757341ceb014f4211b7bf968",
+        "created": 1794851341.0550287,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10136000,
+        "input_tokens": 8540,
+        "output_tokens": 399,
+        "usage": "{\"completion_tokens\": 399, \"prompt_tokens\": 8540, \"total_tokens\": 8939, \"completion_tokens_details\": {\"reasoning_tokens\": 95}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "4f70f3966b5042d0a7fd882a7a69fca9",
+        "created": 1794851359.9853146,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10136000,
+        "input_tokens": 8540,
+        "output_tokens": 399,
+        "usage": "{\"completion_tokens\": 399, \"prompt_tokens\": 8540, \"total_tokens\": 8939, \"completion_tokens_details\": {\"reasoning_tokens\": 95}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "5018a6e71e704a438db60d5fcfbb0259",
+        "created": 1794851360.4139128,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 10136000,
+        "input_tokens": 8540,
+        "output_tokens": 399,
+        "usage": "{\"completion_tokens\": 399, \"prompt_tokens\": 8540, \"total_tokens\": 8939, \"completion_tokens_details\": {\"reasoning_tokens\": 95}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "6fabdc80d1c441a3a491b23b8ffc6175",
+        "created": 1794851361.8053215,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 23467000,
+        "input_tokens": 12455,
+        "output_tokens": 2753,
+        "usage": "{\"completion_tokens\": 2753, \"prompt_tokens\": 12455, \"total_tokens\": 15208, \"completion_tokens_details\": {\"reasoning_tokens\": 420}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "3cd803b04ff7464faae476b6839d0c65",
+        "created": 1794851429.4553409,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 24034000,
+        "input_tokens": 11114,
+        "output_tokens": 3230,
+        "usage": "{\"completion_tokens\": 3230, \"prompt_tokens\": 11114, \"total_tokens\": 14344, \"completion_tokens_details\": {\"reasoning_tokens\": 3026}}"
+      },
+      {
+        "id": "bde0a4eef4f1403f9a8b8f3467afeb57",
+        "created": 1794851476.3840206,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 59756000,
+        "input_tokens": 12072,
+        "output_tokens": 11921,
+        "usage": "{\"completion_tokens\": 11921, \"prompt_tokens\": 12072, \"total_tokens\": 23993, \"completion_tokens_details\": {\"reasoning_tokens\": 6803}}"
+      },
+      {
+        "id": "fb522696c46b4884bb031ffbc5d028a7",
+        "created": 1794851477.8053226,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 59756000,
+        "input_tokens": 12072,
+        "output_tokens": 11921,
+        "usage": "{\"completion_tokens\": 11921, \"prompt_tokens\": 12072, \"total_tokens\": 23993, \"completion_tokens_details\": {\"reasoning_tokens\": 6803}}"
+      },
+      {
+        "id": "8c519770630249fcac9c834bee76ecf5",
+        "created": 1794851478.3932436,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 14899000,
+        "input_tokens": 8887,
+        "output_tokens": 1503,
+        "usage": "{\"completion_tokens\": 1503, \"prompt_tokens\": 8887, \"total_tokens\": 10390, \"completion_tokens_details\": {\"reasoning_tokens\": 1394}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "8acbd40cae344882a2083b8b4df5a142",
+        "created": 1794851537.6899118,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 7428000,
+        "input_tokens": 6136,
+        "output_tokens": 323,
+        "usage": "{\"completion_tokens\": 323, \"prompt_tokens\": 6136, \"total_tokens\": 6459, \"completion_tokens_details\": {\"reasoning_tokens\": 50}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "97ad0587fbbe4fc8be7fcfebbbb3c7d8",
+        "created": 1794851550.9643168,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 7428000,
+        "input_tokens": 6136,
+        "output_tokens": 323,
+        "usage": "{\"completion_tokens\": 323, \"prompt_tokens\": 6136, \"total_tokens\": 6459, \"completion_tokens_details\": {\"reasoning_tokens\": 50}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "9110364728a342ce962634f0647ad83a",
+        "created": 1794851551.3798995,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 7428000,
+        "input_tokens": 6136,
+        "output_tokens": 323,
+        "usage": "{\"completion_tokens\": 323, \"prompt_tokens\": 6136, \"total_tokens\": 6459, \"completion_tokens_details\": {\"reasoning_tokens\": 50}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "42678748854f49089e11b72d2ace4ead",
+        "created": 1794851551.9961178,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 12739000,
+        "input_tokens": 10051,
+        "output_tokens": 672,
+        "usage": "{\"completion_tokens\": 672, \"prompt_tokens\": 10051, \"total_tokens\": 10723, \"completion_tokens_details\": {\"reasoning_tokens\": 671}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "0883dd9974654875b4a67a3649c95661",
+        "created": 1794851568.4986255,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9625000,
+        "input_tokens": 8381,
+        "output_tokens": 311,
+        "usage": "{\"completion_tokens\": 311, \"prompt_tokens\": 8381, \"total_tokens\": 8692, \"completion_tokens_details\": {\"reasoning_tokens\": 30}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "5bbcf920b84447cb8ad32ccbdb8d4f1e",
+        "created": 1794851579.5361435,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9625000,
+        "input_tokens": 8381,
+        "output_tokens": 311,
+        "usage": "{\"completion_tokens\": 311, \"prompt_tokens\": 8381, \"total_tokens\": 8692, \"completion_tokens_details\": {\"reasoning_tokens\": 30}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "0a688472a787439182146e058c4609ba",
+        "created": 1794851579.9352365,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9625000,
+        "input_tokens": 8381,
+        "output_tokens": 311,
+        "usage": "{\"completion_tokens\": 311, \"prompt_tokens\": 8381, \"total_tokens\": 8692, \"completion_tokens_details\": {\"reasoning_tokens\": 30}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "c68f88db461441b08595ac8064b15ec9",
+        "created": 1794851580.4376624,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 17420000,
+        "input_tokens": 12296,
+        "output_tokens": 1281,
+        "usage": "{\"completion_tokens\": 1281, \"prompt_tokens\": 12296, \"total_tokens\": 13577, \"completion_tokens_details\": {\"reasoning_tokens\": 882}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "eeef900ebf2a4014a1d380229e404b96",
+        "created": 1794851581.944192,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 16297000,
+        "input_tokens": 10141,
+        "output_tokens": 1539,
+        "usage": "{\"completion_tokens\": 1539, \"prompt_tokens\": 10141, \"total_tokens\": 11680, \"completion_tokens_details\": {\"reasoning_tokens\": 965}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "c3ffc6b1997f41c6b59bcea1ad7a3d93",
+        "created": 1794851620.1394017,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 21446000,
+        "input_tokens": 11206,
+        "output_tokens": 2560,
+        "usage": "{\"completion_tokens\": 2560, \"prompt_tokens\": 11206, \"total_tokens\": 13766, \"completion_tokens_details\": {\"reasoning_tokens\": 2004}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "53eb5126a3ad4319bcd3192076cb6b0b",
+        "created": 1794851648.5490394,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 24598000,
+        "input_tokens": 8890,
+        "output_tokens": 3927,
+        "usage": "{\"completion_tokens\": 3927, \"prompt_tokens\": 8890, \"total_tokens\": 12817, \"completion_tokens_details\": {\"reasoning_tokens\": 3846}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "990d6d48f5584c3db55f8543ffa19543",
+        "created": 1794851688.1714342,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9846000,
+        "input_tokens": 8734,
+        "output_tokens": 278,
+        "usage": "{\"completion_tokens\": 278, \"prompt_tokens\": 8734, \"total_tokens\": 9012, \"completion_tokens_details\": {\"reasoning_tokens\": 23}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "ce48b8ecd81b435aaaf87da2293e9ba1",
+        "created": 1794851701.7757366,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9846000,
+        "input_tokens": 8734,
+        "output_tokens": 278,
+        "usage": "{\"completion_tokens\": 278, \"prompt_tokens\": 8734, \"total_tokens\": 9012, \"completion_tokens_details\": {\"reasoning_tokens\": 23}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "df01c1c79e874860b982abcab91d4f3a",
+        "created": 1794851703.1041536,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9846000,
+        "input_tokens": 8734,
+        "output_tokens": 278,
+        "usage": "{\"completion_tokens\": 278, \"prompt_tokens\": 8734, \"total_tokens\": 9012, \"completion_tokens_details\": {\"reasoning_tokens\": 23}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "4e29e8c7667c4965b62d5e343ce05583",
+        "created": 1794851703.800325,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 16749000,
+        "input_tokens": 12293,
+        "output_tokens": 1114,
+        "usage": "{\"completion_tokens\": 1114, \"prompt_tokens\": 12293, \"total_tokens\": 13407, \"completion_tokens_details\": {\"reasoning_tokens\": 61}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "52d849691ed742689b1b5bbdf4c2f015",
+        "created": 1794851718.476051,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 26193000,
+        "input_tokens": 11297,
+        "output_tokens": 3724,
+        "usage": "{\"completion_tokens\": 3724, \"prompt_tokens\": 11297, \"total_tokens\": 15021, \"completion_tokens_details\": {\"reasoning_tokens\": 3616}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "931bbca7993f49bb9047f2519b58ea6e",
+        "created": 1794851761.0432634,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 17442000,
+        "input_tokens": 12774,
+        "output_tokens": 1167,
+        "usage": "{\"completion_tokens\": 1167, \"prompt_tokens\": 12774, \"total_tokens\": 13941, \"completion_tokens_details\": {\"reasoning_tokens\": 221}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "7367bae6831742e0ada570c7f57bb6f2",
+        "created": 1794851802.9362986,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 7343000,
+        "input_tokens": 6139,
+        "output_tokens": 301,
+        "usage": "{\"completion_tokens\": 301, \"prompt_tokens\": 6139, \"total_tokens\": 6440, \"completion_tokens_details\": {\"reasoning_tokens\": 64}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "c5c337528d1b446a9b7c2ce863d02920",
+        "created": 1794851810.5903053,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 38613000,
+        "input_tokens": 11233,
+        "output_tokens": 6845,
+        "usage": "{\"completion_tokens\": 6845, \"prompt_tokens\": 11233, \"total_tokens\": 18078, \"completion_tokens_details\": {\"reasoning_tokens\": 3734}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "b57b23bfb77943d6a2e66c80fb048dd0",
+        "created": 1794851815.001539,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 7343000,
+        "input_tokens": 6139,
+        "output_tokens": 301,
+        "usage": "{\"completion_tokens\": 301, \"prompt_tokens\": 6139, \"total_tokens\": 6440, \"completion_tokens_details\": {\"reasoning_tokens\": 64}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "9376b23ddecb401b9816e4eb17741339",
+        "created": 1794851815.3761504,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 7343000,
+        "input_tokens": 6139,
+        "output_tokens": 301,
+        "usage": "{\"completion_tokens\": 301, \"prompt_tokens\": 6139, \"total_tokens\": 6440, \"completion_tokens_details\": {\"reasoning_tokens\": 64}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "b1175030f1964ab2879f1b04c7cf0bf2",
+        "created": 1794851815.965385,
+        "state": "unknown",
+        "reserve": 1114112000,
+        "charged": 1114112000,
+        "input_tokens": null,
+        "output_tokens": null,
+        "usage": null
+      },
+      {
+        "id": "07835071bf0a4ae0ae470dad69fd178e",
+        "created": 1794851894.2772021,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 9767000,
+        "input_tokens": 8539,
+        "output_tokens": 307,
+        "usage": "{\"completion_tokens\": 307, \"prompt_tokens\": 8539, \"total_tokens\": 8846, \"completion_tokens_details\": {\"reasoning_tokens\": 38}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "1c3450b9fc224667a63a10c042f0ac1d",
+        "created": 1794851904.832905,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 12509000,
+        "input_tokens": 12293,
+        "output_tokens": 54,
+        "usage": "{\"completion_tokens\": 54, \"prompt_tokens\": 12293, \"total_tokens\": 12347, \"completion_tokens_details\": {\"reasoning_tokens\": 53}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "4274f3a171454ad48e990d95adc564c3",
+        "created": 1794851909.8418014,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 63119000,
+        "input_tokens": 12147,
+        "output_tokens": 12743,
+        "usage": "{\"completion_tokens\": 12743, \"prompt_tokens\": 12147, \"total_tokens\": 24890, \"completion_tokens_details\": {\"reasoning_tokens\": 3881}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "0a9ba9054f1942eeafb1975877a70198",
+        "created": 1794851981.3374705,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 23709000,
+        "input_tokens": 12941,
+        "output_tokens": 2692,
+        "usage": "{\"completion_tokens\": 2692, \"prompt_tokens\": 12941, \"total_tokens\": 15633, \"completion_tokens_details\": {\"reasoning_tokens\": 2594}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "8b7234d835084ebbbaa9d78f2a7a3de2",
+        "created": 1794852112.8727624,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 11159000,
+        "input_tokens": 10183,
+        "output_tokens": 244,
+        "usage": "{\"completion_tokens\": 244, \"prompt_tokens\": 10183, \"total_tokens\": 10427, \"completion_tokens_details\": {\"reasoning_tokens\": 58}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "19b3dd7733524c58af927af01f73236f",
+        "created": 1794852124.3509321,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 21986000,
+        "input_tokens": 14318,
+        "output_tokens": 1917,
+        "usage": "{\"completion_tokens\": 1917, \"prompt_tokens\": 14318, \"total_tokens\": 16235, \"completion_tokens_details\": {\"reasoning_tokens\": 1311}}"
+      },
+      {
+        "id": "230fcbe71db6488e837ea8e713d1a57e",
+        "created": 1794852210.0789754,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 21088000,
+        "input_tokens": 16148,
+        "output_tokens": 1235,
+        "usage": "{\"completion_tokens\": 1235, \"prompt_tokens\": 16148, \"total_tokens\": 17383, \"completion_tokens_details\": {\"reasoning_tokens\": 326}}"
+      },
+      {
+        "id": "05712944ae524f92afe24f8f96e71387",
+        "created": 1794852252.6650674,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 63621000,
+        "input_tokens": 13281,
+        "output_tokens": 12585,
+        "usage": "{\"completion_tokens\": 12585, \"prompt_tokens\": 13281, \"total_tokens\": 25866, \"completion_tokens_details\": {\"reasoning_tokens\": 7653}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      },
+      {
+        "id": "4afaea420b6a4a0e84f3eab284dde9ea",
+        "created": 1794852254.8153675,
+        "state": "settled",
+        "reserve": 1114112000,
+        "charged": 25457000,
+        "input_tokens": 11945,
+        "output_tokens": 3378,
+        "usage": "{\"completion_tokens\": 3378, \"prompt_tokens\": 11945, \"total_tokens\": 15323, \"completion_tokens_details\": {\"reasoning_tokens\": 3266}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+      }
+    ]
+  }
+}

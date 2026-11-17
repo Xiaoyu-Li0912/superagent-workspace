@@ -1,0 +1,7 @@
+[holdout] fitting members ...
+[holdout] lgbm acc@0.5: 0.7447
+[holdout] catboost acc@0.5: 0.7635
+[holdout] mlp acc@0.5: 0.7151
+[holdout] fused acc=0.7635 weights={'lgbm': np.float64(0.0), 'catboost': np.float64(1.0), 'mlp': np.float64(0.0)} threshold=0.500
+[final] fitting members on full data ...
+Final Validation Score: 0.7635467980295566

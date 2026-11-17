@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/solution.py", line 625, in <module>
+    main()
+  File "/solution.py", line 621, in main
+    args.func(args)
+  File "/solution.py", line 591, in predict
+    preds = stacker.predict(stack_X).astype(np.int64)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/sklearn/linear_model/_base.py", line 414, in predict
+    scores = self.decision_function(X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/sklearn/linear_model/_base.py", line 389, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 3062, in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+  File "/opt/superagent-env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2926, in _check_n_features
+    raise ValueError(
+ValueError: X has 4 features, but LogisticRegression is expecting 6 features as input.

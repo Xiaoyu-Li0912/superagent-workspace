@@ -1,0 +1,8 @@
+{
+  "candidate_id": "48ae615acb7141c580ff0a1ad4176dbc",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 30.80022280500043,
+  "diagnostics": "RuntimeError: Candidate predict exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 625, in <module>\n    main()\n  File \"/solution.py\", line 621, in main\n    args.func(args)\n  File \"/solution.py\", line 591, in predict\n    preds = stacker.predict(stack_X).astype(np.int64)\n            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/linear_model/_base.py\", line 414, in predict\n    scores = self.decision_function(X)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/linear_model/_base.py\", line 389, in decision_function\n    X = validate_data(self, X, accept_sparse=\"csr\", reset=False)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/utils/validation.py\", line 3062, in validate_data\n    _check_n_features(_estimator, X, reset=reset)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/utils/validation.py\", line 2926, in _check_n_features\n    raise ValueError(\nValueError: X has 4 features, but LogisticRegression is expecting 6 features as input.\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/48ae615acb7141c580ff0a1ad4176dbc"
+}

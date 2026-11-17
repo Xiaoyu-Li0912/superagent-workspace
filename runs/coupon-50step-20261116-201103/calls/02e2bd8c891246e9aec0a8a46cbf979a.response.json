@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-7bf6a4ef-08cf-4e8a-8739-d397afea2e8e",
+  "created": 1794832649,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"needs_revision\": true, \"reasoning\": \"The provided code is empty, so there is no train/predict implementation at all. A complete solution.py is required with argparse subcommands, schema-driven preprocessing fitted only on training rows, persisted model artifacts, and a predict path that loads (not refits) the pipeline and emits row_id,prediction with original labels. I will supply the full corrected script implementing this contract.\", \"revised_code\": \"import argparse\\nimport json\\nimport os\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom sklearn.ensemble import HistGradientBoostingClassifier\\nfrom sklearn.preprocessing import OrdinalEncoder\\n\\n\\ndef load_schema(data_dir):\\n    with open(os.path.join(data_dir, \\\"schema.json\\\"), \\\"r\\\") as f:\\n        return json.load(f)\\n\\n\\ndef get_feature_columns(schema, features_df):\\n    cols = schema.get(\\\"feature_columns\\\")\\n    if cols:\\n        return [c for c in cols if c in features_df.columns]\\n    return [c for c in features_df.columns if c != \\\"row_id\\\"]\\n\\n\\ndef train(data_dir, model_dir):\\n    os.makedirs(model_dir, exist_ok=True)\\n    schema = load_schema(data_dir)\\n    features = pd.read_csv(os.path.join(data_dir, \\\"features.csv\\\"))\\n    labels = pd.read_csv(os.path.join(data_dir, \\\"labels.csv\\\"))\\n\\n    feature_cols = get_feature_columns(schema, features)\\n    X = features[feature_cols].copy()\\n    y_raw = labels[\\\"label\\\"].astype(str).values\\n\\n    classes = np.unique(y_raw)\\n    label_to_idx = {c: i for i, c in enumerate(classes)}\\n    y = np.array([label_to_idx[v] for v in y_raw], dtype=np.int64)\\n\\n    cat_cols = [c for c in feature_cols if X[c].dtype == object or str(X[c].dtype) == \\\"str\\\"]\\n    num_cols = [c for c in feature_cols if c not in cat_cols]\\n\\n    encoder = None\\n    if cat_cols:\\n        encoder = OrdinalEncoder(handle_unknown=\\\"use_encoded_value\\\", unknown_value=-1)\\n        X_cat = encoder.fit_transform(X[cat_cols].astype(str))\\n    else:\\n        X_cat = np.empty((len(X), 0))\\n\\n    if num_cols:\\n        X_num = X[num_cols].apply(pd.to_numeric, errors=\\\"coerce\\\").values.astype(float)\\n    else:\\n        X_num = np.empty((len(X), 0))\\n\\n    X_all = np.hstack([X_num, X_cat]) if X_num.shape[1] and X_cat.shape[1] else (X_num if X_num.shape[1] else X_cat)\\n\\n    model = HistGradientBoostingClassifier(\\n        max_iter=300,\\n        learning_rate=0.08,\\n        max_depth=None,\\n        random_state=42,\\n    )\\n    model.fit(X_all, y)\\n\\n    with open(os.path.join(model_dir, \\\"label_mapping.json\\\"), \\\"w\\\") as f:\\n        json.dump({\\\"classes\\\": [str(c) for c in classes]}, f)\\n    with open(os.path.join(model_dir, \\\"columns.json\\\"), \\\"w\\\") as f:\\n        json.dump({\\\"feature_cols\\\": feature_cols, \\\"cat_cols\\\": cat_cols, \\\"num_cols\\\": num_cols}, f)\\n\\n    import pickle\\n    with open(os.path.join(model_dir, \\\"pipeline.pkl\\\"), \\\"wb\\\") as f:\\n        pickle.dump({\\\"encoder\\\": encoder, \\\"model\\\": model}, f)\\n\\n\\ndef predict(data_dir, model_dir, output_path):\\n    import pickle\\n\\n    schema = load_schema(data_dir)\\n    features = pd.read_csv(os.path.join(data_dir, \\\"features.csv\\\"))\\n\\n    with open(os.path.join(model_dir, \\\"columns.json\\\"), \\\"r\\\") as f:\\n        col_info = json.load(f)\\n    with open(os.path.join(model_dir, \\\"label_mapping.json\\\"), \\\"r\\\") as f:\\n        label_info = json.load(f)\\n    with open(os.path.join(model_dir, \\\"pipeline.pkl\\\"), \\\"rb\\\") as f:\\n        pipeline = pickle.load(f)\\n\\n    feature_cols = col_info[\\\"feature_cols\\\"]\\n    cat_cols = col_info[\\\"cat_cols\\\"]\\n    num_cols = col_info[\\\"num_cols\\\"]\\n    encoder = pipeline[\\\"encoder\\\"]\\n    model = pipeline[\\\"model\\\"]\\n    classes = label_info[\\\"classes\\\"]\\n\\n    X = features.reindex(columns=feature_cols)\\n\\n    if cat_cols:\\n        X_cat = encoder.transform(X[cat_cols].astype(str))\\n    else:\\n        X_cat = np.empty((len(X), 0))\\n\\n    if num_cols:\\n        X_num = X[num_cols].apply(pd.to_numeric, errors=\\\"coerce\\\").values.astype(float)\\n    else:\\n        X_num = np.empty((len(X), 0))\\n\\n    X_all = np.hstack([X_num, X_cat]) if X_num.shape[1] and X_cat.shape[1] else (X_num if X_num.shape[1] else X_cat)\\n\\n    preds_idx = model.predict(X_all)\\n    preds = [classes[int(i)] for i in preds_idx]\\n\\n    out = pd.DataFrame({\\\"row_id\\\": np.arange(len(features)), \\\"prediction\\\": preds})\\n    os.makedirs(os.path.dirname(output_path) or \\\".\\\", exist_ok=True)\\n    out.to_csv(output_path, index=False)\\n\\n\\ndef main():\\n    parser = argparse.ArgumentParser()\\n    sub = parser.add_subparsers(dest=\\\"command\\\", required=True)\\n\\n    p_train = sub.add_parser(\\\"train\\\")\\n    p_train.add_argument(\\\"--data\\\", required=True)\\n    p_train.add_argument(\\\"--model\\\", required=True)\\n\\n    p_pred = sub.add_parser(\\\"predict\\\")\\n    p_pred.add_argument(\\\"--data\\\", required=True)\\n    p_pred.add_argument(\\\"--model\\\", required=True)\\n    p_pred.add_argument(\\\"--output\\\", required=True)\\n\\n    args = parser.parse_args()\\n    if args.command == \\\"train\\\":\\n        train(args.data, args.model)\\n    elif args.command == \\\"predict\\\":\\n        predict(args.data, args.model, args.output)\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"}",
+        "role": "assistant",
+        "provider_specific_fields": {
+          "reasoning": null,
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "token_ids": null,
+        "stop_reason": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1536,
+    "prompt_tokens": 3883,
+    "total_tokens": 5419,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

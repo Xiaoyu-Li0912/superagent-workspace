@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-fdb73dee-6145-45b4-8b82-167af910bc0c",
+  "created": 1794831074,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"needs_revision\": true, \"reasoning\": \"The submitted code is empty, so it cannot train or predict at all. I will provide a complete solution.py implementing the required train/predict CLI with schema-driven preprocessing, CatBoost training on training rows only, and persisted pipeline for inference.\", \"revised_code\": \"import argparse\\nimport json\\nimport os\\nimport sys\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom catboost import CatBoostClassifier, Pool\\n\\n\\ndef load_schema(data_dir):\\n    with open(os.path.join(data_dir, \\\"schema.json\\\"), \\\"r\\\") as f:\\n        return json.load(f)\\n\\n\\ndef get_feature_columns(schema, df):\\n    cols = schema.get(\\\"feature_columns\\\")\\n    if cols:\\n        cols = [c for c in cols if c in df.columns]\\n    else:\\n        cols = [c for c in df.columns if c != \\\"row_id\\\"]\\n    return cols\\n\\n\\ndef prepare_features(df, feature_columns):\\n    X = df[feature_columns].copy()\\n    cat_cols = []\\n    for c in X.columns:\\n        if X[c].dtype == object or str(X[c].dtype).startswith(\\\"str\\\") or X[c].dtype.name == \\\"category\\\":\\n            X[c] = X[c].astype(str).fillna(\\\"__NA__\\\")\\n            cat_cols.append(c)\\n        else:\\n            X[c] = pd.to_numeric(X[c], errors=\\\"coerce\\\")\\n    return X, cat_cols\\n\\n\\ndef train(args):\\n    data_dir = args.data\\n    model_dir = args.model\\n    os.makedirs(model_dir, exist_ok=True)\\n\\n    schema = load_schema(data_dir)\\n    features = pd.read_csv(os.path.join(data_dir, \\\"features.csv\\\"))\\n    labels = pd.read_csv(os.path.join(data_dir, \\\"labels.csv\\\"))\\n\\n    label_col = \\\"label\\\" if \\\"label\\\" in labels.columns else labels.columns[0]\\n    y_raw = labels[label_col].values\\n\\n    feature_columns = get_feature_columns(schema, features)\\n    X, cat_cols = prepare_features(features, feature_columns)\\n\\n    classes = np.unique(y_raw)\\n    class_to_idx = {str(c): i for i, c in enumerate(classes)}\\n    idx_to_class = {i: c for c, i in class_to_idx.items()}\\n    y = np.array([class_to_idx[str(v)] for v in y_raw], dtype=int)\\n\\n    cat_indices = [X.columns.get_loc(c) for c in cat_cols]\\n\\n    model = CatBoostClassifier(\\n        iterations=500,\\n        learning_rate=0.05,\\n        depth=6,\\n        loss_function=\\\"MultiClass\\\" if len(classes) > 2 else \\\"Logloss\\\",\\n        verbose=False,\\n        thread_count=2,\\n        random_seed=42,\\n        allow_writing_files=False,\\n    )\\n\\n    train_pool = Pool(X, y, cat_features=cat_indices)\\n    model.fit(train_pool)\\n\\n    model.save_model(os.path.join(model_dir, \\\"model.cbm\\\"))\\n\\n    meta = {\\n        \\\"feature_columns\\\": feature_columns,\\n        \\\"cat_cols\\\": cat_cols,\\n        \\\"idx_to_class\\\": {str(k): (v.item() if hasattr(v, \\\"item\\\") else v) for k, v in idx_to_class.items()},\\n        \\\"n_classes\\\": int(len(classes)),\\n    }\\n    with open(os.path.join(model_dir, \\\"meta.json\\\"), \\\"w\\\") as f:\\n        json.dump(meta, f)\\n\\n\\ndef predict(args):\\n    data_dir = args.data\\n    model_dir = args.model\\n    output_path = args.output\\n\\n    with open(os.path.join(model_dir, \\\"meta.json\\\"), \\\"r\\\") as f:\\n        meta = json.load(f)\\n\\n    feature_columns = meta[\\\"feature_columns\\\"]\\n    cat_cols = meta[\\\"cat_cols\\\"]\\n    idx_to_class = {int(k): v for k, v in meta[\\\"idx_to_class\\\"].items()}\\n\\n    features = pd.read_csv(os.path.join(data_dir, \\\"features.csv\\\"))\\n    X, _ = prepare_features(features, feature_columns)\\n    cat_indices = [X.columns.get_loc(c) for c in cat_cols]\\n\\n    model = CatBoostClassifier()\\n    model.load_model(os.path.join(model_dir, \\\"model.cbm\\\"))\\n\\n    preds = model.predict(X)\\n    preds = np.asarray(preds).ravel().astype(int)\\n\\n    original = [idx_to_class[int(p)] for p in preds]\\n\\n    out_df = pd.DataFrame({\\\"row_id\\\": np.arange(len(features)), \\\"prediction\\\": original})\\n    os.makedirs(os.path.dirname(output_path) or \\\".\\\", exist_ok=True)\\n    out_df.to_csv(output_path, index=False)\\n\\n\\ndef main():\\n    parser = argparse.ArgumentParser()\\n    sub = parser.add_subparsers(dest=\\\"command\\\", required=True)\\n\\n    p_train = sub.add_parser(\\\"train\\\")\\n    p_train.add_argument(\\\"--data\\\", required=True)\\n    p_train.add_argument(\\\"--model\\\", required=True)\\n    p_train.set_defaults(func=train)\\n\\n    p_pred = sub.add_parser(\\\"predict\\\")\\n    p_pred.add_argument(\\\"--data\\\", required=True)\\n    p_pred.add_argument(\\\"--model\\\", required=True)\\n    p_pred.add_argument(\\\"--output\\\", required=True)\\n    p_pred.set_defaults(func=predict)\\n\\n    args = parser.parse_args()\\n    args.func(args)\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"}",
+        "role": "assistant",
+        "provider_specific_fields": {
+          "reasoning": null,
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "token_ids": null,
+        "stop_reason": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1339,
+    "prompt_tokens": 3883,
+    "total_tokens": 5222,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

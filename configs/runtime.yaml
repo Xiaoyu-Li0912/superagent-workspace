@@ -1,0 +1,21 @@
+steps: 100
+time_limit_seconds: 28800
+candidate_timeout_seconds: 600
+candidate_memory_mb: 4096
+candidate_cpus: 2
+request_timeout_seconds: 1200
+max_output_tokens: 32768
+max_calls: 400
+budget_rmb: 20
+max_unknown_calls: 3
+network_retry_attempts: 2
+network_retry_backoff_seconds: 30
+network_cooldown_seconds: 120
+seed: 42
+model: DeepSeek-V4.1-Flash
+upstream_environment:
+  agent.search.num_gpus: 0
+  agent.memory_embedding_device: cpu
+# Algorithm switches/hyperparameters are read unchanged from
+# third_party/MLEvolve/config/config.yaml, including memory and parallelism.
+# Current experiment defaults; the course cap remains RMB 20 per task.

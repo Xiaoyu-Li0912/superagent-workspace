@@ -1,0 +1,8 @@
+{
+  "candidate_id": "a8db80774e814b19a356fe90cd48f3e5",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 2.479842978000079,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 381, in <module>\n    main()\n  File \"/solution.py\", line 377, in main\n    args.func(args)\n  File \"/solution.py\", line 259, in cmd_train\n    X_hgb_tr = make_hgb_matrix(eng.iloc[tr_idx], cat_cols, num_cols, fold_enc, fit=True)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 222, in make_hgb_matrix\n    X_num = eng[num_cols].values.astype(np.float64)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: could not convert string to float: '10PM'\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/a8db80774e814b19a356fe90cd48f3e5"
+}

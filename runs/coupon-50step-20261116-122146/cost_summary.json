@@ -1,0 +1,19 @@
+{
+  "cap_rmb": 10.0,
+  "charged_or_reserved_rmb": 1.081344,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "unresolved_calls": 1,
+  "calls": [
+    {
+      "id": "6a718cf716554c92a01dc9a44118891c",
+      "created": 1794802914.9946187,
+      "state": "unknown",
+      "reserve": 1081344000,
+      "charged": 1081344000,
+      "input_tokens": null,
+      "output_tokens": null,
+      "usage": null
+    }
+  ]
+}

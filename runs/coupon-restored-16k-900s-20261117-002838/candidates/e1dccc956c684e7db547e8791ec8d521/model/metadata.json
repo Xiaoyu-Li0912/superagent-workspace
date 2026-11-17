@@ -1,0 +1,9 @@
+{
+  "n_folds": 3,
+  "threshold": 0.5,
+  "oof_accuracy": 0.7146729087101146,
+  "label_classes": [
+    "0",
+    "1"
+  ]
+}

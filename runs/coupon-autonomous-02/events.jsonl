@@ -1,0 +1,6 @@
+{"time_unix": 1794731080.04595, "event": "run_started", "formal_cap_rmb": 20, "authorized_experiment_cap_rmb": 30.0}
+{"time_unix": 1794731083.247989, "event": "search_step", "step": 0, "parent_id": "a20b35de886b40a5a9eb0a7b6edc2c60"}
+{"time_unix": 1794731083.3028436, "event": "llm_reserved", "call_id": "5d38779e8ec24a4b9e7852cc4d85f3c8", "model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794731162.0287564, "event": "llm_settled", "call_id": "5d38779e8ec24a4b9e7852cc4d85f3c8", "usage": {"completion_tokens": 3581, "prompt_tokens": 5041, "total_tokens": 8622, "completion_tokens_details": {"reasoning_tokens": 3580}, "prompt_tokens_details": {"cached_tokens": 0}}, "response_model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794731162.0475688, "event": "search_error", "error_type": "RuntimeError", "message": "Empty model output; charged and recorded"}
+{"time_unix": 1794731162.06667, "event": "run_failed", "reason": "search_error", "candidates": 0}

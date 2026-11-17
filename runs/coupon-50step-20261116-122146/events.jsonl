@@ -1,0 +1,5 @@
+{"time_unix": 1794802909.73074, "event": "run_started", "formal_cap_rmb": 20, "authorized_experiment_cap_rmb": 10.0}
+{"time_unix": 1794802914.9615338, "event": "search_step", "step": 0, "parent_id": "46d1b467fce8406c840ed23f44dc2838"}
+{"time_unix": 1794802915.029396, "event": "llm_reserved", "call_id": "6a718cf716554c92a01dc9a44118891c", "model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794802915.5958269, "event": "llm_uncertain", "call_id": "6a718cf716554c92a01dc9a44118891c", "error_type": "URLError"}
+{"time_unix": 1794802915.6297371, "event": "run_failed", "reason": "budget_or_uncertain_usage", "candidates": 0}

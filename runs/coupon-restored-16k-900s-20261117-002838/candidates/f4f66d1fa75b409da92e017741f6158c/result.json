@@ -1,0 +1,8 @@
+{
+  "candidate_id": "f4f66d1fa75b409da92e017741f6158c",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 0.01935685700027534,
+  "diagnostics": "SyntaxError: invalid character '×' (U+00D7) (solution.py, line 8)",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/f4f66d1fa75b409da92e017741f6158c"
+}

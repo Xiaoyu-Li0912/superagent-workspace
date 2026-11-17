@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-f7a4b1ce-de29-4312-8b77-ff7386f980f3",
+  "created": 1794850250,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training crashed with exit code 152 (128+24 = SIGXCPU, CPU time limit exceeded). The script attempts to train 5 stratified folds of a DCN-V2 neural network for up to 50 epochs each on CPU, which exceeds the sandbox's resource/time budget before completing. No validation metric was produced.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Leakage-safe pipeline: FeatureBuilder parses age/income/time/expiration/education and venue-frequency columns, engineers venue affinity, distance tier, and coupon×time/expiration combinations, then imputes numerics by training median and treats categoricals as strings. A TensorEncoder ordinal-encodes categoricals (with an unseen bucket) and standardizes numerics; the model is a feature-gated DCN-V2 (embedding + linear projections, sigmoid gate, stacked cross layers, deep MLP branch, joint head) trained with BCE-with-logits and label smoothing via AdamW + cosine schedule. Validation is 5-fold StratifiedKFold with per-fold early stopping on val loss, OOF probability threshold tuning for accuracy, and fold checkpoints persisted to model.pkl; prediction averages fold sigmoid outputs and applies the tuned threshold to emit original labels.\"}",
+        "role": "assistant",
+        "reasoning_content": "The training exited with code 152, which is likely a SIGXCPU (signal 24, 128+24=152) or similar - typical of resource/time limits being exceeded. Actually 152 = 128 + 24 = SIGXCPU (CPU time limit exceeded). This indicates the training crashed due to exceeding CPU time limit.\n\nSo is_bug = true, metric = null.\n\nLet me summarize the bug: The code attempts to train a DCN-V2 model with 5-fold CV, 50 epochs each, on CPU, which exceeds the CPU time limit (signal 24, exit 152). Also uses 2 threads which may be slow.\n\nThe model is heavy - 5 folds × 50 epochs × neural network training. Likely exceeded time budget.\n\nReport is_bug true, metric null.",
+        "provider_specific_fields": {
+          "reasoning": "The training exited with code 152, which is likely a SIGXCPU (signal 24, 128+24=152) or similar - typical of resource/time limits being exceeded. Actually 152 = 128 + 24 = SIGXCPU (CPU time limit exceeded). This indicates the training crashed due to exceeding CPU time limit.\n\nSo is_bug = true, metric = null.\n\nLet me summarize the bug: The code attempts to train a DCN-V2 model with 5-fold CV, 50 epochs each, on CPU, which exceeds the CPU time limit (signal 24, exit 152). Also uses 2 threads which may be slow.\n\nThe model is heavy - 5 folds × 50 epochs × neural network training. Likely exceeded time budget.\n\nReport is_bug true, metric null.",
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "token_ids": null,
+        "stop_reason": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 446,
+    "prompt_tokens": 8574,
+    "total_tokens": 9020,
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

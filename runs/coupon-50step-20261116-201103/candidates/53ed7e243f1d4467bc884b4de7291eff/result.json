@@ -1,0 +1,8 @@
+{
+  "candidate_id": "53ed7e243f1d4467bc884b4de7291eff",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 98.86764077200041,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 440, in <module>\n    main()\n  File \"/solution.py\", line 436, in main\n    args.func(args)\n  File \"/solution.py\", line 278, in train\n    stacker = LogisticRegression(\n              ^^^^^^^^^^^^^^^^^^^\nTypeError: LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/53ed7e243f1d4467bc884b4de7291eff"
+}

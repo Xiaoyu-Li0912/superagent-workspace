@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-4578c340-d7d1-4247-bda2-e4c25c29a1a1",
+  "created": 1794850271,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n</head>\n<body>\n<h1>Bugfix</h1>\n<p>The previous solution did a very expensive DCN-V2 model with 5-fold CV and a very short patience, but the budget (300s) was far exceeded. The training script overran the time limit. I need a simpler, fast training.</p>\n<p>This is a tabular dataset with ~8k rows and 21 categorical features. A gradient boosting model (HistGradientBoosting or similar) will train in a fraction of a second and do just as well or better than the DCN-V2 approach on this data.</p>\n<p>The plan: replace the torch model training with a scikit-learn HistGradientBoostingClassifier, using ordinal-encoded categorical features and one-hot / target encodings. To stay safe with categorical data, use ordinal encoding with ordinal-coded categorical columns and let HGB handle it via `categorical_features` indices. This is much faster than 5-fold DCN training.</p>\n<p>We preserve the FeatureBuilder pipeline, the CLI, the thresholding logic, and the artifact persistence. We keep the OOF fold loop but use HistGradientBoosting (much cheaper). Optionally we could use a single model rather than 5 folds if time is tight.</p>\n</body>\n</html>",
+        "provider_specific_fields": {
+          "reasoning": "\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n</head>\n<body>\n<h1>Bugfix</h1>\n<p>The previous solution did a very expensive DCN-V2 model with 5-fold CV and a very short patience, but the budget (300s) was far exceeded. The training script overran the time limit. I need a simpler, fast training.</p>\n<p>This is a tabular dataset with ~8k rows and 21 categorical features. A gradient boosting model (HistGradientBoosting or similar) will train in a fraction of a second and do just as well or better than the DCN-V2 approach on this data.</p>\n<p>The plan: replace the torch model training with a scikit-learn HistGradientBoostingClassifier, using ordinal-encoded categorical features and one-hot / target encodings. To stay safe with categorical data, use ordinal encoding with ordinal-coded categorical columns and let HGB handle it via `categorical_features` indices. This is much faster than 5-fold DCN training.</p>\n<p>We preserve the FeatureBuilder pipeline, the CLI, the thresholding logic, and the artifact persistence. We keep the OOF fold loop but use HistGradientBoosting (much cheaper). Optionally we could use a single model rather than 5 folds if time is tight.</p>\n</body>\n</html>",
+          "refusal": null
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "token_ids": null,
+        "stop_reason": null,
+        "routed_experts": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 291,
+    "prompt_tokens": 12014,
+    "total_tokens": 12305,
+    "completion_tokens_details": {
+      "reasoning_tokens": 290
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

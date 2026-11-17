@@ -1,0 +1,50 @@
+[
+  {
+    "candidate_id": "86dc39f80e7a40a3b6f6712b2713e4fc",
+    "status": "valid",
+    "metric": 0.7596059113300493,
+    "elapsed_seconds": 29.92274982500001,
+    "diagnostics": "Trusted validation accuracy=0.75960591; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-autonomous-03/candidates/86dc39f80e7a40a3b6f6712b2713e4fc"
+  },
+  {
+    "candidate_id": "103887c454f54c4db7df17c811b50b43",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.014728484999977809,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-autonomous-03/candidates/103887c454f54c4db7df17c811b50b43"
+  },
+  {
+    "candidate_id": "2d376cdea71c4015b2e78565258bcc18",
+    "status": "valid",
+    "metric": 0.7719211822660098,
+    "elapsed_seconds": 15.621625514000016,
+    "diagnostics": "Trusted validation accuracy=0.77192118; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-autonomous-03/candidates/2d376cdea71c4015b2e78565258bcc18"
+  },
+  {
+    "candidate_id": "7540d82c79b24b239b1d985874d371d0",
+    "status": "valid",
+    "metric": 0.7714285714285715,
+    "elapsed_seconds": 38.521463703999984,
+    "diagnostics": "Trusted validation accuracy=0.77142857; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-autonomous-03/candidates/7540d82c79b24b239b1d985874d371d0"
+  },
+  {
+    "candidate_id": "ed2d0abff91a4a1fa836373ba33f0980",
+    "status": "valid",
+    "metric": 0.7733990147783252,
+    "elapsed_seconds": 98.21029263800006,
+    "diagnostics": "Trusted validation accuracy=0.77339901; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-autonomous-03/candidates/ed2d0abff91a4a1fa836373ba33f0980"
+  },
+  {
+    "candidate_id": "dca523b496f84d0ab98029359bb2806e",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.014673887999833823,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-autonomous-03/candidates/dca523b496f84d0ab98029359bb2806e"
+  }
+]

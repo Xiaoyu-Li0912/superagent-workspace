@@ -1,0 +1,11 @@
+{"time_unix": 1794845044.0336056, "event": "run_started", "formal_cap_rmb": 20, "authorized_experiment_cap_rmb": 10.0}
+{"time_unix": 1794845055.9789567, "event": "llm_reserved", "call_id": "66c55041cfe442f28b95a094d0c8c3bd", "model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845061.1037052, "event": "llm_settled", "call_id": "66c55041cfe442f28b95a094d0c8c3bd", "usage": {"completion_tokens": 68, "prompt_tokens": 669, "total_tokens": 737, "completion_tokens_details": {"reasoning_tokens": 54}, "prompt_tokens_details": {"cached_tokens": 0}}, "response_model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845061.1576242, "event": "llm_reserved", "call_id": "b6adabf0153b4c33a9143b6ad1036251", "model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845068.0621562, "event": "llm_settled", "call_id": "b6adabf0153b4c33a9143b6ad1036251", "usage": {"completion_tokens": 147, "prompt_tokens": 1493, "total_tokens": 1640, "completion_tokens_details": {"reasoning_tokens": 88}, "prompt_tokens_details": {"cached_tokens": 0}}, "response_model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845068.079415, "event": "mlevolve_initialized", "memory_initialized": true}
+{"time_unix": 1794845068.1469681, "event": "llm_reserved", "call_id": "848898a104f24fb4ae0e3d4cd324acf4", "model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845250.085348, "event": "llm_settled", "call_id": "848898a104f24fb4ae0e3d4cd324acf4", "usage": {"completion_tokens": 8192, "prompt_tokens": 4546, "total_tokens": 12738, "completion_tokens_details": {"reasoning_tokens": 6457}, "prompt_tokens_details": {"cached_tokens": 0}}, "response_model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845250.1662729, "event": "llm_reserved", "call_id": "e77bc6c887174efe833b8a91873eb37a", "model": "DeepSeek-V4.1-Flash"}
+{"time_unix": 1794845473.469801, "event": "llm_uncertain", "call_id": "e77bc6c887174efe833b8a91873eb37a", "error_type": "TimeoutError"}
+{"time_unix": 1794845473.4961755, "event": "run_failed", "reason": "budget_or_uncertain_usage", "candidates": 0}

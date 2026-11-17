@@ -1,0 +1,7 @@
+{
+  "algorithm_config": "third_party/MLEvolve/config/config.yaml",
+  "effective_config": "mlevolve-effective.yaml",
+  "integration": "explicit course execution/metric hooks; no monkey patches",
+  "memory_initialized": true,
+  "coldstart_guidance_found": false
+}

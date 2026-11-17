@@ -1,0 +1,49 @@
+{
+  "cap_rmb": 10.0,
+  "charged_or_reserved_rmb": 1.12168,
+  "input_tokens": 6708,
+  "output_tokens": 8407,
+  "unresolved_calls": 1,
+  "calls": [
+    {
+      "id": "66c55041cfe442f28b95a094d0c8c3bd",
+      "created": 1794845055.9494386,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 941000,
+      "input_tokens": 669,
+      "output_tokens": 68,
+      "usage": "{\"completion_tokens\": 68, \"prompt_tokens\": 669, \"total_tokens\": 737, \"completion_tokens_details\": {\"reasoning_tokens\": 54}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "b6adabf0153b4c33a9143b6ad1036251",
+      "created": 1794845061.1353238,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 2081000,
+      "input_tokens": 1493,
+      "output_tokens": 147,
+      "usage": "{\"completion_tokens\": 147, \"prompt_tokens\": 1493, \"total_tokens\": 1640, \"completion_tokens_details\": {\"reasoning_tokens\": 88}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "848898a104f24fb4ae0e3d4cd324acf4",
+      "created": 1794845068.1259284,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 37314000,
+      "input_tokens": 4546,
+      "output_tokens": 8192,
+      "usage": "{\"completion_tokens\": 8192, \"prompt_tokens\": 4546, \"total_tokens\": 12738, \"completion_tokens_details\": {\"reasoning_tokens\": 6457}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "e77bc6c887174efe833b8a91873eb37a",
+      "created": 1794845250.1519353,
+      "state": "unknown",
+      "reserve": 1081344000,
+      "charged": 1081344000,
+      "input_tokens": null,
+      "output_tokens": null,
+      "usage": null
+    }
+  ]
+}

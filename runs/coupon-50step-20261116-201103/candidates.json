@@ -1,0 +1,282 @@
+[
+  {
+    "candidate_id": "eb5cd758df0e4eafa1fe5fb14114f737",
+    "status": "valid",
+    "metric": 0.7458128078817734,
+    "elapsed_seconds": 7.221413517000016,
+    "diagnostics": "Trusted validation accuracy=0.74581281; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/eb5cd758df0e4eafa1fe5fb14114f737"
+  },
+  {
+    "candidate_id": "0be01a6e673b48ad8f265b88583c00c9",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.017545329000029142,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/0be01a6e673b48ad8f265b88583c00c9"
+  },
+  {
+    "candidate_id": "70b8208c10ca40e59c3b1ec3eea5de7c",
+    "status": "valid",
+    "metric": 0.7472906403940887,
+    "elapsed_seconds": 119.95718972600002,
+    "diagnostics": "Trusted validation accuracy=0.74729064; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/70b8208c10ca40e59c3b1ec3eea5de7c"
+  },
+  {
+    "candidate_id": "6e70afe39f7c439086c49a4c5638612b",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.0148330409999744,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/6e70afe39f7c439086c49a4c5638612b"
+  },
+  {
+    "candidate_id": "7c3e88087d754fc599e92913f351c230",
+    "status": "valid",
+    "metric": 0.7487684729064039,
+    "elapsed_seconds": 12.90728005799997,
+    "diagnostics": "Trusted validation accuracy=0.74876847; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/7c3e88087d754fc599e92913f351c230"
+  },
+  {
+    "candidate_id": "ee7265c0042040d4b0234b9e19a1bb94",
+    "status": "valid",
+    "metric": 0.7472906403940887,
+    "elapsed_seconds": 3.7711920300000656,
+    "diagnostics": "Trusted validation accuracy=0.74729064; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/ee7265c0042040d4b0234b9e19a1bb94"
+  },
+  {
+    "candidate_id": "5184924e4835486d96168a698dd22479",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.014656156999990344,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/5184924e4835486d96168a698dd22479"
+  },
+  {
+    "candidate_id": "72df4a35f443422ebf02304042a37b95",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.019603509000035046,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/72df4a35f443422ebf02304042a37b95"
+  },
+  {
+    "candidate_id": "a8db80774e814b19a356fe90cd48f3e5",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 2.479842978000079,
+    "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 381, in <module>\n    main()\n  File \"/solution.py\", line 377, in main\n    args.func(args)\n  File \"/solution.py\", line 259, in cmd_train\n    X_hgb_tr = make_hgb_matrix(eng.iloc[tr_idx], cat_cols, num_cols, fold_enc, fit=True)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 222, in make_hgb_matrix\n    X_num = eng[num_cols].values.astype(np.float64)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: could not convert string to float: '10PM'\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/a8db80774e814b19a356fe90cd48f3e5"
+  },
+  {
+    "candidate_id": "3e8c30180cc64554b503dd4987a73d7c",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 7.752013585000213,
+    "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 426, in <module>\n    main()\n  File \"/solution.py\", line 422, in main\n    args.func(args)\n  File \"/solution.py\", line 312, in cmd_train\n    m.fit(X_tree.iloc[tr_idx], y[tr_idx], categorical_feature=cat_idx)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py\", line 1704, in fit\n    super().fit(\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py\", line 1171, in fit\n    self._Booster = train(\n                    ^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/engine.py\", line 296, in train\n    booster = Booster(params=params, train_set=train_set)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/basic.py\", line 3758, in __init__\n    train_set.construct()\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/basic.py\", line 2574, in construct\n    self._lazy_init(\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/basic.py\", line 2101, in _lazy_init\n    data, feature_name, categorical_feature, self.pandas_categorical = _data_from_pandas(\n                                                                       ^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/basic.py\", line 795, in _data_from_pandas\n    _pandas_to_numpy(data, target_dtype=target_dtype),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/basic.py\", line 739, in _pandas_to_numpy\n    _check_for_bad_pandas_dtypes(data.dtypes)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/lightgbm/basic.py\", line 730, in _check_for_bad_pandas_dtypes\n    raise ValueError(\nValueError: pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: temperature: str, time: str, coupon: str, expiration: str, gender: str, age: str, maritalStatus: str, has_children: str, education: str, occupation: str, income: str, Bar: str, CoffeeHouse: str, CarryAway: str, RestaurantLessThan20: str, Restaurant20To50: str, toCoupon_GEQ5min: str, toCoupon_GEQ15min: str, toCoupon_GEQ25min: str, direction_same: str, direction_opp: str, children_marital: str\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/3e8c30180cc64554b503dd4987a73d7c"
+  },
+  {
+    "candidate_id": "77c8333f53984369b556237689a9c4e9",
+    "status": "valid",
+    "metric": 0.738423645320197,
+    "elapsed_seconds": 3.601450856999918,
+    "diagnostics": "Trusted validation accuracy=0.73842365; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/77c8333f53984369b556237689a9c4e9"
+  },
+  {
+    "candidate_id": "30acfe01ac76491186e914d1cd735ed3",
+    "status": "valid",
+    "metric": 0.7532019704433498,
+    "elapsed_seconds": 10.215409346000115,
+    "diagnostics": "Trusted validation accuracy=0.75320197; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/30acfe01ac76491186e914d1cd735ed3"
+  },
+  {
+    "candidate_id": "e07934b541584790b55e53e3ff1b1e01",
+    "status": "valid",
+    "metric": 0.7512315270935961,
+    "elapsed_seconds": 104.21721808099983,
+    "diagnostics": "Trusted validation accuracy=0.75123153; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/e07934b541584790b55e53e3ff1b1e01"
+  },
+  {
+    "candidate_id": "9295dec211c44f70b702c4c4ec99ffe2",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 167.11530522799967,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.\n  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)\n/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.\n  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)\n/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.\n  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)\n/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.\n  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/9295dec211c44f70b702c4c4ec99ffe2"
+  },
+  {
+    "candidate_id": "1459783480054e828a84fd8c36ce9e90",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.03091332500025601,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/1459783480054e828a84fd8c36ce9e90"
+  },
+  {
+    "candidate_id": "e5542f7e4c5e49d9bb81ff62f53c5a6e",
+    "status": "valid",
+    "metric": 0.7551724137931034,
+    "elapsed_seconds": 10.436289493000004,
+    "diagnostics": "Trusted validation accuracy=0.75517241; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/e5542f7e4c5e49d9bb81ff62f53c5a6e"
+  },
+  {
+    "candidate_id": "85bbeb31e2624fd58d93bf0977bc8bf3",
+    "status": "valid",
+    "metric": 0.5714285714285714,
+    "elapsed_seconds": 1.4619650899999215,
+    "diagnostics": "Trusted validation accuracy=0.57142857; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/85bbeb31e2624fd58d93bf0977bc8bf3"
+  },
+  {
+    "candidate_id": "8bbb9e6cae23403d9591dad856a1e2ee",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.02232405299992024,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/8bbb9e6cae23403d9591dad856a1e2ee"
+  },
+  {
+    "candidate_id": "9a89fb4854dd4fb4b1248f90462d9766",
+    "status": "valid",
+    "metric": 0.7561576354679803,
+    "elapsed_seconds": 7.235548377000214,
+    "diagnostics": "Trusted validation accuracy=0.75615764; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/9a89fb4854dd4fb4b1248f90462d9766"
+  },
+  {
+    "candidate_id": "48ae615acb7141c580ff0a1ad4176dbc",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 30.80022280500043,
+    "diagnostics": "RuntimeError: Candidate predict exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 625, in <module>\n    main()\n  File \"/solution.py\", line 621, in main\n    args.func(args)\n  File \"/solution.py\", line 591, in predict\n    preds = stacker.predict(stack_X).astype(np.int64)\n            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/linear_model/_base.py\", line 414, in predict\n    scores = self.decision_function(X)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/linear_model/_base.py\", line 389, in decision_function\n    X = validate_data(self, X, accept_sparse=\"csr\", reset=False)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/utils/validation.py\", line 3062, in validate_data\n    _check_n_features(_estimator, X, reset=reset)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/sklearn/utils/validation.py\", line 2926, in _check_n_features\n    raise ValueError(\nValueError: X has 4 features, but LogisticRegression is expecting 6 features as input.\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/48ae615acb7141c580ff0a1ad4176dbc"
+  },
+  {
+    "candidate_id": "020bbfcccb3349bdabd680dfae005577",
+    "status": "valid",
+    "metric": 0.7497536945812808,
+    "elapsed_seconds": 31.361017175000143,
+    "diagnostics": "Trusted validation accuracy=0.74975369; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/020bbfcccb3349bdabd680dfae005577"
+  },
+  {
+    "candidate_id": "b16e7a6cb31c43b19ea2fafbdcca0050",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.019242714000029082,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/b16e7a6cb31c43b19ea2fafbdcca0050"
+  },
+  {
+    "candidate_id": "43a2c94cfefb4296a7204a571a8c49dc",
+    "status": "valid",
+    "metric": 0.7477832512315271,
+    "elapsed_seconds": 36.1189259089997,
+    "diagnostics": "Trusted validation accuracy=0.74778325; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/43a2c94cfefb4296a7204a571a8c49dc"
+  },
+  {
+    "candidate_id": "015e2262d2a3448ab0a31663dec6ab30",
+    "status": "valid",
+    "metric": 0.7369458128078817,
+    "elapsed_seconds": 1.715202605999366,
+    "diagnostics": "Trusted validation accuracy=0.73694581; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/015e2262d2a3448ab0a31663dec6ab30"
+  },
+  {
+    "candidate_id": "0354c04154f7464f8a587e3106d920c6",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.01680289000069024,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/0354c04154f7464f8a587e3106d920c6"
+  },
+  {
+    "candidate_id": "e4ac71b8c6d1492683f76f906c7682ee",
+    "status": "valid",
+    "metric": 0.7541871921182266,
+    "elapsed_seconds": 51.31009825399997,
+    "diagnostics": "Trusted validation accuracy=0.75418719; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/e4ac71b8c6d1492683f76f906c7682ee"
+  },
+  {
+    "candidate_id": "f029d95007824f2f8f67d3ba900bcb41",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.016542071999538166,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/f029d95007824f2f8f67d3ba900bcb41"
+  },
+  {
+    "candidate_id": "98839181a4b34dbb8427ce6bc58045ff",
+    "status": "valid",
+    "metric": 0.7576354679802956,
+    "elapsed_seconds": 147.27722476399958,
+    "diagnostics": "Trusted validation accuracy=0.75763547; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/98839181a4b34dbb8427ce6bc58045ff"
+  },
+  {
+    "candidate_id": "32f5c637fb344d408939e44d07e9f15a",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 168.411846125,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/32f5c637fb344d408939e44d07e9f15a"
+  },
+  {
+    "candidate_id": "102f9e49476f4ca7bfed348870c49147",
+    "status": "valid",
+    "metric": 0.7566502463054188,
+    "elapsed_seconds": 59.882672032999835,
+    "diagnostics": "Trusted validation accuracy=0.75665025; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/102f9e49476f4ca7bfed348870c49147"
+  },
+  {
+    "candidate_id": "731d58000e9c493aabc17c5650964710",
+    "status": "valid",
+    "metric": 0.7610837438423645,
+    "elapsed_seconds": 97.82277283200074,
+    "diagnostics": "Trusted validation accuracy=0.76108374; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/731d58000e9c493aabc17c5650964710"
+  },
+  {
+    "candidate_id": "4bca934fae7b4683953d704d1364fbe7",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 166.97897595199993,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/4bca934fae7b4683953d704d1364fbe7"
+  },
+  {
+    "candidate_id": "0b490c0ef9f04b54816fc72d1e4659da",
+    "status": "valid",
+    "metric": 0.7546798029556651,
+    "elapsed_seconds": 13.39611147100004,
+    "diagnostics": "Trusted validation accuracy=0.75467980; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/0b490c0ef9f04b54816fc72d1e4659da"
+  },
+  {
+    "candidate_id": "53ed7e243f1d4467bc884b4de7291eff",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 98.86764077200041,
+    "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 440, in <module>\n    main()\n  File \"/solution.py\", line 436, in main\n    args.func(args)\n  File \"/solution.py\", line 278, in train\n    stacker = LogisticRegression(\n              ^^^^^^^^^^^^^^^^^^^\nTypeError: LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/53ed7e243f1d4467bc884b4de7291eff"
+  },
+  {
+    "candidate_id": "4cf611a2fa5744b88415a46b81524f40",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 169.95722191799996,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-50step-20261116-201103/candidates/4cf611a2fa5744b88415a46b81524f40"
+  }
+]

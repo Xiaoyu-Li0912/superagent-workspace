@@ -1,0 +1,9 @@
+format: csv
+modality: text_pair
+description: Predict which of two headlines has higher observed click-through rate. Label 1 means A; 0 means B.
+metric: accuracy
+train_features: train.csv
+val_features: val.csv
+test_features: test.csv
+feature_columns: [headline_A, headline_B]
+label_column: label_pairwise

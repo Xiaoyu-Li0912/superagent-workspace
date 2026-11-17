@@ -1,0 +1,2 @@
+# Historical artifacts and freeze manifests must retain their original bytes.
+runs/** -text

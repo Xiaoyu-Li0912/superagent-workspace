@@ -1,0 +1,12 @@
+format: categorical_npy
+modality: tabular
+description: Predict acceptance of a coupon from categorical customer and trip features.
+metric: accuracy
+train_features: C_train.npy
+train_labels: y_train.npy
+val_features: C_val.npy
+val_labels: y_val.npy
+test_features: C_test.npy
+test_labels: y_test.npy
+trusted_pickle: true
+feature_columns: [temperature, time, coupon, expiration, gender, age, maritalStatus, has_children, education, occupation, income, Bar, CoffeeHouse, CarryAway, RestaurantLessThan20, Restaurant20To50, toCoupon_GEQ5min, toCoupon_GEQ15min, toCoupon_GEQ25min, direction_same, direction_opp]

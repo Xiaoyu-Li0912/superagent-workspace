@@ -1,0 +1,4 @@
+{"time_unix": 1794731009.8073866, "event": "run_started", "formal_cap_rmb": 20, "authorized_experiment_cap_rmb": 30.0}
+{"time_unix": 1794731012.4727032, "event": "search_step", "step": 0, "parent_id": "cb238652e57946b3809527239186eeba"}
+{"time_unix": 1794731012.5160313, "event": "search_error", "error_type": "ValueError", "message": "dictionary update sequence element #0 has length 1; 2 is required"}
+{"time_unix": 1794731012.557676, "event": "run_failed", "reason": "search_error", "candidates": 0}

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "989a20f22a8d432b8a7682d7d505274e",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 184.6978408340001,
+  "diagnostics": "RuntimeError: Candidate train exited 152:\n/solution.py:260: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).\nSee https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.\n  features.reset_index(drop=True, inplace=True)\n/solution.py:139: Pandas4Warning: 'IntegerArray' is not supported as a fill value for float64 dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  out[\"age\"] = out[\"age\"].fillna(bare_age)\n/solution.py:139: Pandas4Warning: 'IntegerArray' is not supported as a fill value for float64 dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  out[\"age\"] = out[\"age\"].fillna(bare_age)\n/solution.py:139: Pandas4Warning: 'IntegerArray' is not supported as a fill value for float64 dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  out[\"age\"] = out[\"age\"].fillna(bare_age)\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/989a20f22a8d432b8a7682d7d505274e"
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/solution.py", line 381, in <module>
+    main()
+  File "/solution.py", line 377, in main
+    args.func(args)
+  File "/solution.py", line 259, in cmd_train
+    X_hgb_tr = make_hgb_matrix(eng.iloc[tr_idx], cat_cols, num_cols, fold_enc, fit=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 222, in make_hgb_matrix
+    X_num = eng[num_cols].values.astype(np.float64)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10PM'

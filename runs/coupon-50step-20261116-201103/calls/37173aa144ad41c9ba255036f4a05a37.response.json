@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-47d62b02-4c39-4382-a17b-57406e2d650f",
+  "created": 1794832005,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"needs_revision\": true, \"reasoning\": \"The submitted code is just a placeholder token '|v24|' with no actual implementation, so it cannot train or predict at all. It violates the contract requiring argparse train/predict subcommands, persisted preprocessing/model/label mapping, and row-order-authoritative predictions. I will provide a complete corrected script implementing the full pipeline.\", \"revised_code\": \"import argparse\\nimport json\\nimport os\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom sklearn.ensemble import HistGradientBoostingClassifier\\nfrom sklearn.preprocessing import OrdinalEncoder\\n\\n\\ndef load_schema(data_dir):\\n    with open(os.path.join(data_dir, \\\"schema.json\\\"), \\\"r\\\") as f:\\n        return json.load(f)\\n\\n\\ndef get_feature_columns(schema):\\n    cols = schema.get(\\\"feature_columns\\\")\\n    if cols:\\n        return list(cols)\\n    return None\\n\\n\\ndef build_encoder():\\n    return OrdinalEncoder(handle_unknown=\\\"use_encoded_value\\\", unknown_value=-1)\\n\\n\\ndef prepare_features(df, feature_cols, encoder=None, fit=False):\\n    X = df[feature_cols].copy()\\n    for c in X.columns:\\n        X[c] = X[c].astype(object)\\n        X[c] = X[c].where(X[c].notna(), \\\"__MISSING__\\\")\\n        X[c] = X[c].astype(str)\\n    if fit:\\n        encoder = build_encoder()\\n        arr = encoder.fit_transform(X)\\n    else:\\n        arr = encoder.transform(X)\\n    return arr.astype(np.float64), encoder\\n\\n\\ndef cmd_train(args):\\n    data_dir = args.data\\n    model_dir = args.model\\n    os.makedirs(model_dir, exist_ok=True)\\n\\n    schema = load_schema(data_dir)\\n    features = pd.read_csv(os.path.join(data_dir, \\\"features.csv\\\"))\\n    labels = pd.read_csv(os.path.join(data_dir, \\\"labels.csv\\\"))\\n\\n    feature_cols = get_feature_columns(schema)\\n    if feature_cols is None:\\n        feature_cols = [c for c in features.columns]\\n\\n    label_col = \\\"label\\\" if \\\"label\\\" in labels.columns else labels.columns[0]\\n    y_raw = labels[label_col].values\\n\\n    classes = np.unique(y_raw)\\n    class_to_idx = {str(c): i for i, c in enumerate(classes)}\\n    y = np.array([class_to_idx[str(v)] for v in y_raw], dtype=np.int64)\\n\\n    X, encoder = prepare_features(features, feature_cols, fit=True)\\n\\n    model = HistGradientBoostingClassifier(\\n        max_iter=300,\\n        learning_rate=0.08,\\n        max_depth=None,\\n        random_state=42,\\n    )\\n    model.fit(X, y)\\n\\n    with open(os.path.join(model_dir, \\\"feature_columns.json\\\"), \\\"w\\\") as f:\\n        json.dump(feature_cols, f)\\n    with open(os.path.join(model_dir, \\\"label_mapping.json\\\"), \\\"w\\\") as f:\\n        json.dump([str(c) for c in classes], f)\\n\\n    import pickle\\n    with open(os.path.join(model_dir, \\\"encoder.pkl\\\"), \\\"wb\\\") as f:\\n        pickle.dump(encoder, f)\\n    with open(os.path.join(model_dir, \\\"model.pkl\\\"), \\\"wb\\\") as f:\\n        pickle.dump(model, f)\\n\\n\\ndef cmd_predict(args):\\n    data_dir = args.data\\n    model_dir = args.model\\n    output_path = args.output\\n\\n    import pickle\\n\\n    schema = load_schema(data_dir)\\n    features = pd.read_csv(os.path.join(data_dir, \\\"features.csv\\\"))\\n\\n    with open(os.path.join(model_dir, \\\"feature_columns.json\\\"), \\\"r\\\") as f:\\n        feature_cols = json.load(f)\\n    with open(os.path.join(model_dir, \\\"label_mapping.json\\\"), \\\"r\\\") as f:\\n        classes = json.load(f)\\n    with open(os.path.join(model_dir, \\\"encoder.pkl\\\"), \\\"rb\\\") as f:\\n        encoder = pickle.load(f)\\n    with open(os.path.join(model_dir, \\\"model.pkl\\\"), \\\"rb\\\") as f:\\n        model = pickle.load(f)\\n\\n    X, _ = prepare_features(features, feature_cols, encoder=encoder, fit=False)\\n    preds_idx = model.predict(X)\\n    preds = [classes[int(i)] for i in preds_idx]\\n\\n    out_dir = os.path.dirname(output_path)\\n    if out_dir:\\n        os.makedirs(out_dir, exist_ok=True)\\n\\n    out_df = pd.DataFrame({\\\"row_id\\\": np.arange(len(preds)), \\\"prediction\\\": preds})\\n    out_df.to_csv(output_path, index=False)\\n\\n\\ndef main():\\n    parser = argparse.ArgumentParser()\\n    sub = parser.add_subparsers(dest=\\\"command\\\", required=True)\\n\\n    p_train = sub.add_parser(\\\"train\\\")\\n    p_train.add_argument(\\\"--data\\\", required=True)\\n    p_train.add_argument(\\\"--model\\\", required=True)\\n    p_train.set_defaults(func=cmd_train)\\n\\n    p_pred = sub.add_parser(\\\"predict\\\")\\n    p_pred.add_argument(\\\"--data\\\", required=True)\\n    p_pred.add_argument(\\\"--model\\\", required=True)\\n    p_pred.add_argument(\\\"--output\\\", required=True)\\n    p_pred.set_defaults(func=cmd_predict)\\n\\n    args = parser.parse_args()\\n    args.func(args)\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"}",
+        "role": "assistant",
+        "provider_specific_fields": {
+          "reasoning": null,
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1314,
+    "prompt_tokens": 3886,
+    "total_tokens": 5200,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

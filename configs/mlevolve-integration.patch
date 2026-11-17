@@ -1,0 +1,451 @@
+diff --git a/agents/code_review_agent.py b/agents/code_review_agent.py
+index cc3d06b..23008fe 100644
+--- a/agents/code_review_agent.py
++++ b/agents/code_review_agent.py
+@@ -35,7 +35,7 @@ CODE_REVIEW_SPEC = FunctionSpec(
+                 )
+             },
+             "revised_code": {
+-                "type": "string",
++                "type": ["string", "null"],
+                 "description": (
+                     "ONLY if needs_revision=true: Provide targeted fixes using SEARCH/REPLACE diff format.\n\n"
+                     "**REQUIRED FORMAT** (use this for each fix):\n"
+@@ -66,8 +66,9 @@ def run(agent, node: SearchNode) -> str:
+     prompt = get_code_review_prompt(
+         task_desc=agent.task_desc,
+         code=node.code,
++        integration=getattr(agent, "integration", None),
+     )
+-    internet_clarification = get_internet_clarification(getattr(agent.cfg, "pretrain_model_dir", ""))
++    internet_clarification = get_internet_clarification(getattr(agent.cfg, "pretrain_model_dir", ""), agent)
+     if "Instructions" not in prompt:
+         prompt["Instructions"] = {}
+     if "Implementation guideline" in prompt["Instructions"]:
+diff --git a/agents/coder/stepwise_coder.py b/agents/coder/stepwise_coder.py
+index 0ac7f5e..83add95 100644
+--- a/agents/coder/stepwise_coder.py
++++ b/agents/coder/stepwise_coder.py
+@@ -342,6 +342,12 @@ class MetaAgent:
+             "- Assume previous steps have NOT been executed; do not skip execution steps and only read files or outputs.",
+             "- All parts must work together seamlessly",
+         ]
++        if getattr(agent_instance, "integration", None) is not None:
++            prompt_instructions["Merge guidelines"][6] = (
++                "- Implement the host train/predict CLI, persist all preprocessing and models, "
++                "and write row_id,prediction to the requested output path in predict mode. "
++                "Held-out scoring is performed by the supervisor, not by this script."
++            )
+ 
+         prompt: Dict[str, Any] = {
+             "Introduction": introduction,
+@@ -404,8 +410,8 @@ class MetaAgent:
+         return "\n".join(code_parts)
+ 
+ 
+-def create_default_step_agents() -> List[StepAgent]:
+-    return [
++def create_default_step_agents(integration=None) -> List[StepAgent]:
++    agents = [
+         StepAgent(
+             name="data_processing_and_feature_engineering",
+             introduction="You are a Data Preparation Specialist responsible for data loading, cleaning, and feature engineering.",
+@@ -453,6 +459,26 @@ def create_default_step_agents() -> List[StepAgent]:
+             ],
+         ),
+     ]
++    if integration is not None:
++        agents[0].description = "Load the host training data, clean it, and implement reusable feature processing."
++        agents[0].guidelines[0] = (
++            "Your responsibility: Load /data/features.csv and /data/labels.csv in train mode, "
++            "implement reusable feature processing and optionally create internal train-only CV splits. "
++            "Predict mode receives only unlabeled /data/features.csv; never create or read a test split."
++        )
++        agents[2].guidelines[0] = (
++            "Your responsibility: Train the model designed in previous steps, optionally evaluate using "
++            "train-only internal splits, and persist the complete model and preprocessing to --model. "
++            "Implement fresh-process reload and unlabeled inference for predict mode, writing "
++            "row_id,prediction to the requested --output path. The supervisor measures held-out accuracy."
++        )
++        agents[2].introduction = "You are a Training and Evaluation Expert responsible for training, validation, persistence, and reloadable inference."
++        agents[2].description = "Implement training, internal validation, complete model saving, and fresh-process unlabeled prediction."
++        agents[2].guidelines[-1] = (
++            "Any printed score must be a real train-only internal metric, clearly labeled as such. "
++            "Do not fabricate the supervisor's held-out score or produce a Kaggle submission."
++        )
++    return agents
+ 
+ 
+ def stepwise_plan_and_code_query(
+@@ -470,7 +496,7 @@ def stepwise_plan_and_code_query(
+         execution_output=context.get("execution_output", ""),
+     )
+ 
+-    step_agents = create_default_step_agents()
++    step_agents = create_default_step_agents(getattr(agent_instance, "integration", None))
+     meta_agent = MetaAgent()
+ 
+     step_results: List[Dict[str, str]] = []
+diff --git a/agents/debug_agent.py b/agents/debug_agent.py
+index b6bb4fd..bc708d7 100644
+--- a/agents/debug_agent.py
++++ b/agents/debug_agent.py
+@@ -111,7 +111,7 @@ def run(agent, parent_node: SearchNode) -> SearchNode:
+     prompt["Instructions"] |= get_impl_guideline_from_agent(agent)
+     prompt["Instructions"] |= ROBUSTNESS_GENERALIZATION_STRATEGY
+ 
+-    internet_clarification = get_internet_clarification(getattr(agent.cfg, "pretrain_model_dir", ""))
++    internet_clarification = get_internet_clarification(getattr(agent.cfg, "pretrain_model_dir", ""), agent)
+     prompt["Instructions"]["Implementation guideline"].extend(internet_clarification)
+ 
+     debug_memory_guidance = ""
+diff --git a/agents/draft_agent.py b/agents/draft_agent.py
+index 5c4ee8e..3f02b4e 100644
+--- a/agents/draft_agent.py
++++ b/agents/draft_agent.py
+@@ -151,7 +151,7 @@ def run(agent, init_solution_path: Optional[str] = None) -> SearchNode:
+         coldstart_guideline = [""]
+ 
+     prompt["Instructions"]["Implementation guideline"].extend(coldstart_guideline)
+-    prompt["Instructions"] |= get_prompt_environment()
++    prompt["Instructions"] |= get_prompt_environment(agent)
+     prompt["Instructions"] |= ROBUSTNESS_GENERALIZATION_STRATEGY
+ 
+     instructions = f"\n# Instructions\n\n"
+diff --git a/agents/improve_agent.py b/agents/improve_agent.py
+index 8896f5e..952212a 100644
+--- a/agents/improve_agent.py
++++ b/agents/improve_agent.py
+@@ -215,7 +215,7 @@ def run(agent, parent_node: SearchNode) -> SearchNode:
+ 
+     prompt["Instructions"] |= get_impl_guideline_from_agent(agent)
+     prompt["Instructions"] |= prompt_leakage_prevention()
+-    internet_clarification = get_internet_clarification(getattr(agent.cfg, "pretrain_model_dir", ""))
++    internet_clarification = get_internet_clarification(getattr(agent.cfg, "pretrain_model_dir", ""), agent)
+     prompt["Instructions"]["Implementation guideline"].extend(internet_clarification)
+     prompt["Instructions"] |= ROBUSTNESS_GENERALIZATION_STRATEGY
+ 
+diff --git a/agents/prompts/environment.py b/agents/prompts/environment.py
+index 68cfd7d..ccc77bb 100644
+--- a/agents/prompts/environment.py
++++ b/agents/prompts/environment.py
+@@ -3,8 +3,10 @@
+ import random
+ 
+ 
+-def get_prompt_environment():
++def get_prompt_environment(agent=None):
+     """Installed packages description."""
++    if agent is not None and getattr(agent, "integration", None) is not None:
++        return agent.integration.environment()
+     pkgs = [
+         "numpy",
+         "pandas",
+diff --git a/agents/prompts/impl_guideline.py b/agents/prompts/impl_guideline.py
+index 27ca5c4..9913e34 100644
+--- a/agents/prompts/impl_guideline.py
++++ b/agents/prompts/impl_guideline.py
+@@ -9,6 +9,14 @@ def get_impl_guideline_from_agent(agent):
+     """Build implementation guideline from agent config."""
+     tot_time_remaining = agent.acfg.time_limit - (time.time() - agent.start_time)
+     exec_timeout = int(min(agent.cfg.exec.timeout, tot_time_remaining))
++    if getattr(agent, "integration", None) is not None:
++        return {"Implementation guideline": [
++            f"Resource Budget: Time left = {_format_time(tot_time_remaining)}; "
++            f"Steps left = {agent.acfg.steps - agent.current_step}; execution limit = {exec_timeout}s.",
++            agent.integration.instructions(),
++            "Preserve task semantics and official metric; use real model inference for every prediction. "
++            "Internal holdout/CV on training rows is allowed. The supervisor supplies held-out accuracy.",
++        ]}
+     return get_impl_guideline(
+         tot_time_remaining=tot_time_remaining,
+         steps_remaining=agent.acfg.steps - agent.current_step,
+diff --git a/agents/prompts/shared.py b/agents/prompts/shared.py
+index 35e6cdf..2d41d8c 100644
+--- a/agents/prompts/shared.py
++++ b/agents/prompts/shared.py
+@@ -48,8 +48,10 @@ def prompt_resp_fmt():
+     }
+ 
+ 
+-def get_internet_clarification(pretrain_model_dir: str = ""):
++def get_internet_clarification(pretrain_model_dir: str = "", agent=None):
+     """Internet access clarification for improve/debug stages."""
++    if agent is not None and getattr(agent, "integration", None) is not None:
++        return [agent.integration.instructions()]
+     lines = [
+         "**⚠️ IMPORTANT: Internet Access During Code Development**",
+         "- The \"no internet access\" restriction mentioned in the task description applies **ONLY to submission evaluation after code generation** (for mle-bench test set).",
+diff --git a/agents/prompts/validation_template_prompts.py b/agents/prompts/validation_template_prompts.py
+index 887b86d..2d6ff7b 100644
+--- a/agents/prompts/validation_template_prompts.py
++++ b/agents/prompts/validation_template_prompts.py
+@@ -10,7 +10,7 @@ from utils.response import wrap_code
+ # ============================================================================
+ # Code Review Prompts
+ # ============================================================================
+-def get_code_review_prompt(task_desc: str, code: str) -> Dict[str, Any]:
++def get_code_review_prompt(task_desc: str, code: str, integration=None) -> Dict[str, Any]:
+     """Build full code review prompt dict from task description and code."""
+     introduction = (
+         "You are a Senior Data Science Code Reviewer. Your goal is to ensure the submission is legally valid and logically sound.\n\n"
+@@ -26,11 +26,11 @@ def get_code_review_prompt(task_desc: str, code: str) -> Dict[str, Any]:
+         "Code to review": wrap_code(code),
+         "Instructions": {},
+     }
+-    prompt["Instructions"]["Code review guidelines"] = get_code_review_guidelines()
++    prompt["Instructions"]["Code review guidelines"] = get_code_review_guidelines(integration)
+     prompt["Instructions"]["Response format"] = get_code_review_response_format()
+     return prompt
+ 
+-def get_code_review_guidelines() -> list:
++def get_code_review_guidelines(integration=None) -> list:
+     """Code review guidelines."""
+     guidelines = [
+         "# 📜 Code Review Guidelines\n",
+@@ -104,6 +104,10 @@ def get_code_review_guidelines() -> list:
+         "",
+         "**Default**: Approve unless concrete logic bugs found"
+     ]
++    if integration is not None:
++        start = guidelines.index("  • **Paths**: `./input/`, `./working/`, `./submission/` ALL EXIST. **Don't question the path.**")
++        end = guidelines.index("---\n", start)
++        guidelines[start:end] = [integration.instructions(), str(integration.environment())]
+     return guidelines
+ 
+ 
+diff --git a/agents/result_parse_agent.py b/agents/result_parse_agent.py
+index ac0e9ca..86398c8 100644
+--- a/agents/result_parse_agent.py
++++ b/agents/result_parse_agent.py
+@@ -212,6 +212,9 @@ def _determine_buggy(node: SearchNode, response: dict, has_csv_submission: bool)
+ 
+ 
+ def _validate_format_with_retry(agent, node: SearchNode):
++    if getattr(agent, "integration", None) is not None:
++        agent.integration.validate(node)
++        return
+     exp_id = agent.cfg.exp_name.split("_")[2]
+     submission_path = agent.cfg.workspace_dir / "submission" / f"submission_{node.id}.csv"
+ 
+@@ -420,6 +423,9 @@ def run(agent, node: SearchNode, exec_result: ExecutionResult) -> SearchNode:
+                 if isinstance(v, str):
+                     response[bool_field] = v.strip().lower() not in ("false", "0", "no", "")
+ 
++            if getattr(agent, "integration", None) is not None:
++                response = agent.integration.authoritative_review(node, response)
++
+             has_csv_submission = _check_submission_file(agent, node)
+ 
+             node.analysis = response["summary"]
+diff --git a/engine/agent_search.py b/engine/agent_search.py
+index 814d087..ce8e856 100644
+--- a/engine/agent_search.py
++++ b/engine/agent_search.py
+@@ -34,11 +34,13 @@ class AgentSearch:
+             task_desc: str,
+             cfg: Config,
+             journal: Journal,
++            integration=None,
+     ):
+         self.cfg = cfg
+         self.acfg = cfg.agent
+         self.scfg = cfg.agent.search
+-        self.task_desc = clean_task_desc(task_desc, cfg)
++        self.integration = integration
++        self.task_desc = task_desc
+         self.journal = journal
+         self.data_preview: str | None = None
+         self.current_step = 0
+@@ -81,7 +83,6 @@ class AgentSearch:
+ 
+         self.metric_maximize: bool | None = None
+         self.metric_maximize_reasoning: str | None = None
+-        result_parse_agent.determine_metric_direction(self)
+ 
+         # Global memory
+         self.global_memory = None
+@@ -97,6 +98,8 @@ class AgentSearch:
+                 )
+                 logger.info(f"[AgentSearch] Global memory enabled and initialized at {memory_dir}")
+             except Exception as e:
++                if self.integration is not None:
++                    raise RuntimeError("Enabled MLEvolve memory failed to initialize; refusing silent ablation") from e
+                 import traceback
+                 logger.warning(f"[AgentSearch] Failed to initialize global memory: {e}")
+                 logger.debug(f"[AgentSearch] Global memory initialization traceback: {traceback.format_exc()}")
+@@ -104,6 +107,11 @@ class AgentSearch:
+         else:
+             logger.info("[AgentSearch] Global memory is disabled by config")
+ 
++        self.task_desc = clean_task_desc(task_desc, cfg)
++        if self.integration is not None:
++            self.task_desc += "\n" + self.integration.instructions()
++        result_parse_agent.determine_metric_direction(self)
++
+     def _serialize_prompt(self, prompt_complete) -> str | None:
+         """Serialize prompt (str or dict) to string for saving in node."""
+         if prompt_complete is None:
+@@ -116,6 +124,9 @@ class AgentSearch:
+             return str(prompt_complete)
+ 
+     def update_data_preview(self):
++        if self.integration is not None:
++            self.data_preview = self.integration.data_preview()
++            return
+         base_preview = data_preview.generate(self.cfg.workspace_dir)
+         submission_format_warning = """
+ 
+diff --git a/engine/execution.py b/engine/execution.py
+index 5783b08..e683b23 100644
+--- a/engine/execution.py
++++ b/engine/execution.py
+@@ -30,7 +30,8 @@ def validate_executed_node(agent, node: SearchNode):
+         logger.info(f"Node {node.id} did not produce a submission.csv")
+         return
+ 
+-    if node.metric.maximize and node.metric.value == 0.0:
++    if (getattr(agent, "integration", None) is None
++            and node.metric.maximize and node.metric.value == 0.0):
+         node.is_buggy = True
+         node.metric = WorstMetricValue()
+         node.analysis = _ZERO_METRIC_ANALYSIS
+diff --git a/llm/__init__.py b/llm/__init__.py
+index e11d880..1e4ce3a 100644
+--- a/llm/__init__.py
++++ b/llm/__init__.py
+@@ -5,6 +5,39 @@ from .gemini import FunctionSpec, OutputType, PromptType, compile_prompt_to_md
+ from config import Config
+ logger = logging.getLogger("MLEvolve")
+ 
++_transport = None
++
++
++class SearchStopped(BaseException):
++    """A host budget/deadline stop must bypass agent-level retry handlers."""
++
++
++def set_transport(transport):
++    """Optional audited host transport; native provider routing is the default."""
++    global _transport
++    _transport = transport
++
++
++def _host_call(method, **kwargs):
++    from .model_profiles import get_profile, get_thinking_extra_body, thinking_json_incompatible
++    model = kwargs.get("model") or kwargs["cfg"].agent.code.model
++    schema = kwargs.get("json_schema")
++    if method == "generate" and schema is not None and thinking_json_incompatible(model):
++        kwargs["json_schema"] = schema = None
++    thinking = ((kwargs.get("func_spec") is None) if method == "query" else schema is None) or model.lower().startswith("claude")
++    profile = get_profile(model, use_thinking=thinking)
++    options = {key: value for key, value in profile.items()
++               if key in {"temperature", "top_p", "presence_penalty", "top_k", "enable_thinking"}}
++    if thinking:
++        options.update(get_thinking_extra_body(model))
++    kwargs["provider_options"] = options
++    try:
++        return getattr(_transport, method)(**kwargs)
++    except Exception as error:
++        if getattr(error, "stop_search", False):
++            raise SearchStopped(str(error)) from error
++        raise
++
+ 
+ def _provider(model: str) -> str:
+     """Use Gemini backend for model names starting with 'gemini', else OpenAI-compatible (e.g. Qwen)."""
+@@ -37,6 +70,12 @@ def query(
+         OutputType: A string completion if func_spec is None, otherwise a dict with the function call details.
+     """
+ 
++    if _transport is not None:
++        return _host_call("query", system_message=compile_prompt_to_md(system_message) if system_message else None,
++                          user_message=compile_prompt_to_md(user_message) if user_message else None,
++                          model=model, temperature=temperature, max_tokens=max_tokens,
++                          func_spec=func_spec, cfg=cfg, **model_kwargs)
++
+     model_kwargs = model_kwargs | {
+         "model": model,
+         "temperature": temperature,
+@@ -92,6 +131,9 @@ def generate(
+     retry_delay=3,
+ ):
+     """Streaming text generation. Dispatches to Gemini or OpenAI-compatible backend by cfg.agent.code.model."""
++    if _transport is not None:
++        return _host_call("generate", prompt=prompt, cfg=cfg, temperature=temperature,
++                          max_tokens=max_tokens, stop_tokens=stop_tokens, json_schema=json_schema)
+     model = getattr(cfg.agent.code, "model", "") or ""
+     if _provider(model) == "openai":
+         return _openai.generate(
+diff --git a/engine/scheduler.py b/engine/scheduler.py
+new file mode 100644
+index 0000000..7b1a14b
+--- /dev/null
++++ b/engine/scheduler.py
+@@ -0,0 +1,66 @@
++"""Two-phase scheduling from run.py, reusable with an external execution callback.
++
++Initial drafts are generated sequentially, then deferred execution and search
++continuations share a thread pool. Selection/actions remain in AgentSearch.
++"""
++import time
++import logging
++from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
++
++logger = logging.getLogger("MLEvolve")
++
++
++def run_search(agent, execute, checkpoint, should_stop=lambda: False, stagger_seconds=10,
++               max_workers=None):
++    total = agent.acfg.steps
++    workers = max_workers or agent.scfg.parallel_search_num
++    pending = []
++    for _ in range(min(agent.acfg.initial_drafts, total)):
++        if should_stop():
++            break
++        try:
++            node = agent.step(None, execute, execute_immediately=False)
++            if node is not None:
++                pending.append(node)
++        except Exception:
++            logger.exception("Initial draft generation failed; continuing as in run.py")
++
++    futures = set()
++    completed = len(agent.journal) - 1
++    executor = ThreadPoolExecutor(max_workers=workers)
++    try:
++        for node in pending:
++            if should_stop():
++                break
++            futures.add(executor.submit(agent.execute_deferred_node, node, execute))
++            if stagger_seconds and node is not pending[-1]:
++                time.sleep(stagger_seconds)
++
++        def submit(parent=None):
++            futures.add(executor.submit(agent.step, parent, execute))
++
++        while len(futures) < min(workers, total - completed) and not should_stop():
++            submit()
++        while futures:
++            done, _ = wait(futures, return_when=FIRST_COMPLETED, timeout=1)
++            for future in done:
++                futures.remove(future)
++                try:
++                    parent = future.result()
++                except Exception:
++                    logger.exception("Search task failed; continuing from virtual root as in run.py")
++                    parent = None
++                checkpoint(agent)
++                completed = len(agent.journal) - 1
++                if completed + len(futures) < total and not should_stop():
++                    submit(parent)
++        return completed
++    except BaseException:
++        # Running calls have already reserved budget. Drain them and persist
++        # their usage; never freeze while workers can still mutate candidates.
++        for future in futures:
++            future.cancel()
++        raise
++    finally:
++        executor.shutdown(wait=True, cancel_futures=True)
++        checkpoint(agent)

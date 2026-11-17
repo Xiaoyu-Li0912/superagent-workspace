@@ -1,0 +1,106 @@
+[
+  {
+    "candidate_id": "7af4359b12c64569993a00bca43bd1f4",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 300.10103771300055,
+    "diagnostics": "TimeoutError: Candidate train exceeded 300s",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/7af4359b12c64569993a00bca43bd1f4"
+  },
+  {
+    "candidate_id": "67837759dc1d4dbc92128a47772053bb",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 298.1158153279998,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/67837759dc1d4dbc92128a47772053bb"
+  },
+  {
+    "candidate_id": "fa24b55afcbb4cf3882074febef93240",
+    "status": "valid",
+    "metric": 0.7551724137931034,
+    "elapsed_seconds": 8.107644376999815,
+    "diagnostics": "Trusted validation accuracy=0.75517241; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/fa24b55afcbb4cf3882074febef93240"
+  },
+  {
+    "candidate_id": "e1dccc956c684e7db547e8791ec8d521",
+    "status": "valid",
+    "metric": 0.7123152709359606,
+    "elapsed_seconds": 7.928520762000517,
+    "diagnostics": "Trusted validation accuracy=0.71231527; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/e1dccc956c684e7db547e8791ec8d521"
+  },
+  {
+    "candidate_id": "ecf852f8564345da9153fe7391d52049",
+    "status": "valid",
+    "metric": 0.7635467980295566,
+    "elapsed_seconds": 19.13315627799966,
+    "diagnostics": "Trusted validation accuracy=0.76354680; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/ecf852f8564345da9153fe7391d52049"
+  },
+  {
+    "candidate_id": "989a20f22a8d432b8a7682d7d505274e",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 184.6978408340001,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n/solution.py:260: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).\nSee https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.\n  features.reset_index(drop=True, inplace=True)\n/solution.py:139: Pandas4Warning: 'IntegerArray' is not supported as a fill value for float64 dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  out[\"age\"] = out[\"age\"].fillna(bare_age)\n/solution.py:139: Pandas4Warning: 'IntegerArray' is not supported as a fill value for float64 dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  out[\"age\"] = out[\"age\"].fillna(bare_age)\n/solution.py:139: Pandas4Warning: 'IntegerArray' is not supported as a fill value for float64 dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  out[\"age\"] = out[\"age\"].fillna(bare_age)\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/989a20f22a8d432b8a7682d7d505274e"
+  },
+  {
+    "candidate_id": "92a0f57e791c4625809bc8f23adecbe9",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.018920969000646437,
+    "diagnostics": "SyntaxError: invalid character '×' (U+00D7) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/92a0f57e791c4625809bc8f23adecbe9"
+  },
+  {
+    "candidate_id": "fed442fdc3b04d3fa629045551e99859",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.04288462400018034,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 549)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/fed442fdc3b04d3fa629045551e99859"
+  },
+  {
+    "candidate_id": "cf9b16f6906b4d9c9e18a238204d1baf",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.02473145099975227,
+    "diagnostics": "IndentationError: expected an indented block after 'with' statement on line 543 (solution.py, line 544)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/cf9b16f6906b4d9c9e18a238204d1baf"
+  },
+  {
+    "candidate_id": "f4f66d1fa75b409da92e017741f6158c",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.01935685700027534,
+    "diagnostics": "SyntaxError: invalid character '×' (U+00D7) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/f4f66d1fa75b409da92e017741f6158c"
+  },
+  {
+    "candidate_id": "e67502128e60405d829d2695c24fb77c",
+    "status": "valid",
+    "metric": 0.7571428571428571,
+    "elapsed_seconds": 19.90675881400057,
+    "diagnostics": "Trusted validation accuracy=0.75714286; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/e67502128e60405d829d2695c24fb77c"
+  },
+  {
+    "candidate_id": "212059b436824622a3dfb3d2226ae464",
+    "status": "valid",
+    "metric": 0.7655172413793103,
+    "elapsed_seconds": 18.53280738900048,
+    "diagnostics": "Trusted validation accuracy=0.76551724; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/212059b436824622a3dfb3d2226ae464"
+  },
+  {
+    "candidate_id": "da4a67d10da646e7a230d397f42c8853",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 300.0846036060002,
+    "diagnostics": "TimeoutError: Candidate train exceeded 300s",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-restored-16k-900s-20261117-002838/candidates/da4a67d10da646e7a230d397f42c8853"
+  }
+]

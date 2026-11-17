@@ -1,0 +1,53 @@
+{
+  "verified": true,
+  "attempts": [
+    {
+      "run": "coupon-autonomous-01",
+      "calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "rmb": "0"
+    },
+    {
+      "run": "coupon-autonomous-02",
+      "calls": 1,
+      "input_tokens": 5041,
+      "output_tokens": 3581,
+      "rmb": "0.019365"
+    },
+    {
+      "run": "coupon-autonomous-03",
+      "calls": 14,
+      "input_tokens": 121460,
+      "output_tokens": 49182,
+      "rmb": "0.318188"
+    }
+  ],
+  "input_tokens": 126501,
+  "output_tokens": 52763,
+  "reasoning_tokens_included_in_output": 3580,
+  "total_tokens": 179264,
+  "total_rmb": "0.337553",
+  "cap_rmb": 30,
+  "unresolved_calls": 0,
+  "candidates": 6,
+  "valid_candidates": 4,
+  "best_candidate": "ed2d0abff91a4a1fa836373ba33f0980",
+  "validation_accuracy": 0.7733990147783252,
+  "final_result": {
+    "test_accuracy": 0.7765076862435948,
+    "test_rows": 2537,
+    "frozen_before_test": true
+  },
+  "pricing_evidence_sha256": {
+    "flash-20260910.jpeg": "701177bc7d46edd0faf9a761123f89196ae0d2bbd70e69ba272028c641f1582c",
+    "pricing-20261115.html": "23b70cda2e51dde6685a59c7336d0cf7a672b54f9000004b9166514f5e81510e",
+    "release-20260910.html": "c797f6c8f1edda0e71d63f8fc167aff7910369667badbe0c8a8c6b0e95122e03",
+    "release-20261017.html": "530a8e1bde28ff0a5875c0b4da51e23faf473b671d1d0350a4adaa18c71e39b2"
+  },
+  "limits": [
+    "Provider exact model build not independently attested",
+    "Test labels not reopened by this audit",
+    "One task experiment, not final course submission or multimodal performance proof"
+  ]
+}

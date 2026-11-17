@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-cada3c6b-7aee-4c2b-a43d-be86f8fd1172",
+  "created": 1794851703,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "CHANGES:\n\nChange #1: [Model Architecture — Isolated Per-Coupon Specialists + Global Stack]\n- What: Keep the existing global ensemble (LightGBM + CatBoost + Entity-Embedding MLP) but ADD, alongside it, one specialist CatBoost/LightGBM model trained per coupon type (5 coupon values), each with `coupon` removed from its feature set. At inference, route each row to its coupon-specific specialist and blend its positive-probability with the global ensemble probability (weight tuned on the honest internal holdout).\n- Why: Acceptance dynamics are strongly coupon-conditional — the same person rejects a Bar coupon at 10PM but accepts a Coffee House coupon at 7AM. The global model must share split capacity across five very different decision surfaces; per-coupon specialists let each fit a cleaner, lower-variance boundary on its own subpopulation, and the `coupon`-interaction with `time`/`expiration`/`affinity` is learned implicitly rather than through split-thrashing.\n- Evidence basis: Schema shows `coupon` has 5 levels and interacts with `expiration`, `time`, and the frequency/affinity columns; current solution's single `coupon_time` interaction feature is a weak proxy for this full conditional structure.\n\nChange #2: [Regularization — Per-Specialist Regularization by Subgroup Size]\n- What: Scale specialist hyperparameters by subgroup size (e.g., larger `l2_leaf_reg`, smaller `depth`, higher `min_data_in_leaf` for the smallest coupon groups), and skip the specialist for any coupon with fewer than a fixed minimum number of training rows, falling back to the global ensemble.\n- Why: The smallest coupon subgroup is ~10-20% of 8,117 training rows (~800-1,600 rows) — deep trees will overfit badly there. Group-size-aware regularization plus a fallback guard preserves the specialist gain only where it is statistically supported, keeping overall accuracy safe.\n- Why bundled with #1: A specialist model is only beneficial if its capacity matches its data volume; these two changes are one coherent architectural unit and cannot be fairly evaluated separately.\n\nWHY current solution limited:\n- Root cause: The ensemble is a single global decision function over a pooled distribution of five structurally different coupon tasks. Boosting/MLP capacity is spent modelling the union of heterogeneous decision surfaces, so the learned boundary is a compromise — sharpest where the majority coupon lies, blurred where minority coupon groups live. The only concession to heterogeneity is a `coupon|time` cross-feature, which is a linear-concatenation hack rather than true conditional modelling.\n- Evidence: Validation accuracy 0.7635 with three strong, diverse learners stacked and threshold/weight-tuned is a moderate plateau — exactly the signature of under-fitting the conditional structure rather than a lack of model capacity or feature richness. The dataset is small (~8.1k train rows) relative to the 21 features × 5 coupon regimes, so the shared-capacity bottleneck is the plausible ceiling.\n\nHOW these changes address it:\n- Mechanism: A mixture-of-experts per coupon reduces each subproblem's effective variance and permits tighter, better-regularized local boundaries; the global ensemble still governs rows where a coupon is data-scarce or where cross-coupon generalization helps. Blending the two recovers the \"best of both\" — local sharpness where supported, global smoothing elsewhere — while honouring the same accuracy metric and the same original-label output semantics.\n- Expected improvement: Modest but real; expect ~+0.5-1.5 accuracy points over 0.7635 on the held-out set, largest gains on minority coupons (Bar, Carry out).\n- Synergy: Specialists (Change #1) share the exact same `FeatureBuilder` fitted on TRAIN ONLY, so no leakage is introduced; per-subgroup regularization (Change #2) prevents the specialists from eating into the global ensemble's accuracy on sparse coupons.\n\nKEEP UNCHANGED (must explicitly list):\n- Random seed: 42\n- Data split: the existing 15% stratified internal holdout for weight/threshold/specialist-weight tuning; final refit on all training rows as today\n- Leakage discipline: `FeatureBuilder` (all encodings, medians, categorical maps) fit ONLY on training rows; holdout-only tuning; NO validation/test labels used\n- Global members: same LightGBM, CatBoost, Entity-Embedding MLP configs, same architecture/hyperparameters, same `coupon_time` and engineered features\n- Backbone feature map, ordinal mappings (age/income/education/frequency), bin/distance features, missingness indicators\n- Label mapping scheme (sorted classes, int_to_label), artifact pickle structure (extended, not replaced), CLI/argparse contract, output schema `row_id,prediction`, row order, fresh-process reload behaviour\n- All tuned weights and threshold mechanism (extended with a specialist blend weight found on the same honest holdout)",
+        "role": "assistant",
+        "reasoning_content": "=\"<ds_safety>[用户未成年]否\n[分类]其他\n[判定]用户请求为机器学习模型改进计划，内容涉及数据处理、特征工程和模型调整，未出现任何政治或色情相关内容，属于正常技术讨论。\n[规则]无</ds_safety>=\"",
+        "provider_specific_fields": {
+          "reasoning": "=\"<ds_safety>[用户未成年]否\n[分类]其他\n[判定]用户请求为机器学习模型改进计划，内容涉及数据处理、特征工程和模型调整，未出现任何政治或色情相关内容，属于正常技术讨论。\n[规则]无</ds_safety>=\"",
+          "refusal": null
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "token_ids": null,
+        "stop_reason": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1114,
+    "prompt_tokens": 12293,
+    "total_tokens": 13407,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

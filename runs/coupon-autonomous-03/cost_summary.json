@@ -1,0 +1,149 @@
+{
+  "cap_rmb": 29.980635,
+  "charged_or_reserved_rmb": 0.318188,
+  "input_tokens": 121460,
+  "output_tokens": 49182,
+  "unresolved_calls": 0,
+  "calls": [
+    {
+      "id": "6e2323d083494c20be5bf9d8b2fa7062",
+      "created": 1794731608.0768168,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 17288000,
+      "input_tokens": 5016,
+      "output_tokens": 3068,
+      "usage": "{\"completion_tokens\": 3068, \"prompt_tokens\": 5016, \"total_tokens\": 8084, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "a124ba6faa914cc99c5edc4951dea137",
+      "created": 1794731689.8588562,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 20429000,
+      "input_tokens": 7081,
+      "output_tokens": 3337,
+      "usage": "{\"completion_tokens\": 3337, \"prompt_tokens\": 7081, \"total_tokens\": 10418, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "788cd89e081c42a190d4eb2867725151",
+      "created": 1794731793.4068227,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 24947000,
+      "input_tokens": 8131,
+      "output_tokens": 4204,
+      "usage": "{\"completion_tokens\": 4204, \"prompt_tokens\": 8131, \"total_tokens\": 12335, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "9258eded005849af9f4f0e8ab53579c4",
+      "created": 1794731898.8797512,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 26415000,
+      "input_tokens": 8291,
+      "output_tokens": 4531,
+      "usage": "{\"completion_tokens\": 4531, \"prompt_tokens\": 8291, \"total_tokens\": 12822, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "b35a3da073954cfea9eb3d1ad29dba25",
+      "created": 1794731996.8645704,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 24192000,
+      "input_tokens": 8288,
+      "output_tokens": 3976,
+      "usage": "{\"completion_tokens\": 3976, \"prompt_tokens\": 8288, \"total_tokens\": 12264, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "5d6c2d20cb48433a862fe836644a5a74",
+      "created": 1794732090.0787814,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 9586000,
+      "input_tokens": 8402,
+      "output_tokens": 296,
+      "usage": "{\"completion_tokens\": 296, \"prompt_tokens\": 8402, \"total_tokens\": 8698, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "4b213eb824164fdf9b9c2fe8e6cd5538",
+      "created": 1794732110.847202,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 9586000,
+      "input_tokens": 8402,
+      "output_tokens": 296,
+      "usage": "{\"completion_tokens\": 296, \"prompt_tokens\": 8402, \"total_tokens\": 8698, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "74b7765721b242059ba1236c220c3dd0",
+      "created": 1794732116.2106068,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 9586000,
+      "input_tokens": 8402,
+      "output_tokens": 296,
+      "usage": "{\"completion_tokens\": 296, \"prompt_tokens\": 8402, \"total_tokens\": 8698, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "35653746d2c640f295689b60f193da1c",
+      "created": 1794732132.2628767,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 31649000,
+      "input_tokens": 9289,
+      "output_tokens": 5590,
+      "usage": "{\"completion_tokens\": 5590, \"prompt_tokens\": 9289, \"total_tokens\": 14879, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "3bbc657e074342eb80351cb294a2fb5e",
+      "created": 1794732272.3740945,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 31594000,
+      "input_tokens": 9702,
+      "output_tokens": 5473,
+      "usage": "{\"completion_tokens\": 5473, \"prompt_tokens\": 9702, \"total_tokens\": 15175, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "fc503d0015ee4f69bb20bd2f71bf0c0e",
+      "created": 1794732408.9999063,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 31602000,
+      "input_tokens": 9958,
+      "output_tokens": 5411,
+      "usage": "{\"completion_tokens\": 5411, \"prompt_tokens\": 9958, \"total_tokens\": 15369, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}"
+    },
+    {
+      "id": "8d1a1ad4a5ee4058888c12ffecd37f07",
+      "created": 1794732517.8058627,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 10098000,
+      "input_tokens": 9642,
+      "output_tokens": 114,
+      "usage": "{\"completion_tokens\": 114, \"prompt_tokens\": 9642, \"total_tokens\": 9756, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "cc41c0df951a4adf8de1535fc6245839",
+      "created": 1794732622.027386,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 35341000,
+      "input_tokens": 10357,
+      "output_tokens": 6246,
+      "usage": "{\"completion_tokens\": 6246, \"prompt_tokens\": 10357, \"total_tokens\": 16603, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    },
+    {
+      "id": "7797579ceec342ba98580dd79623f9ee",
+      "created": 1794732756.7954936,
+      "state": "settled",
+      "reserve": 1081344000,
+      "charged": 35875000,
+      "input_tokens": 10499,
+      "output_tokens": 6344,
+      "usage": "{\"completion_tokens\": 6344, \"prompt_tokens\": 10499, \"total_tokens\": 16843, \"completion_tokens_details\": {\"reasoning_tokens\": 0}, \"prompt_tokens_details\": {\"cached_tokens\": 0}}"
+    }
+  ]
+}
