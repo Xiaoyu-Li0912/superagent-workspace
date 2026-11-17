@@ -117,3 +117,10 @@
 - README 补入真实仓库链接、克隆命令和私有访问说明，移除尚无远程的过时描述；AGENTS 同步协作目标与授权边界。准备首次提交与推送，结果以后续验证为准；历史 runs、源码逻辑和 human.md 不改。
 - 首次提交 e3cfc3ce5fed328cfd4e563ec26eb45bb3150c7b 已成功推送至 origin/main。GitHub API 核验仓库 private、默认分支 main、远程提交一致，递归树未截断；1049 个普通文件的路径和 blob 哈希逐一与本地提交一致，其中 runs 926 个、MLEvolve 78 个，没有 gitlink。原始 runs SHA256 复核全部不变，真实 .env 未入库，没有单文件达到 100 MiB。
 - 两位同学的标准 write 邀请已发送，发布核验时均为待接受；共享入口为 https://github.com/Xiaoyu-Li0912/superagent-workspace ，邀请入口为该仓库的 /invitations。没有执行收费调用、搜索或最终评测；此前 45 项离线测试通过，本次仅发布与文档变动未重跑算法测试。
+
+## 2026-11-17（Asia/Shanghai）| 按用户要求改为公开仓库
+
+- 同学的 GitHub 插件未列出协作仓库；检查发现两位同学均已接受邀请并具有 read/write 权限，用户随后明确要求将仓库公开。未将插件的授权问题误判为协作者权限缺失。
+- 修改前核验远程 main 与本地 879ddb9b4ac6f6fb1ec2762e9f841efa2157bc3d 一致，本地工作区干净。917 个候选文本文件的真实本地凭据精确匹配及常见 token/私钥格式扫描无发现，真实 .env 不在 Git；扫描排除任务数据、私有标签和最终评测输出，不是穷尽式安全或分享许可证明。正式课程要求与任务说明未见明确禁止公开条款，但不据此声称取得课程材料/数据的自由转载许可。
+- 使用已验证的 Xiaoyu-Li0912 管理身份，将同名仓库 visibility 改为 public；随后无认证 GitHub API 成功读取并确认 private=false、默认分支 main。print-666、LiQingfeng111 的 write 权限核验保留不变。公开后的完整 runs 含课程数据、验证标签、历史最终测试产物和请求响应，任何人均可下载。
+- README 与 AGENTS 同步公开访问、克隆和写入认证说明。不改算法、配置、历史 runs 或 human.md，不运行收费调用、训练或最终评测；公开读取不保证特定插件会自动列出仓库，必要时刷新连接或按 owner/repo 访问。

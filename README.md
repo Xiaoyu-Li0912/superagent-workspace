@@ -2,7 +2,7 @@
 
 **组员从这一份开始。** 这是基于 MLEvolve 的课程 SuperAgent：自主生成 ML 方案和代码，在隔离环境训练、验证、修复与改进，自动冻结最佳有效模型。课程要求、论文资料、文件职责及分工建议见本文后半部分。
 
-小组私有仓库：[Xiaoyu-Li0912/superagent-workspace](https://github.com/Xiaoyu-Li0912/superagent-workspace)。组员先登录自己的 GitHub 账号并接受协作者邀请，再查看或克隆；私有仓库链接本身不授予访问权。
+小组公开仓库：[Xiaoyu-Li0912/superagent-workspace](https://github.com/Xiaoyu-Li0912/superagent-workspace)。查看和克隆无需登录；提交代码仍需用获授权的 GitHub 账号完成身份验证。`print-666`、`LiQingfeng111` 已接受协作者邀请，具有写入权限。
 
 算法在 `third_party/MLEvolve/`，课程运行基础设施在 `src/superagent/`，完整实验记录在 `runs/`。当前保留了 MLEvolve 的主要原始机制，但不是严格论文复现；标题、图像、多分类和全部高级搜索分支尚未完成真实验收。详细集成说明、网络恢复和历史实验见给 AI 按需查阅的 [运行参考](docs/agent-runtime.md)，不要求组员先读工作日志。
 
@@ -34,7 +34,7 @@ wsl -d Ubuntu-24.04 --cd "$PWD"
 source /opt/superagent-env/bin/activate
 ```
 
-新机器先用已获准访问仓库的 GitHub 账号完成 Git 身份验证，再在 Ubuntu 24.04 / WSL 中克隆并安装。MLEvolve 已包含在源码中，不需要子模块命令：
+新机器可直接在 Ubuntu 24.04 / WSL 中克隆并安装，无需 GitHub 登录；推送修改时才需协作者身份验证。MLEvolve 已包含在源码中，不需要子模块命令：
 
 ```bash
 git clone https://github.com/Xiaoyu-Li0912/superagent-workspace.git
@@ -218,9 +218,9 @@ superagent evaluate --run-dir "$RUN_DIR" --data-root "$DATA_ROOT"
 
 历史 run 混有早期简化适配与后来的机制恢复版，不能把旧成绩当成当前实现成绩。逐次配置、失败原因和费用见 [实验历程](docs/agent-runtime.md#本次实际运行)；输出逐文件归属见下方[文件结构](#文件结构)。保留原始字节和已有评测锁，分析时不要手改历史记录，也不要加载不可信来源的 pickle/joblib 模型。
 
-这些完整记录包含课程数据、训练样例、验证标签和先前最终测试产物。**建议只在获准成员可访问的私有仓库分享，发布前确认课程材料与数据的转载权限；private 本身不是授权。** 分析优化只能用允许的开发数据与验证反馈，不能以历史 test 成绩/标签指导新搜索。真实 `.env`、HF 权重缓存、虚拟环境及仓库外原始数据不上传。
+这些完整记录包含课程数据、训练样例、验证标签和先前最终测试产物。**仓库于 2026-11-17 按用户要求由私有改为公开，任何人都能下载；公开可见不等于课程材料和数据具有自由转载许可。** 分析优化只能用允许的开发数据与验证反馈，不能以历史 test 成绩/标签指导新搜索。真实 `.env`、HF 权重缓存、虚拟环境及仓库外原始数据不上传。
 
-共享目标为上述小组私有仓库，完整 `runs/` 随 Git 提交交付，不另外裁剪或改写历史实验。协作者需接受邀请后访问；不要对外公开仓库或转发其中的课程数据。
+共享目标为上述小组公开仓库，完整 `runs/` 随 Git 提交交付，不另外裁剪或改写历史实验。公开读取不授予写入权限；后续新增日志和数据前仍须检查凭据、隐私及分享权限。
 
 ## 课程要做什么
 
@@ -711,7 +711,7 @@ cli.py -> orchestrator.py -> mlevolve_adapter.py -> MLEvolve AgentSearch
 
 算法优化后补对应测试、更新本地修改声明，并通过本仓库 Git 历史记录实际源码变更；如另导出补丁，应标明基线与覆盖范围。保留许可证、版权和论文引用，不手改 `runs/` 历史候选/分数来“优化结果”。
 
-GitHub 协作目标为本文开头的小组私有仓库，默认分支为 `main`；没有配置 Slack、公开网页或强制分支保护。组员不需要额外的网页或管理工具；课程资料、应用测试与完整 runs 保留，AI 规则和历史运行细节按需查阅。
+GitHub 协作目标为本文开头的小组公开仓库，默认分支为 `main`；没有配置 Slack、GitHub Pages 或强制分支保护。组员不需要额外的网页或管理工具；课程资料、应用测试与完整 runs 保留，AI 规则和历史运行细节按需查阅。
 
 <details>
 <summary>开始开发时：数据、检查与交接</summary>
