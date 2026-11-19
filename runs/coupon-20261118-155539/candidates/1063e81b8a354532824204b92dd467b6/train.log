@@ -1,0 +1,18 @@
+[train] loading training data from /data
+[train] rows=8117 raw_features=21
+[train] labels=[0, 1] pos_rate=0.5684
+Traceback (most recent call last):
+  File "/solution.py", line 937, in <module>
+    main()
+  File "/solution.py", line 930, in main
+    score = train_pipeline(args.data, args.model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 754, in train_pipeline
+    fe = FeatureEngineer().fit(df)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 304, in fit
+    self.state_["feature_columns"] = list(self.transform(df).columns)
+                                          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 310, in transform
+    raise RuntimeError("FeatureEngineer.transform called before fit")
+RuntimeError: FeatureEngineer.transform called before fit

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "1063e81b8a354532824204b92dd467b6",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 2.509609014000489,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\n[train] loading training data from /data\n[train] rows=8117 raw_features=21\n[train] labels=[0, 1] pos_rate=0.5684\nTraceback (most recent call last):\n  File \"/solution.py\", line 937, in <module>\n    main()\n  File \"/solution.py\", line 930, in main\n    score = train_pipeline(args.data, args.model)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 754, in train_pipeline\n    fe = FeatureEngineer().fit(df)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 304, in fit\n    self.state_[\"feature_columns\"] = list(self.transform(df).columns)\n                                          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 310, in transform\n    raise RuntimeError(\"FeatureEngineer.transform called before fit\")\nRuntimeError: FeatureEngineer.transform called before fit\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/1063e81b8a354532824204b92dd467b6"
+}

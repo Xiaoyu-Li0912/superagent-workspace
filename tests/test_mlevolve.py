@@ -309,7 +309,7 @@ else:
              patch.object(self.gateway, "generate", return_value="Fixture plan.\n```python\n" + code + "\n```"), \
              patch("engine.scheduler.run_search", side_effect=schedule):
             summary = run_search(ROOT, task, data, run, runtime, policy)
-        self.assertEqual(gateway_factory.call_args.args[3:], (16384, 900, 0, 0, 0))
+            self.assertEqual(gateway_factory.call_args.args[3:], (16384, 900, 0, 0, 0, "request_bytes"))
         self.assertEqual(summary["status"], "frozen")
         self.assertEqual(summary["candidates"], 3)
         self.assertEqual(summary["validation_accuracy"], 0.5)

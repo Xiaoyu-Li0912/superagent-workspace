@@ -1,0 +1,9 @@
+[fold 0] lgb=0.7408 cb=0.7592 mlp=0.7198
+[fold 1] lgb=0.7272 cb=0.7482 mlp=0.7100
+[fold 2] lgb=0.7357 cb=0.7418 mlp=0.7055
+[fold 3] lgb=0.7634 cb=0.7585 mlp=0.7234
+[fold 4] lgb=0.7554 cb=0.7591 mlp=0.7252
+[OOF blend] acc=0.756684 @ t=0.47
+[OOF] lgb=0.7445 cb=0.7534 mlp=0.7168
+[train] saved to /model
+Final Validation Score: 0.756684

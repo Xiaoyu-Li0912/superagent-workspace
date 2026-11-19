@@ -1,0 +1,12 @@
+/solution.py:574: Pandas4Warning: 'float' is not supported as a fill value for str dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.
+  num_arr = fe_df[num_cols].fillna(0.0).values.astype(np.float32)
+Traceback (most recent call last):
+  File "/solution.py", line 862, in <module>
+    run_training(args.data, args.model)
+  File "/solution.py", line 694, in run_training
+    X_cat, X_num = _prepare_features(
+                   ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 574, in _prepare_features
+    num_arr = fe_df[num_cols].fillna(0.0).values.astype(np.float32)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Restaurant(20-50)'

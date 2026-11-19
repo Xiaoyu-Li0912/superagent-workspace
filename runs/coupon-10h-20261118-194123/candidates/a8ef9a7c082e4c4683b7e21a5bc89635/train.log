@@ -1,0 +1,9 @@
+[train] rows=8117 classes=[0, 1]
+[train] fold 1/5 done
+[train] fold 2/5 done
+[train] fold 3/5 done
+[train] fold 4/5 done
+[train] fold 5/5 done
+[train] OOF nn acc=0.7327
+[train] OOF gbdt acc=0.7466 blend alpha_nn=0.10 acc=0.7483
+[train] saved bundle -> /model/bundle.pt (nn=3, gbdt=3, epochs=30)

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "b892ddbd402c4ae0804333d7921cf156",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 0.02254350300063379,
+  "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-10h-20261118-194123/candidates/b892ddbd402c4ae0804333d7921cf156"
+}

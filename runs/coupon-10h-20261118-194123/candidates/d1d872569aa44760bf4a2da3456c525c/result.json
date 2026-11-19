@@ -1,0 +1,8 @@
+{
+  "candidate_id": "d1d872569aa44760bf4a2da3456c525c",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 6.072010321000562,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\n[train] rows=8117 classes=[0, 1]\nTraceback (most recent call last):\n  File \"/solution.py\", line 778, in <module>\n    main()\n  File \"/solution.py\", line 772, in main\n    run_train(args.data, args.model)\n  File \"/solution.py\", line 379, in run_train\n    m, bep, _ = _train_one_model(\n                ^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 326, in _train_one_model\n    p = torch.softmax(model(Xt[val_mask], Nt[val_mask]), dim=1).numpy()\n                            ~~^^^^^^^^^^\nIndexError: The shape of the mask [8117] at index 0 does not match the shape of the indexed tensor [6493, 5] at index 0\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-10h-20261118-194123/candidates/d1d872569aa44760bf4a2da3456c525c"
+}

@@ -18,11 +18,35 @@ import pandas as pd
 
 from superagent.artifacts import freeze, verify_frozen
 from superagent.audit import Audit, file_manifest
-from superagent.budget import Ledger, BudgetStop, cost_fen_units
+from superagent.budget import Ledger, BudgetPending, BudgetStop, cost_fen_units
 from superagent.contracts import CandidateResult
 from superagent.data import prepare_development
 from superagent.evaluator import evaluate_predictions
-from superagent.llm_gateway import Gateway, TransientLLMError, normalize_prompt
+from superagent.llm_gateway import Gateway, TransientLLMError, normalize_prompt, request_input_bound
+
+
+class RequestBoundTests(unittest.TestCase):
+    def test_text_counts_utf8_envelope_and_template_allowance(self):
+        payload = {"messages": [{"role": "user", "content": "\u4f60\u597d"}], "max_tokens": 32}
+        upper, evidence = request_input_bound(payload, 1_048_576)
+        size = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+        self.assertEqual(upper, size + 4096 + 256)
+        self.assertEqual(evidence["payload_utf8_bytes"], size)
+        self.assertEqual(evidence["method"], "request_bytes_v1")
+        self.assertEqual(request_input_bound(payload, 100)[0], 100)
+        payload.update(thinking={"type": "enabled"}, reasoning_effort="high")
+        self.assertEqual(request_input_bound(payload, 1_048_576)[1]["method"], "request_bytes_v1")
+
+    def test_unsupported_inputs_and_explicit_legacy_mode_use_full_context(self):
+        for payload in ({"messages": [{"role": "user", "content": [{"type": "image_url"}]}]},
+                        {"messages": [], "tools": []},
+                        {"messages": [{"role": "tool", "content": "result"}]},
+                        {"messages": [], "thinking": {"type": "enabled", "budget_tokens": 1000}}):
+            with self.subTest(payload=payload):
+                self.assertEqual(request_input_bound(payload, 10000)[1]["method"], "full_context")
+        self.assertEqual(request_input_bound({"messages": []}, 10000, "full_context")[0], 10000)
+        with self.assertRaises(ValueError):
+            request_input_bound({"messages": []}, 10000, "typo")
 
 
 class GatewayTests(unittest.TestCase):
@@ -51,7 +75,8 @@ class GatewayTests(unittest.TestCase):
             self.assertEqual(transport.call_count, 2)
         cost = ledger.summary()
         self.assertEqual([c["state"] for c in cost["calls"]], ["unknown", "settled"])
-        self.assertAlmostEqual(cost["unknown_reserved_rmb"], 0.075536)
+        self.assertAlmostEqual(cost["unknown_reserved_rmb"], cost["calls"][0]["reserve"] / 1e9)
+        self.assertLess(cost["unknown_reserved_rmb"], 0.075536)
         self.assertAlmostEqual(cost["settled_rmb"], 0.000030)
         events = [json.loads(line) for line in (gateway.audit.root / "events.jsonl").read_text().splitlines()]
         reserved = [e for e in events if e["event"] == "llm_reserved"]
@@ -201,6 +226,73 @@ class GatewayTests(unittest.TestCase):
             gateway.call([], provider_options={"max_tokens": 999999})
         self.assertEqual(ledger.summary()["calls"], [])
 
+    def test_reservation_counts_contract_schema_and_records_bounds(self):
+        gateway, ledger = self.recovering_gateway(retries=0)
+        gateway.policy["context_tokens_upper_bound"] = 1_048_576
+        schema = {"type": "object", "description": "x" * 2000}
+        with patch("urllib.request.urlopen", return_value=self.response("{}")):
+            gateway.call([{"role": "user", "content": "hello"}], json_schema=schema)
+        payload = json.loads(next((gateway.audit.root / "calls").glob("*.request.json")).read_text())
+        upper, evidence = request_input_bound(payload, 1_048_576)
+        self.assertEqual(len(payload["messages"]), 3)
+        self.assertEqual(ledger.summary()["calls"][0]["reserve"], cost_fen_units(upper, 16384, 1, 4))
+        events = [json.loads(line) for line in (gateway.audit.root / "events.jsonl").read_text().splitlines()]
+        reserved = next(e for e in events if e["event"] == "llm_reserved")
+        self.assertEqual(reserved["reservation"]["input_tokens_upper"], evidence["input_tokens_upper"])
+
+    def test_waiting_budget_resumes_or_stops_when_inflight_becomes_unknown(self):
+        for resolve_unknown in (False, True):
+            with self.subTest(resolve_unknown=resolve_unknown):
+                gateway, ledger = self.recovering_gateway(cap=0.1)
+                blocker = ledger.reserve(80000, 0)
+                waiting = threading.Event()
+                original_event = gateway.audit.event
+
+                def record(event, **fields):
+                    original_event(event, **fields)
+                    if event == "budget_waiting":
+                        waiting.set()
+
+                with patch.object(gateway.audit, "event", side_effect=record), \
+                     patch("urllib.request.urlopen", return_value=self.response()) as transport, \
+                     ThreadPoolExecutor(1) as pool:
+                    future = pool.submit(gateway.call, [])
+                    try:
+                        self.assertTrue(waiting.wait(2))
+                        transport.assert_not_called()
+                    finally:
+                        if resolve_unknown:
+                            ledger.unknown(blocker)
+                        else:
+                            ledger.settle(blocker, 10, 0, {})
+                    if resolve_unknown:
+                        with self.assertRaises(BudgetStop):
+                            future.result(timeout=3)
+                        self.assertEqual(gateway.stop_reason, "budget_limit")
+                    else:
+                        self.assertEqual(future.result(timeout=3), "answer")
+                        self.assertFalse(gateway.stopped.is_set())
+                        self.assertIn('"event": "budget_resumed"', (gateway.audit.root / "events.jsonl").read_text())
+
+    def test_budget_wait_respects_deadline_even_at_atomic_reservation(self):
+        gateway, ledger = self.recovering_gateway(cap=0.1)
+        ledger.reserve(80000, 0)
+        gateway.deadline = time.monotonic() + 0.05
+        with self.assertRaises(BudgetStop):
+            gateway._budget(10000, 16384, reserve=True)
+        self.assertEqual(gateway.stop_reason, "time_limit")
+        self.assertEqual(len(ledger.summary()["calls"]), 1)
+
+    def test_input_bound_violation_halts_even_if_total_cost_fits_reservation(self):
+        gateway, ledger = self.recovering_gateway()
+        response = {"model": "DeepSeek", "usage": {"prompt_tokens": 10001, "completion_tokens": 0,
+                    "total_tokens": 10001}, "choices": [{"message": {"content": "answer"}}]}
+        with patch("urllib.request.urlopen", return_value=BytesIO(json.dumps(response).encode())):
+            with self.assertRaises(BudgetStop):
+                gateway.call([])
+        self.assertEqual(gateway.stop_reason, "reservation_exceeded")
+        self.assertAlmostEqual(ledger.summary()["settled_rmb"], 0.010001)
+
     def test_generation_preserves_temperature_schema_and_stops_on_unknown_usage(self):
         policy = {"verified": True, "release_date": "2026-10-17", "cutoff_date": "2026-10-21",
                   "official_family": "DeepSeek", "model": "DeepSeek-V4.1-Flash",
@@ -289,10 +381,24 @@ class GatewayTests(unittest.TestCase):
                 transport.assert_called_once()
                 self.assertEqual(transport.call_args.kwargs["timeout"], 900)
             self.assertEqual(ledger.summary()["unresolved_calls"], 1)
-            self.assertAlmostEqual(ledger.summary()["charged_or_reserved_rmb"], 0.075536)
+            self.assertLess(ledger.summary()["charged_or_reserved_rmb"], 0.075536)
+            self.assertGreater(ledger.summary()["charged_or_reserved_rmb"], 0.065536)
 
 
 class BudgetTests(unittest.TestCase):
+    def test_pending_only_if_inflight_could_release_sufficient_budget(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ledger = Ledger(Path(directory) / "cost.sqlite", 1, 1, 4, 50, 3)
+            unknown = ledger.reserve(600000, 0)
+            ledger.unknown(unknown)
+            ledger.reserve(300000, 0)
+            with self.assertRaises(BudgetPending):
+                ledger.check_dispatch(200000, 0)
+            with self.assertRaises(BudgetStop) as caught:
+                ledger.check_dispatch(500000, 0)
+            self.assertNotIsInstance(caught.exception, BudgetPending)
+            self.assertEqual(caught.exception.reason, "budget_limit")
+
     def test_unknown_recovery_policy_is_persistent_and_immutable(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "cost.sqlite"

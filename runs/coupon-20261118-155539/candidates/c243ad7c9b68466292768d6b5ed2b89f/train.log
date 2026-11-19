@@ -1,0 +1,7 @@
+[train] fold 1/5 done
+[train] fold 2/5 done
+[train] fold 3/5 done
+[train] fold 4/5 done
+[train] fold 5/5 done
+[train] oof acc=0.75607 w_gbdt=0.760 w_lr=0.160 w_mlp=0.080 thr=0.520
+[train] saved model to /model

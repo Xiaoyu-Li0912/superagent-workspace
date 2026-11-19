@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-14fa75ca-e362-49e8-8944-d5aeb040d704",
+  "created": 1794992009,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The solution executed successfully end to end: training ran with stratified CV across CatBoost, LightGBM, and an MLP ensemble, and a fresh-process reload of the saved artifacts also passed. Trusted validation accuracy was 0.75763547, indicating a working pipeline with moderate predictive performance.\", \"metric\": 0.75763547, \"lower_is_better\": false, \"code_summary\": \"Preprocessing uses a leakage-safe FeatureEngineer fit only on training folds: ordinal mappings for time/age/income/education/expiration, frequency encodings for venue columns, coupon affinity and interaction features, plus one-hot encoding of nominal columns. Models are an ensemble of a PyTorch MLP (BN/ReLU/Dropout, label-smoothed BCE, AdamW with cosine warmup), CatBoost, and LightGBM, each with early stopping on an inner validation split. Validation uses stratified K-fold out-of-fold predictions with a weight grid search for ensemble blending, followed by final refitting on full training data and persisting all artifacts (feature engineer, models, label mapping, weights) for fresh-process prediction.\"}",
+        "role": "assistant",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": null
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 248,
+    "prompt_tokens": 8876,
+    "total_tokens": 9124,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

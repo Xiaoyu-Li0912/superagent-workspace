@@ -1,0 +1,35 @@
+{
+  "id": "chatcmpl-e9fa70db-56e2-4272-94a1-fca63e67454c",
+  "created": 1794994937,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and fresh-process prediction completed successfully. The trusted validation accuracy was 0.73349754, and the persisted model loaded correctly in a new process.\", \"metric\": 0.73349754, \"lower_is_better\": false, \"code_summary\": \"The pipeline performs leakage-safe feature engineering with ordinal mappings, nominal one-hot encoding, interaction features, and smoothed target encoding fit only on training folds. It trains a bagged Field-aware DeepFM with categorical embeddings and a HistGradientBoosting anchor, then blends their out-of-fold predictions and searches for the best blend weight and threshold. Final models are refit on all training rows, persisted with preprocessing state, and reloaded for prediction to write row_id,prediction outputs.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need determine is_bug false. Metric 0.73349754. lower_is_better false. Summary concise. Code summary. Ensure valid JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer only JSON. Need determine is_bug false. Metric 0.73349754. lower_is_better false. Summary concise. Code summary. Ensure valid JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 202,
+    "prompt_tokens": 10410,
+    "total_tokens": 10612,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    }
+  }
+}

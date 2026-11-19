@@ -1,0 +1,56 @@
+/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+[train] loading training data from /data
+[train] rows=8117 raw_features=21
+[train] labels=[0, 1] pos_rate=0.5684
+[fold 0] train=5411 val=2706
+  epoch 01 loss 0.6848 val_acc 0.6548
+  epoch 02 loss 0.6463 val_acc 0.6792
+  epoch 03 loss 0.6359 val_acc 0.6855
+  epoch 04 loss 0.6234 val_acc 0.6888
+  epoch 05 loss 0.6160 val_acc 0.6881
+  epoch 06 loss 0.6167 val_acc 0.6888
+  epoch 07 loss 0.6109 val_acc 0.6870
+[fold 0] best_epoch=4 val_acc=0.6888
+[fold 1] train=5411 val=2706
+  epoch 01 loss 0.6696 val_acc 0.6571
+  epoch 02 loss 0.6385 val_acc 0.6770
+  epoch 03 loss 0.6153 val_acc 0.6715
+  epoch 04 loss 0.6098 val_acc 0.6778
+  epoch 05 loss 0.6085 val_acc 0.6822
+  epoch 06 loss 0.5974 val_acc 0.6696
+  epoch 07 loss 0.6070 val_acc 0.6840
+  epoch 08 loss 0.6056 val_acc 0.6826
+  epoch 09 loss 0.5854 val_acc 0.6822
+  epoch 10 loss 0.5973 val_acc 0.6866
+  epoch 11 loss 0.6000 val_acc 0.6863
+  epoch 12 loss 0.6097 val_acc 0.6870
+[fold 1] best_epoch=12 val_acc=0.6870
+[fold 2] train=5412 val=2705
+  epoch 01 loss 0.6690 val_acc 0.6540
+  epoch 02 loss 0.6299 val_acc 0.6787
+  epoch 03 loss 0.6271 val_acc 0.6824
+  epoch 04 loss 0.6132 val_acc 0.6872
+  epoch 05 loss 0.6168 val_acc 0.6957
+  epoch 06 loss 0.6093 val_acc 0.6887
+  epoch 07 loss 0.6088 val_acc 0.6891
+  epoch 08 loss 0.5956 val_acc 0.6946
+[fold 2] best_epoch=5 val_acc=0.6957
+[train] design matrix=(8117, 35) | cat=6 cont=29 | cards=[5, 25, 5, 25, 10, 2]
+[cv] oof_acc@0.5=0.6905 | best_thr=0.46 oof_acc=0.6929 | fold_acc mean=0.6905 std=0.0038
+[final] refitting on all rows for epochs=6
+  epoch 01 loss 0.6795
+  epoch 02 loss 0.6343
+  epoch 03 loss 0.6210
+  epoch 04 loss 0.6111
+  epoch 05 loss 0.6198
+  epoch 06 loss 0.6066
+[train] saved model.pt + config.json to /model
+Internal OOF accuracy (train-only, thr=0.46): 0.6929
+Final Validation Score: 0.6928668227177529

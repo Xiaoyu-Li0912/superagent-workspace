@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-3411c969-20d6-4ad2-b073-aa148c7e732a",
+  "created": 1794992983,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\n║ \n║ Current solution: 0.7675 accuracy. \n║ \n║ Something goes wrong... let's improve it.\n\n[email protected] is running during model creation, but performance is a bottleneck. Focus on improving the solution.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "\n║ \n║ Current solution: 0.7675 accuracy. \n║ \n║ Something goes wrong... let's improve it.\n\n[email protected] is running during model creation, but performance is a bottleneck. Focus on improving the solution."
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 13087,
+    "total_tokens": 13141,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

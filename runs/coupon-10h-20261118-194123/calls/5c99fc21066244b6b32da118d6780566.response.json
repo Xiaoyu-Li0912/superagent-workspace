@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-2f5eb942-97b1-4453-839f-22e6736f26e9",
+  "created": 1795009695,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Execution completed successfully with trusted validation accuracy 0.74384236, and the fresh-process reload check passed. The trained bundle was saved and reloaded correctly for inference.\", \"metric\": 0.74384236, \"lower_is_better\": false, \"code_summary\": \"The pipeline parses schema CSV data, applies learned preprocessing including categorical vocabularies, numeric imputation/medians, and smoothing target encoding fitted only on training rows. Features are prepared as categorical embeddings plus normalized numeric and target-encoding blocks; models include an ensemble of PyTorch MLP classifiers with embeddings and optional HistGradientBoosting classifiers. Validation uses 5-fold stratified OOF predictions, leakage-free fold-specific target encoding, blend-weight search between NN and GBDT probabilities, then retrains full models and persists all preprocessing, models, and label mappings in a bundle loaded by a separate predict process.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need evaluate code output. We have execution output: \"Trusted validation accuracy=0.74384236; fresh-process reload passed.\" Need determine is_bug. The code has duplicate functions and a bug? Let's inspect. The provided implementation has duplicate _save_bundle, _load_bundle, run_predict. Python later definitions override earlier. Final run_predict seems okay. But there might be a bug: _save_bundle earlier lacks gbdt args but overridden by later with gbdt. run_train calls _save_bundle with gbdt_models and blend_alpha, matches later. Good. However in run_predict final, _prepare_fold adds target-encoding block to num. The normalizer was fit on num including TE? In train: cat, num, cat_cols, num_cols = _prepare_fold(fe, features) after fit_target_encoding full maps, so num includes TE. normalizer fit on num (with TE). Then per-fold they do num_n_k = normalizer.transform(_prepare_fold(fe, features, fold_id=k)[1]) where the TE block is fold-specific, but normalizer was fit on full TE block. That's slight, but no crash. In final full training, num_n = normalizer.transform(num) with full TE. Prediction: _prepare_fold(fe, features) uses full maps. Then normalizer.transform(num). Good.\n\nThe output says trusted validation accuracy 0.7438 and reload passed. So no execution failure. is_bug false. metric 0.74384236. lower_is_better false. Summary and code_summary.\n\nNeed be careful: \"is_bug\": false. \"metric\": 0.74384236 raw number. \"lower_is_better\": false. Concise summary 2-3 sentences. Code summary covering preprocessing, feature engineering, model, validation.\n\nLet's craft JSON. Ensure valid. No markdown? Return only JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer only JSON. Need evaluate code output. We have execution output: \"Trusted validation accuracy=0.74384236; fresh-process reload passed.\" Need determine is_bug. The code has duplicate functions and a bug? Let's inspect. The provided implementation has duplicate _save_bundle, _load_bundle, run_predict. Python later definitions override earlier. Final run_predict seems okay. But there might be a bug: _save_bundle earlier lacks gbdt args but overridden by later with gbdt. run_train calls _save_bundle with gbdt_models and blend_alpha, matches later. Good. However in run_predict final, _prepare_fold adds target-encoding block to num. The normalizer was fit on num including TE? In train: cat, num, cat_cols, num_cols = _prepare_fold(fe, features) after fit_target_encoding full maps, so num includes TE. normalizer fit on num (with TE). Then per-fold they do num_n_k = normalizer.transform(_prepare_fold(fe, features, fold_id=k)[1]) where the TE block is fold-specific, but normalizer was fit on full TE block. That's slight, but no crash. In final full training, num_n = normalizer.transform(num) with full TE. Prediction: _prepare_fold(fe, features) uses full maps. Then normalizer.transform(num). Good.\n\nThe output says trusted validation accuracy 0.7438 and reload passed. So no execution failure. is_bug false. metric 0.74384236. lower_is_better false. Summary and code_summary.\n\nNeed be careful: \"is_bug\": false. \"metric\": 0.74384236 raw number. \"lower_is_better\": false. Concise summary 2-3 sentences. Code summary covering preprocessing, feature engineering, model, validation.\n\nLet's craft JSON. Ensure valid. No markdown? Return only JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 611,
+    "prompt_tokens": 10470,
+    "total_tokens": 11081,
+    "completion_tokens_details": {
+      "reasoning_tokens": 415
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-383f66b6-7352-45f7-9be4-e563be132ea5",
+  "created": 1794995230,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The training and prediction pipeline executed successfully end-to-end. Trusted validation accuracy was 0.71822660 and the fresh-process reload check passed, confirming that saved artifacts (feature engineers and model checkpoints) load correctly in a new process for inference.\", \"metric\": 0.7182266, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing: loads features.csv/labels.csv and schema.json, restricts to schema feature columns, and encodes labels into class indices. Feature engineering: a stateful FeatureEngineer builds numeric base features (age/income/education/time/expiration ordinal encodings, frequency encodings, distance estimates, coupon-type indicators, interaction terms) and leakage-safe smoothed target encodings for several categorical and combo sources, using out-of-fold encodings for training (fit_transform) and full-data encodings for inference (transform), with standardization. Model: a TabM batch-ensemble MLP (input projection, rank-1 perturbation blocks shared across K heads, per-head output layers) trained with CrossEntropy label smoothing via AdamW and cosine LR scheduling, grad clipping, and early stopping on validation accuracy. Validation: 5-fold StratifiedKFold with OOF accuracy, per-fold feature engineers and models saved, then averaged predictions across folds at inference; final output written as row_id,prediction CSV with original label restoration.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution succeeded with validation accuracy 0.7182. No bugs observed. Metric is accuracy, higher is better.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution succeeded with validation accuracy 0.7182. No bugs observed. Metric is accuracy, higher is better."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 323,
+    "prompt_tokens": 9181,
+    "total_tokens": 9504,
+    "completion_tokens_details": {
+      "reasoning_tokens": 24
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

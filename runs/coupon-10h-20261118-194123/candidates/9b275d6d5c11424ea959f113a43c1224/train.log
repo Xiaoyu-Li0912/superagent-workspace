@@ -1,0 +1,158 @@
+train rows=8117 pos_rate=0.5684 classes=[np.int64(0), np.int64(1)]
+[fold 1/5]
+  epoch 01 loss 0.6653 val_acc 0.6897
+  epoch 02 loss 0.6173 val_acc 0.6927
+  epoch 03 loss 0.6031 val_acc 0.7143
+  epoch 04 loss 0.5946 val_acc 0.7161
+  epoch 05 loss 0.5838 val_acc 0.6989
+  epoch 06 loss 0.5832 val_acc 0.7254
+  epoch 07 loss 0.5784 val_acc 0.7192
+  epoch 08 loss 0.5733 val_acc 0.7241
+  epoch 09 loss 0.5754 val_acc 0.7229
+  epoch 10 loss 0.5664 val_acc 0.7297
+  epoch 11 loss 0.5649 val_acc 0.7260
+  epoch 12 loss 0.5562 val_acc 0.7241
+  epoch 13 loss 0.5627 val_acc 0.7278
+  epoch 14 loss 0.5548 val_acc 0.7211
+  epoch 15 loss 0.5516 val_acc 0.7266
+  epoch 16 loss 0.5498 val_acc 0.7155
+  epoch 17 loss 0.5465 val_acc 0.7272
+  epoch 18 loss 0.5434 val_acc 0.7235
+  -> fold 1 NN val_acc 0.7297 (epoch 10)
+  -> fold 1 GBDT val_acc 0.7291
+[fold 2/5]
+  epoch 01 loss 0.6607 val_acc 0.6712
+  epoch 02 loss 0.6186 val_acc 0.6915
+  epoch 03 loss 0.6043 val_acc 0.7020
+  epoch 04 loss 0.5942 val_acc 0.7100
+  epoch 05 loss 0.5886 val_acc 0.7192
+  epoch 06 loss 0.5872 val_acc 0.7143
+  epoch 07 loss 0.5794 val_acc 0.7118
+  epoch 08 loss 0.5821 val_acc 0.7204
+  epoch 09 loss 0.5734 val_acc 0.7235
+  epoch 10 loss 0.5676 val_acc 0.7241
+  epoch 11 loss 0.5656 val_acc 0.7217
+  epoch 12 loss 0.5611 val_acc 0.7217
+  epoch 13 loss 0.5586 val_acc 0.7248
+  epoch 14 loss 0.5607 val_acc 0.7266
+  epoch 15 loss 0.5543 val_acc 0.7223
+  epoch 16 loss 0.5533 val_acc 0.7346
+  epoch 17 loss 0.5466 val_acc 0.7278
+  epoch 18 loss 0.5473 val_acc 0.7315
+  epoch 19 loss 0.5459 val_acc 0.7223
+  epoch 20 loss 0.5392 val_acc 0.7297
+  epoch 21 loss 0.5417 val_acc 0.7297
+  epoch 22 loss 0.5331 val_acc 0.7291
+  epoch 23 loss 0.5346 val_acc 0.7346
+  epoch 24 loss 0.5345 val_acc 0.7334
+  -> fold 2 NN val_acc 0.7346 (epoch 16)
+  -> fold 2 GBDT val_acc 0.7389
+[fold 3/5]
+  epoch 01 loss 0.6574 val_acc 0.6765
+  epoch 02 loss 0.6148 val_acc 0.6661
+  epoch 03 loss 0.5963 val_acc 0.6907
+  epoch 04 loss 0.5938 val_acc 0.7086
+  epoch 05 loss 0.5857 val_acc 0.6821
+  epoch 06 loss 0.5784 val_acc 0.7061
+  epoch 07 loss 0.5788 val_acc 0.7055
+  epoch 08 loss 0.5698 val_acc 0.6993
+  epoch 09 loss 0.5720 val_acc 0.7092
+  epoch 10 loss 0.5646 val_acc 0.7197
+  epoch 11 loss 0.5633 val_acc 0.7104
+  epoch 12 loss 0.5602 val_acc 0.7190
+  epoch 13 loss 0.5545 val_acc 0.7055
+  epoch 14 loss 0.5543 val_acc 0.7036
+  epoch 15 loss 0.5526 val_acc 0.7098
+  epoch 16 loss 0.5478 val_acc 0.7092
+  epoch 17 loss 0.5439 val_acc 0.7160
+  epoch 18 loss 0.5414 val_acc 0.7141
+  -> fold 3 NN val_acc 0.7197 (epoch 10)
+  -> fold 3 GBDT val_acc 0.7295
+[fold 4/5]
+  epoch 01 loss 0.6628 val_acc 0.6901
+  epoch 02 loss 0.6212 val_acc 0.6839
+  epoch 03 loss 0.6039 val_acc 0.6999
+  epoch 04 loss 0.5938 val_acc 0.7012
+  epoch 05 loss 0.5904 val_acc 0.7147
+  epoch 06 loss 0.5831 val_acc 0.7141
+  epoch 07 loss 0.5814 val_acc 0.7172
+  epoch 08 loss 0.5760 val_acc 0.7172
+  epoch 09 loss 0.5733 val_acc 0.7141
+  epoch 10 loss 0.5704 val_acc 0.7141
+  epoch 11 loss 0.5695 val_acc 0.7135
+  epoch 12 loss 0.5620 val_acc 0.7277
+  epoch 13 loss 0.5610 val_acc 0.7289
+  epoch 14 loss 0.5563 val_acc 0.7240
+  epoch 15 loss 0.5510 val_acc 0.7030
+  epoch 16 loss 0.5529 val_acc 0.7234
+  epoch 17 loss 0.5445 val_acc 0.7320
+  epoch 18 loss 0.5471 val_acc 0.7234
+  epoch 19 loss 0.5386 val_acc 0.7307
+  epoch 20 loss 0.5388 val_acc 0.7301
+  epoch 21 loss 0.5339 val_acc 0.7252
+  epoch 22 loss 0.5350 val_acc 0.7197
+  epoch 23 loss 0.5340 val_acc 0.7344
+  epoch 24 loss 0.5275 val_acc 0.7215
+  epoch 25 loss 0.5260 val_acc 0.7314
+  epoch 26 loss 0.5245 val_acc 0.7289
+  epoch 27 loss 0.5187 val_acc 0.7190
+  epoch 28 loss 0.5174 val_acc 0.7344
+  epoch 29 loss 0.5161 val_acc 0.7326
+  epoch 30 loss 0.5220 val_acc 0.7258
+  epoch 31 loss 0.5084 val_acc 0.7178
+  -> fold 4 NN val_acc 0.7344 (epoch 23)
+  -> fold 4 GBDT val_acc 0.7400
+[fold 5/5]
+  epoch 01 loss 0.6592 val_acc 0.6802
+  epoch 02 loss 0.6205 val_acc 0.6907
+  epoch 03 loss 0.6002 val_acc 0.6925
+  epoch 04 loss 0.5967 val_acc 0.7110
+  epoch 05 loss 0.5854 val_acc 0.7184
+  epoch 06 loss 0.5806 val_acc 0.7203
+  epoch 07 loss 0.5841 val_acc 0.7203
+  epoch 08 loss 0.5771 val_acc 0.7172
+  epoch 09 loss 0.5736 val_acc 0.7160
+  epoch 10 loss 0.5698 val_acc 0.7240
+  epoch 11 loss 0.5671 val_acc 0.7203
+  epoch 12 loss 0.5580 val_acc 0.7197
+  epoch 13 loss 0.5629 val_acc 0.7258
+  epoch 14 loss 0.5563 val_acc 0.7277
+  epoch 15 loss 0.5562 val_acc 0.7283
+  epoch 16 loss 0.5503 val_acc 0.7314
+  epoch 17 loss 0.5497 val_acc 0.7277
+  epoch 18 loss 0.5473 val_acc 0.7264
+  epoch 19 loss 0.5420 val_acc 0.7252
+  epoch 20 loss 0.5413 val_acc 0.7326
+  epoch 21 loss 0.5385 val_acc 0.7381
+  epoch 22 loss 0.5307 val_acc 0.7388
+  epoch 23 loss 0.5343 val_acc 0.7314
+  epoch 24 loss 0.5314 val_acc 0.7332
+  epoch 25 loss 0.5295 val_acc 0.7388
+  epoch 26 loss 0.5265 val_acc 0.7338
+  epoch 27 loss 0.5300 val_acc 0.7375
+  epoch 28 loss 0.5198 val_acc 0.7320
+  epoch 29 loss 0.5217 val_acc 0.7295
+  epoch 30 loss 0.5166 val_acc 0.7301
+  -> fold 5 NN val_acc 0.7388 (epoch 22)
+  -> fold 5 GBDT val_acc 0.7412
+OOF accuracy 0.738820 | blend_w(nn)=0.30 thr=0.510
+refitting 3 seeds x 16 epochs on all training rows
+  epoch 01 loss 0.6645
+  epoch 02 loss 0.6128
+  epoch 03 loss 0.6001
+  epoch 04 loss 0.5921
+  epoch 05 loss 0.5858
+  epoch 06 loss 0.5807
+  epoch 07 loss 0.5795
+  epoch 08 loss 0.5747
+  epoch 09 loss 0.5691
+  epoch 10 loss 0.5669
+  epoch 11 loss 0.5646
+  epoch 12 loss 0.5561
+  epoch 13 loss 0.5556
+  epoch 14 loss 0.5550
+  epoch 15 loss 0.5517
+  epoch 16 loss 0.5499
+refit GBDT on all training rows
+saved bundle to /model
+Final Validation Score: 0.7388197609954417

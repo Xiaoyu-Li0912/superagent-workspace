@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-24c3a529-483c-4334-9443-bf2e642d84ab",
+  "created": 1795017436,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and prediction executed successfully. The pipeline produced a trusted validation accuracy of 0.7606 and passed a fresh-process model reload check, confirming the persisted bundle loads and predicts correctly.\", \"metric\": 0.76059113, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing cleans numeric/binary fields, coerces text columns to strings, and imputes missing categoricals. Feature engineering creates ordinal encodings (age, income, education, time, expiration), frequency ordinals for venue visits, a social index, matched-venue frequency/bucket, distance level, and interaction categoricals (coupon x time/expiration/occupation/income). Modeling uses a 5-fold stratified CV with CatBoost (native categorical handling) and LightGBM (ordinal-encoded categoricals) blended 0.6/0.4 in logit space; OOF predictions tune the decision threshold and estimate boosting iterations. Final models are retrained on 100% of training rows and persisted via joblib with label mapping and metadata; prediction loads the frozen bundle, blends probabilities, applies the tuned threshold, and maps back to original label strings.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution succeeded, validation accuracy 0.76059, fresh-process reload passed. No bugs.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution succeeded, validation accuracy 0.76059, fresh-process reload passed. No bugs."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 274,
+    "prompt_tokens": 6607,
+    "total_tokens": 6881,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

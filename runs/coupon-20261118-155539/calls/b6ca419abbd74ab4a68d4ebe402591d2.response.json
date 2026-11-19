@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-2cdb562c-a897-44e7-bbbd-d9ba9e65be3f",
+  "created": 1794995309,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\nCharter only for plan format — summarization ended.\n\nCHANGES (list ALL modifications):\n\nChange #1: [Model Architecture / Fusion]\n- What: Keep the leakage-safe target encoding + TabM core, but add a strong tree-based ensemble (LightGBM/XGBoost/CatBoost if present, else sklearn HistGradientBoostingClassifier) trained on the same leakage-safe feature matrices, and blend its probabilities with the TabM ensemble. Select blend weight by OOF accuracy.\n- Why: The dataset has strong categorical interactions (coupon × time × income × freq columns) that GBDTs capture better than 2-block MLPs when data is small (8k rows). GBDTs also handle missing freq values natively. TabM alone around 0.72 suggests we're leaving performance on the table from under-modeling these interactions.\n\nChange #2: [Feature Engineering]\n- What: Add pairwise target encodings for high-signal interactions already observed plus frequency-encoded (count) features for the raw categorical columns, computed on training folds only via the same leave-fold-safe logic.\n- Why: Count features give the model a \"popularity/rarity\" prior and stabilize TE; they are cheap and leakage-safe when computed per-fold.\n\nWHY current solution limited:\n- Root cause: Solely one model family (TabM MLP) trained on 8k rows with 2 blocks; tabular categorical interactions that GBDTs trivially learn via axis-aligned splits aren't fully captured by an MLP with limited capacity and TE-only signal.\n- Evidence: Validation accuracy 0.7182 with pos_rate ~0.57; coupon and freq columns show strong interaction effects in the sample data, and the current model's OOF shows high variance across folds — classic model-family limitation, not tuning.\n\nHOW these changes address it:\n- Mechanism: Blending an MLP (smooth, dense TE representation) with GBDT (sharp axis-aligned splits over raw categoricals + counts) reduces variance and captures complementary signal; count features give GBDT informative continuous splits on categories.\n- Expected improvement: +0.3–1.0 pp accuracy over 0.7182 baseline.\n- Synergy: TE features already built help TabM; count/GBDT features add signal that neither alone captures.\n\nKEEP UNCHANGED:\n- Random seed: 42 (folds & prediction seeds), 1000+fi for model seeds\n- Data split: StratifiedKFold n=5, shuffle=True, random_state=42 — identical\n- Leakage-safe per-fold TE fitting, CLI contract, output format (row_id, prediction with original labels), fresh-process reload, TabM config, training schedule.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "\nCharter only for plan format — summarization ended.\n\nCHANGES (list ALL modifications):\n\nChange #1: [Model Architecture / Fusion]\n- What: Keep the leakage-safe target encoding + TabM core, but add a strong tree-based ensemble (LightGBM/XGBoost/CatBoost if present, else sklearn HistGradientBoostingClassifier) trained on the same leakage-safe feature matrices, and blend its probabilities with the TabM ensemble. Select blend weight by OOF accuracy.\n- Why: The dataset has strong categorical interactions (coupon × time × income × freq columns) that GBDTs capture better than 2-block MLPs when data is small (8k rows). GBDTs also handle missing freq values natively. TabM alone around 0.72 suggests we're leaving performance on the table from under-modeling these interactions.\n\nChange #2: [Feature Engineering]\n- What: Add pairwise target encodings for high-signal interactions already observed plus frequency-encoded (count) features for the raw categorical columns, computed on training folds only via the same leave-fold-safe logic.\n- Why: Count features give the model a \"popularity/rarity\" prior and stabilize TE; they are cheap and leakage-safe when computed per-fold.\n\nWHY current solution limited:\n- Root cause: Solely one model family (TabM MLP) trained on 8k rows with 2 blocks; tabular categorical interactions that GBDTs trivially learn via axis-aligned splits aren't fully captured by an MLP with limited capacity and TE-only signal.\n- Evidence: Validation accuracy 0.7182 with pos_rate ~0.57; coupon and freq columns show strong interaction effects in the sample data, and the current model's OOF shows high variance across folds — classic model-family limitation, not tuning.\n\nHOW these changes address it:\n- Mechanism: Blending an MLP (smooth, dense TE representation) with GBDT (sharp axis-aligned splits over raw categoricals + counts) reduces variance and captures complementary signal; count features give GBDT informative continuous splits on categories.\n- Expected improvement: +0.3–1.0 pp accuracy over 0.7182 baseline.\n- Synergy: TE features already built help TabM; count/GBDT features add signal that neither alone captures.\n\nKEEP UNCHANGED:\n- Random seed: 42 (folds & prediction seeds), 1000+fi for model seeds\n- Data split: StratifiedKFold n=5, shuffle=True, random_state=42 — identical\n- Leakage-safe per-fold TE fitting, CLI contract, output format (row_id, prediction with original labels), fresh-process reload, TabM config, training schedule."
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 567,
+    "prompt_tokens": 13155,
+    "total_tokens": 13722,
+    "completion_tokens_details": {
+      "reasoning_tokens": 566
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

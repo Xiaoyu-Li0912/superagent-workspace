@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-8c9558a1-9e5a-4bc6-92f5-b387ed1d2516",
+  "created": 1795016975,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"The execution failed with a ValueError stating 'Training did not save a model'. The training subcommand appears to have completed without persisting the model artifact to the --model directory, so the pipeline could not be saved/loaded as required.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"The patch defines MAX_EPOCHS and MODEL_CFG (embedding dim 8, 2 cross layers, MLP hidden 256/128, 4 experts, dropout 0.30, lr 2e-3, 120 epochs, label smoothing 0.05) and adds an MLP_CFG ensemble config (emb dim 8, 4 frequency features, hidden 160, 2 blocks, dropout 0.15) with 2 seeds, 3 refits, 45 epochs and patience 7. The intended pipeline is a tabular deep model combining embeddings, cross-network style interactions and a mixture-of-experts head, trained with internal validation. However, execution terminated with 'Training did not save a model', indicating the learned preprocessing/model/label mapping was not written under --model.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution failed with ValueError: Training did not save a model. This is a bug. Metric null, lower_is_better false (accuracy presumably).",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution failed with ValueError: Training did not save a model. This is a bug. Metric null, lower_is_better false (accuracy presumably)."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 283,
+    "prompt_tokens": 1359,
+    "total_tokens": 1642,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

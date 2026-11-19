@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-8ce86210-ec9f-4a32-ba7c-395417577d97",
+  "created": 1794995487,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"is_bug\": true,\n  \"summary\": \"Training crashed with a RecursionError caused by infinite mutual recursion between FeatureEngineer.transform and _raw_te_components. When te_active becomes True inside fit(), transform calls _raw_te_components which calls transform again, exhausting the recursion limit. No model was produced and prediction could not run.\",\n  \"metric\": null,\n  \"lower_is_better\": false,\n  \"code_summary\": \"Pipeline implements a stateful FeatureEngineer (ordinal/frequency mappings, one-hot nominals, ratio/distance features, habit-match features, and smoothed target encodings) intended to be fit on training rows only. Models are a Field-aware DeepFM (embeddings, FM interaction, MLP) trained bagged via BCE with label smoothing and pos_weight, plus a tree zoo (HistGradientBoosting, optional XGBoost/LightGBM/CatBoost). OOF evaluation with StratifiedKFold blends deep and tree probabilities, searching blend weight and threshold; final fit refits on all training data with inner-KFold target encodings and artifacts are persisted (pickle + torch state dicts). Prediction reloads the transformer, scaler, cat-block spec, DeepFM weights, and tree models to blend and threshold into original labels. The bug is the transform/_raw_te_components recursion triggered once te_active is set.\"\n}",
+        "role": "assistant",
+        "reasoning_content": "The code has infinite recursion: transform calls _raw_te_components which calls transform. This happens when te_active is True. In fit(), set te_active=True then call transform, which recurses infinitely. Error is RecursionError.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The code has infinite recursion: transform calls _raw_te_components which calls transform. This happens when te_active is True. In fit(), set te_active=True then call transform, which recurses infinitely. Error is RecursionError."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 343,
+    "prompt_tokens": 11877,
+    "total_tokens": 12220,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

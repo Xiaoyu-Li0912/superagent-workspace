@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-ee70e78f-244b-4360-9655-70d6f7a63d1f",
+  "created": 1795012575,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training crashed immediately during feature engineering with a KeyError for 'expiration'. The _raw method computed an 'expiration_num' column but the INTERACTION_SPECS reference the non-existent raw column 'expiration', so the interaction-building loop failed before any model was trained.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Intended pipeline: parse raw coupon/income/age/frequency columns into numeric and categorical representations, build explicit interaction categoricals (coupon×expiration, coupon×time, coupon×income, etc.), fit leak-free smoothed target encoding with per-fold maps, and train a 5-fold ensemble of an embedding MLP, HistGradientBoosting (native categorical) and ExtraTrees, blending probabilities with OOF-optimized non-negative weights. Preprocessing, normalizer, TE maps, label map, and model state are persisted in a torch bundle for new-process prediction. The implementation failed during preprocessing because the interaction spec references 'expiration' rather than the built 'expiration_num' column, raising KeyError before any validation metric could be computed.\"}",
+        "role": "assistant",
+        "reasoning_content": "The error: KeyError 'expiration'. The _raw method uses INTERACTION_SPECS with \"expiration\" but out doesn't have \"expiration\" column — it has \"expiration_num\". Let me check. The FIT builds raw with \"expiration_num\" not \"expiration\". INTERACTION_SPECS uses [\"coupon\", \"expiration\"]. That's the bug.\n\nYes is_bug true.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The error: KeyError 'expiration'. The _raw method uses INTERACTION_SPECS with \"expiration\" but out doesn't have \"expiration\" column — it has \"expiration_num\". Let me check. The FIT builds raw with \"expiration_num\" not \"expiration\". INTERACTION_SPECS uses [\"coupon\", \"expiration\"]. That's the bug.\n\nYes is_bug true."
+        }
+      },
+      "provider_specific_fields": {}
+    }
+  ],
+  "usage": {
+    "completion_tokens": 328,
+    "prompt_tokens": 15175,
+    "total_tokens": 15503,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "2313fca2bd36411baaec4497707cb384",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 2.4605280849973497,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\n/solution.py:574: Pandas4Warning: 'float' is not supported as a fill value for str dtype. In a future version, calling fillna with an incompatible value will raise. Explicitly cast to a common dtype before filling.\n  num_arr = fe_df[num_cols].fillna(0.0).values.astype(np.float32)\nTraceback (most recent call last):\n  File \"/solution.py\", line 862, in <module>\n    run_training(args.data, args.model)\n  File \"/solution.py\", line 694, in run_training\n    X_cat, X_num = _prepare_features(\n                   ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 574, in _prepare_features\n    num_arr = fe_df[num_cols].fillna(0.0).values.astype(np.float32)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: could not convert string to float: 'Restaurant(20-50)'\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-10h-20261118-194123/candidates/2313fca2bd36411baaec4497707cb384"
+}

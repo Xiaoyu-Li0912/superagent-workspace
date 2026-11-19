@@ -1,0 +1,24 @@
+[train][cat] fold 0: best_iter=2590 acc@0.5=0.7586
+[train][cat] fold 1: best_iter=1062 acc@0.5=0.7432
+[train][cat] fold 2: best_iter=934 acc@0.5=0.7474
+[train][cat] fold 3: best_iter=1667 acc@0.5=0.7646
+[train][cat] fold 4: best_iter=2433 acc@0.5=0.7745
+[train][lgb] fold 0: best_iter=326 acc@0.5=0.7463
+[train][lgb] fold 1: best_iter=383 acc@0.5=0.7451
+[train][lgb] fold 2: best_iter=340 acc@0.5=0.7307
+[train][lgb] fold 3: best_iter=403 acc@0.5=0.7486
+[train][lgb] fold 4: best_iter=411 acc@0.5=0.7480
+[train][cat] fold 0: best_iter=983 acc@0.5=0.7574
+[train][cat] fold 1: best_iter=1178 acc@0.5=0.7549
+[train][cat] fold 2: best_iter=1556 acc@0.5=0.7579
+[train][cat] fold 3: best_iter=1813 acc@0.5=0.7560
+[train][cat] fold 4: best_iter=1001 acc@0.5=0.7505
+[train][lgb] fold 0: best_iter=553 acc@0.5=0.7568
+[train][lgb] fold 1: best_iter=419 acc@0.5=0.7291
+[train][lgb] fold 2: best_iter=449 acc@0.5=0.7505
+[train][lgb] fold 3: best_iter=386 acc@0.5=0.7548
+[train][lgb] fold 4: best_iter=261 acc@0.5=0.7301
+[train] OOF blend acc@0.5=0.7578  @0.515=0.7588 w_cat=0.80 (cat=0.7567, lgb=0.7473)
+[train] final CatBoost retrained on 8117 rows, iters=1367
+[train] final LightGBM retrained on 8117 rows, iters=433
+Final Validation Score: 0.7587778735986201

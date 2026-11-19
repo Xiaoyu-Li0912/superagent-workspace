@@ -1,2 +1,8 @@
 # Historical artifacts and freeze manifests must retain their original bytes.
 runs/** -text
+# Oversized model artifacts use LFS without changing their working-tree bytes.
+runs/coupon-10h-20261118-194123/candidates/71439595d7ea43708481c81a5859dde8/model/bundle.pt filter=lfs diff=lfs merge=lfs -text
+runs/coupon-10h-20261118-194123/candidates/c62d627f937c4652bd2d4a1f5dbb72eb/model/bundle.pt filter=lfs diff=lfs merge=lfs -text
+runs/coupon-10h-20261118-194123/candidates/d651e5cf872049939ad25849b72621ce/model/bundle.pt filter=lfs diff=lfs merge=lfs -text
+runs/coupon-10h-20261118-194123/candidates/f32d3e5e6e9c4112870b07a289e159bd/model/bundle.pt filter=lfs diff=lfs merge=lfs -text
+runs/coupon-20261118-155539/candidates/b5f9919c34e9486d92a21cc9d41c8517/model/meta.pkl filter=lfs diff=lfs merge=lfs -text

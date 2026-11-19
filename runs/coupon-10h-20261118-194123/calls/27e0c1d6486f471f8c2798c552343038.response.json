@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-820518f3-5e68-4450-902d-ea2d61a8be67",
+  "created": 1795008965,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<dcp-message-id>m0002</dc13c9a7a7b8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a</dcp-message-id>",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<dcp-message-id>m0002</dc13c9a7a7b8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a</dcp-message-id>"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 12378,
+    "total_tokens": 12438,
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

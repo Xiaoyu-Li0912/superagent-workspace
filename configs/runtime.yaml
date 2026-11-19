@@ -5,6 +5,7 @@ candidate_memory_mb: 4096
 candidate_cpus: 2
 request_timeout_seconds: 1200
 max_output_tokens: 32768
+input_reservation_mode: request_bytes
 max_calls: 400
 budget_rmb: 20
 max_unknown_calls: 3

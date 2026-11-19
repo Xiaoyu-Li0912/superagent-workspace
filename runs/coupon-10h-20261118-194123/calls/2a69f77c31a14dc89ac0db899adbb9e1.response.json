@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-066ab216-4771-4b06-95fe-6d57a0fb8deb",
+  "created": 1795018338,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and prediction completed successfully with a fresh-process reload passing. The trusted validation accuracy was 0.76305419, indicating a functioning CatBoost/LightGBM blend with threshold tuning.\", \"metric\": 0.76305419, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing cleans and coerces numeric/binary/categorical columns, fills missing categorical values, and restricts to schema feature columns. Feature engineering derives ordinal encodings (age, income, education, time, expiration), frequency-based social/dining features, matched-venue frequency and bucket, distance level, affinity ratio, and interaction categoricals (coupon x time/expiration/occupation/income, matched-venue combo). Modeling blends CatBoost (native categoricals) and LightGBM (persisted category maps) in logit space, selected via 5-fold StratifiedKFold OOF with two repetitions to tune blend weight and decision threshold. Final models are retrained on 100% of training rows using median CV iteration counts, and the full bundle (models, category maps, threshold, classes, feature order) is persisted and reloaded in a separate process for prediction, outputting row_id and original-label predictions.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution was successful. Trusted validation accuracy 0.76305419. Fresh-process reload passed. Need to return JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution was successful. Trusted validation accuracy 0.76305419. Fresh-process reload passed. Need to return JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 290,
+    "prompt_tokens": 7995,
+    "total_tokens": 8285,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

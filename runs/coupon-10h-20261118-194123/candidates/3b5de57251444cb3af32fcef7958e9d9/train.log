@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/solution.py", line 11, in <module>
+    total_epochs=MAX_EPOCHS,
+                 ^^^^^^^^^^
+NameError: name 'MAX_EPOCHS' is not defined

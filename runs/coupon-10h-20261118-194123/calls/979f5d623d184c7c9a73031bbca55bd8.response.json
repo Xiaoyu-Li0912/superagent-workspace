@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-0b5e7a38-8443-476c-bd75-d1005752c57e",
+  "created": 1795015737,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The script ran successfully through both train and predict stages, and the fresh-process reload check passed. Trusted validation accuracy was 0.75123153, indicating the ensemble predicted original labels correctly on held-out data.\", \"metric\": 0.75123153, \"lower_is_better\": false, \"code_summary\": \"Features are read via schema-aware column selection, with ordinal maps for frequency/income/age variables, one-hot encoding for plain categoricals, direct numeric columns, and interactions (income×age, distance sum, distance×same). An ensemble of HistGradientBoosting, ExtraTrees, and optional LightGBM is trained with 5-fold StratifiedKFold OOF predictions; simplex blend weights are optimized by coordinate ascent on OOF accuracy. Base models are refit on all training rows, and the one-hot encoder, models, labels, and blend weights are persisted in a single pickle bundle that predict loads to produce row_id,prediction outputs.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution succeeded. Validation accuracy 0.7512. No bugs reported.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution succeeded. Validation accuracy 0.7512. No bugs reported."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 229,
+    "prompt_tokens": 5060,
+    "total_tokens": 5289,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

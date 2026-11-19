@@ -1,0 +1,7 @@
+Metric: 0.7364532019704434
+Maximize: True
+Branch ID: 5
+Stage: improve (refinement)
+From Top-K: False
+Execution Time(s): 26.51
+Created Time: 2026-11-18T18:09:40

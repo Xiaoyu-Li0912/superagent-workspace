@@ -1,0 +1,8 @@
+{
+  "candidate_id": "05eec5910f2d4ff99c7471f640b443b0",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 3.6143081359987264,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 31, in <module>\n    GBDT_CONFIGS: List[Dict[str, Any]] = [\n                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-10h-20261118-194123/candidates/05eec5910f2d4ff99c7471f640b443b0"
+}

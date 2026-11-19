@@ -1,0 +1,13 @@
+[train] rows=8117 classes=[0, 1]
+Traceback (most recent call last):
+  File "/solution.py", line 778, in <module>
+    main()
+  File "/solution.py", line 772, in main
+    run_train(args.data, args.model)
+  File "/solution.py", line 379, in run_train
+    m, bep, _ = _train_one_model(
+                ^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 326, in _train_one_model
+    p = torch.softmax(model(Xt[val_mask], Nt[val_mask]), dim=1).numpy()
+                            ~~^^^^^^^^^^
+IndexError: The shape of the mask [8117] at index 0 does not match the shape of the indexed tensor [6493, 5] at index 0

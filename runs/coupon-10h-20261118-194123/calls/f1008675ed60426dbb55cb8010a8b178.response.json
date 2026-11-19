@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-8d85c5de-ea33-4d93-8816-a9d258df68b0",
+  "created": 1795008949,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The script executed successfully, completing both training and a fresh-process predict/reload cycle. Trusted validation accuracy was 0.72857143, and the model bundle reloaded correctly in a new process without refitting.\", \"metric\": 0.72857143, \"lower_is_better\": false, \"code_summary\": \"Feature engineering builds ordinal encodings for frequency/age/income/education/time/expiration, binary flags, missingness indicators, distance and frequency aggregates, coupon-venue affinity features, interaction terms, and nominal categorical crosses. A fit-only-on-train CouponFeatureEngineer handles median imputation and column ordering, while a CategoricalIndexer builds string vocabularies with an unknown token. The model is a DCN-style network with categorical embeddings, LayerNorm, crossed layers, an MLP deep tower, and a gated mixture-of-experts plus shared head, trained with LabelSmoothingBCE, AdamW (decoupled weight decay), cosine annealing, and gradient clipping. Validation uses leakage-safe 5-fold StratifiedKFold on training rows only, with best-epoch early stopping by fold accuracy, OOF threshold tuning, and a multi-seed full-data refit; all artifacts are persisted to a bundle and reloaded read-only for prediction, which outputs row_id,prediction in input order using original labels.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution succeeded with validation accuracy 0.72857143. No bugs. Return JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution succeeded with validation accuracy 0.72857143. No bugs. Return JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 312,
+    "prompt_tokens": 8243,
+    "total_tokens": 8555,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

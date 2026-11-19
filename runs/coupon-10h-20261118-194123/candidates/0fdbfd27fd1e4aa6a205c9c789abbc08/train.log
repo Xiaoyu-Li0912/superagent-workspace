@@ -1,0 +1,9 @@
+[fold 0] acc=0.7488
+[fold 1] acc=0.7315
+[fold 2] acc=0.7492
+[fold 3] acc=0.7548
+[fold 4] acc=0.7548
+[OOF] LGB acc=0.749784 @ t=0.53
+[train] rows=8117 cat=24 num=48 pos_rate=0.5684
+[train] saved bundle to /model
+Final Validation Score: 0.749784

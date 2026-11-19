@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-80c91c51-54b0-4a7f-99d2-79caef316c18",
+  "created": 1795012722,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and fresh-process prediction completed successfully. The trusted validation accuracy was 0.76059113, and the model reloaded correctly in a new process.\", \"metric\": 0.76059113, \"lower_is_better\": false, \"code_summary\": \"Loads features/labels/schema, applies deterministic coupon feature engineering with frequency encodings fit on training rows only, and uses fold-safe interaction target encoding. Trains LightGBM, CatBoost, and a PyTorch DeepFM, evaluates candidates via stratified 5-fold OOF predictions, tunes thresholds, selects the best model or ensemble, refits on all training data, and persists the full pipeline. Prediction loads the bundle and writes row_id,prediction outputs without refitting.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer JSON only. Need assess execution output: \"Trusted validation accuracy=0.76059113; fresh-process reload passed.\" No bugs. metric 0.76059113, lower_is_better false, summary concise, code_summary. Ensure valid JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer JSON only. Need assess execution output: \"Trusted validation accuracy=0.76059113; fresh-process reload passed.\" No bugs. metric 0.76059113, lower_is_better false, summary concise, code_summary. Ensure valid JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 10739,
+    "total_tokens": 10963,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

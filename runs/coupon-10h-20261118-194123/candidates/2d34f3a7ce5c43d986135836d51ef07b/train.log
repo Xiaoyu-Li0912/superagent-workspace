@@ -1,0 +1,13 @@
+[train] rows=8117 cat=24 num=48 pos_rate=0.5684 sum_card=258
+[fold 0] lgb=0.7525 cb=0.7518
+[fold 1] lgb=0.7352 cb=0.7457
+[fold 2] lgb=0.7461 cb=0.7492
+[fold 3] lgb=0.7591 cb=0.7566
+[fold 4] lgb=0.7480 cb=0.7579
+[OOF] LGB acc=0.750524 @ t=0.54
+[OOF] CB  acc=0.753111 @ t=0.45
+[OOF] soft_vote acc=0.755821 @ t=0.45
+[OOF] meta_gbdt acc=0.755821 @ t=0.45
+[select] chosen=soft_vote acc=0.755821 @ t=0.45
+[train] saved bundle to /model
+Final Validation Score: 0.755821

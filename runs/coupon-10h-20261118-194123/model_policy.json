@@ -1,0 +1,25 @@
+{
+  "model": "DeepSeek-V4.1-Flash",
+  "official_family": "DeepSeek-V4.1-Flash",
+  "official_version": "DeepSeek-V4.1-Flash-1017",
+  "release_date": "2026-10-17",
+  "cutoff_date": "2026-10-21",
+  "input_rmb_per_million": "1",
+  "output_rmb_per_million": "4",
+  "context_tokens_upper_bound": 1048576,
+  "pricing_basis": "Official off-peak, cache-miss input, no cache/promotional discount; all call times",
+  "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+  "release_source": "https://api-docs.deepseek.com/zh-cn/news/news261017",
+  "allowed_response_models": [
+    "DeepSeek-V4.1-Flash",
+    "deepseek-flash"
+  ],
+  "verified": true,
+  "verification_note": "2026-09-10 official announcement and original price image establish 1/4 RMB off-peak effective before cutoff; 2026-10-17 announcement establishes eligible update. Gateway public /api/v2/models explicitly lists DeepSeek-V4.1-Flash (not generic DSF). Exact provider build is not independently attested: require same-family response and record returned model; this is an experimental provenance limitation, not formal provider certification.",
+  "evidence_files": [
+    "configs/pricing-evidence/flash-20260910.jpeg",
+    "configs/pricing-evidence/release-20260910.html",
+    "configs/pricing-evidence/release-20261017.html",
+    "configs/pricing-evidence/pricing-20261115.html"
+  ]
+}

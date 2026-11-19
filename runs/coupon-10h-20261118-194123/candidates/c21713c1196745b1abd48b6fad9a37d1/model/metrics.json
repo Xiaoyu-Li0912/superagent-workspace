@@ -1,0 +1,6 @@
+{
+  "oof_accuracy": 0.7314278674387089,
+  "threshold": 0.49999999999999994,
+  "refit_epochs": 16,
+  "n_refit": 3
+}

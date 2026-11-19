@@ -1,0 +1,2 @@
+[predict] used=['hgb', 'et', 'lgb'] weights=[0.088, 0.361, 0.551]
+[predict] wrote /output/predictions.csv (2030 rows)

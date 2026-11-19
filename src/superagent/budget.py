@@ -15,6 +15,10 @@ class BudgetStop(RuntimeError):
         self.reason = reason
 
 
+class BudgetPending(BudgetStop):
+    """In-flight settlements may release enough budget; do not stop search yet."""
+
+
 def cost_fen_units(tokens_in, tokens_out, input_rate, output_rate):
     # Integer nanoyuan avoids floating point comparisons at the hard cap.
     value = (Decimal(tokens_in) * Decimal(input_rate) + Decimal(tokens_out) * Decimal(output_rate)) * 1000
@@ -69,12 +73,17 @@ class Ledger:
             self._check_dispatch(db, amount)
 
     def _check_dispatch(self, db, amount):
-        spent, count, unknown = db.execute("SELECT COALESCE(SUM(charged),0),COUNT(*),COALESCE(SUM(state='unknown'),0) FROM calls").fetchone()
+        spent, count, unknown, inflight = db.execute(
+            "SELECT COALESCE(SUM(charged),0),COUNT(*),COALESCE(SUM(state='unknown'),0),"
+            "COALESCE(SUM(CASE WHEN state='reserved' THEN charged ELSE 0 END),0) FROM calls"
+        ).fetchone()
         if unknown >= max(1, self.max_unknown_calls):
             raise BudgetStop("Unknown usage limit reached; reservations retained", "unknown_usage_limit")
         if count >= self.max_calls:
             raise BudgetStop("Call limit reached", "call_limit")
         if spent + amount > self.cap:
+            if inflight and spent - inflight + amount <= self.cap:
+                raise BudgetPending("Waiting for in-flight budget settlement", "budget_pending")
             raise BudgetStop("Reservation would exceed budget", "budget_limit")
 
     def settle(self, call_id, input_tokens, output_tokens, usage):

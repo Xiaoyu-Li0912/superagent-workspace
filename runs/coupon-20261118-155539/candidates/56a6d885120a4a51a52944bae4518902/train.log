@@ -1,0 +1,252 @@
+TE smoothing strength = 25.0
+OOF TE inner-KFold seed = 42 (5 folds, shuffle=True)
+epoch 1/22 loss=0.6803 val_loss=0.6078 val_acc=0.6847
+epoch 2/22 loss=0.5350 val_loss=0.5730 val_acc=0.7050
+epoch 3/22 loss=0.5117 val_loss=0.5699 val_acc=0.7087
+epoch 4/22 loss=0.4967 val_loss=0.5635 val_acc=0.7198
+epoch 5/22 loss=0.4931 val_loss=0.5610 val_acc=0.7229
+epoch 6/22 loss=0.4818 val_loss=0.5593 val_acc=0.7161
+epoch 7/22 loss=0.4751 val_loss=0.5632 val_acc=0.7149
+epoch 8/22 loss=0.4680 val_loss=0.5579 val_acc=0.7131
+epoch 9/22 loss=0.4638 val_loss=0.5562 val_acc=0.7229
+epoch 10/22 loss=0.4627 val_loss=0.5600 val_acc=0.7124
+epoch 11/22 loss=0.4554 val_loss=0.5579 val_acc=0.7155
+epoch 12/22 loss=0.4562 val_loss=0.5628 val_acc=0.7131
+epoch 13/22 loss=0.4547 val_loss=0.5582 val_acc=0.7229
+epoch 14/22 loss=0.4502 val_loss=0.5638 val_acc=0.7167
+early stop at epoch 14
+epoch 1/22 loss=0.5951 val_loss=0.5919 val_acc=0.6915
+epoch 2/22 loss=0.5200 val_loss=0.5795 val_acc=0.6927
+epoch 3/22 loss=0.5036 val_loss=0.5721 val_acc=0.7032
+epoch 4/22 loss=0.4911 val_loss=0.5654 val_acc=0.7137
+epoch 5/22 loss=0.4853 val_loss=0.5673 val_acc=0.7057
+epoch 6/22 loss=0.4787 val_loss=0.5700 val_acc=0.7094
+epoch 7/22 loss=0.4680 val_loss=0.5679 val_acc=0.7124
+epoch 8/22 loss=0.4647 val_loss=0.5729 val_acc=0.7050
+epoch 9/22 loss=0.4674 val_loss=0.5735 val_acc=0.7063
+early stop at epoch 9
+fold 0 deep_acc=0.7211 gbm_acc=0.7500
+epoch 1/22 loss=0.6050 val_loss=0.5977 val_acc=0.6989
+epoch 2/22 loss=0.5249 val_loss=0.5865 val_acc=0.6989
+epoch 3/22 loss=0.5026 val_loss=0.5758 val_acc=0.7014
+epoch 4/22 loss=0.4887 val_loss=0.5781 val_acc=0.7063
+epoch 5/22 loss=0.4810 val_loss=0.5652 val_acc=0.7174
+epoch 6/22 loss=0.4734 val_loss=0.5682 val_acc=0.7167
+epoch 7/22 loss=0.4686 val_loss=0.5622 val_acc=0.7198
+epoch 8/22 loss=0.4664 val_loss=0.5750 val_acc=0.7057
+epoch 9/22 loss=0.4616 val_loss=0.5681 val_acc=0.7180
+epoch 10/22 loss=0.4588 val_loss=0.5629 val_acc=0.7211
+epoch 11/22 loss=0.4534 val_loss=0.5621 val_acc=0.7266
+epoch 12/22 loss=0.4489 val_loss=0.5623 val_acc=0.7254
+epoch 13/22 loss=0.4481 val_loss=0.5593 val_acc=0.7223
+epoch 14/22 loss=0.4476 val_loss=0.5573 val_acc=0.7291
+epoch 15/22 loss=0.4422 val_loss=0.5639 val_acc=0.7186
+epoch 16/22 loss=0.4429 val_loss=0.5613 val_acc=0.7266
+epoch 17/22 loss=0.4422 val_loss=0.5611 val_acc=0.7254
+epoch 18/22 loss=0.4383 val_loss=0.5596 val_acc=0.7248
+epoch 19/22 loss=0.4417 val_loss=0.5612 val_acc=0.7223
+early stop at epoch 19
+epoch 1/22 loss=0.5825 val_loss=0.5841 val_acc=0.6970
+epoch 2/22 loss=0.5098 val_loss=0.5828 val_acc=0.7007
+epoch 3/22 loss=0.4944 val_loss=0.5706 val_acc=0.7075
+epoch 4/22 loss=0.4869 val_loss=0.5710 val_acc=0.7100
+epoch 5/22 loss=0.4801 val_loss=0.5768 val_acc=0.7050
+epoch 6/22 loss=0.4749 val_loss=0.5616 val_acc=0.7198
+epoch 7/22 loss=0.4708 val_loss=0.5728 val_acc=0.7081
+epoch 8/22 loss=0.4675 val_loss=0.5623 val_acc=0.7211
+epoch 9/22 loss=0.4635 val_loss=0.5651 val_acc=0.7118
+epoch 10/22 loss=0.4615 val_loss=0.5808 val_acc=0.6989
+epoch 11/22 loss=0.4523 val_loss=0.5663 val_acc=0.7112
+early stop at epoch 11
+fold 1 deep_acc=0.7241 gbm_acc=0.7438
+epoch 1/22 loss=0.6218 val_loss=0.6276 val_acc=0.6642
+epoch 2/22 loss=0.5187 val_loss=0.5997 val_acc=0.6845
+epoch 3/22 loss=0.4935 val_loss=0.5897 val_acc=0.6870
+epoch 4/22 loss=0.4899 val_loss=0.5892 val_acc=0.6888
+epoch 5/22 loss=0.4771 val_loss=0.5865 val_acc=0.6956
+epoch 6/22 loss=0.4740 val_loss=0.5889 val_acc=0.6932
+epoch 7/22 loss=0.4658 val_loss=0.6029 val_acc=0.6833
+epoch 8/22 loss=0.4637 val_loss=0.5963 val_acc=0.6870
+epoch 9/22 loss=0.4549 val_loss=0.5961 val_acc=0.6969
+epoch 10/22 loss=0.4576 val_loss=0.5877 val_acc=0.6950
+early stop at epoch 10
+epoch 1/22 loss=0.6083 val_loss=0.6240 val_acc=0.6543
+epoch 2/22 loss=0.5096 val_loss=0.6142 val_acc=0.6654
+epoch 3/22 loss=0.4985 val_loss=0.5954 val_acc=0.6845
+epoch 4/22 loss=0.4859 val_loss=0.6099 val_acc=0.6808
+epoch 5/22 loss=0.4813 val_loss=0.5940 val_acc=0.6913
+epoch 6/22 loss=0.4737 val_loss=0.6006 val_acc=0.6895
+epoch 7/22 loss=0.4660 val_loss=0.5854 val_acc=0.6925
+epoch 8/22 loss=0.4611 val_loss=0.5813 val_acc=0.6944
+epoch 9/22 loss=0.4598 val_loss=0.5808 val_acc=0.6981
+epoch 10/22 loss=0.4569 val_loss=0.5835 val_acc=0.6999
+epoch 11/22 loss=0.4537 val_loss=0.5994 val_acc=0.6858
+epoch 12/22 loss=0.4509 val_loss=0.5934 val_acc=0.6944
+epoch 13/22 loss=0.4456 val_loss=0.5836 val_acc=0.6993
+epoch 14/22 loss=0.4451 val_loss=0.5799 val_acc=0.7030
+epoch 15/22 loss=0.4426 val_loss=0.5860 val_acc=0.6969
+epoch 16/22 loss=0.4376 val_loss=0.5845 val_acc=0.7018
+epoch 17/22 loss=0.4372 val_loss=0.5829 val_acc=0.7043
+epoch 18/22 loss=0.4365 val_loss=0.5848 val_acc=0.7012
+epoch 19/22 loss=0.4330 val_loss=0.5853 val_acc=0.6975
+early stop at epoch 19
+fold 2 deep_acc=0.6981 gbm_acc=0.7277
+epoch 1/22 loss=0.5744 val_loss=0.6083 val_acc=0.6913
+epoch 2/22 loss=0.5151 val_loss=0.5826 val_acc=0.7116
+epoch 3/22 loss=0.4927 val_loss=0.5750 val_acc=0.7086
+epoch 4/22 loss=0.4842 val_loss=0.5719 val_acc=0.7184
+epoch 5/22 loss=0.4813 val_loss=0.5783 val_acc=0.7092
+epoch 6/22 loss=0.4748 val_loss=0.5703 val_acc=0.7073
+epoch 7/22 loss=0.4660 val_loss=0.5747 val_acc=0.7086
+epoch 8/22 loss=0.4662 val_loss=0.5683 val_acc=0.7141
+epoch 9/22 loss=0.4587 val_loss=0.5649 val_acc=0.7221
+epoch 10/22 loss=0.4624 val_loss=0.5656 val_acc=0.7178
+epoch 11/22 loss=0.4561 val_loss=0.5692 val_acc=0.7221
+epoch 12/22 loss=0.4494 val_loss=0.5730 val_acc=0.7153
+epoch 13/22 loss=0.4484 val_loss=0.5706 val_acc=0.7221
+epoch 14/22 loss=0.4440 val_loss=0.5682 val_acc=0.7221
+early stop at epoch 14
+epoch 1/22 loss=0.6146 val_loss=0.5947 val_acc=0.6944
+epoch 2/22 loss=0.5187 val_loss=0.5797 val_acc=0.7055
+epoch 3/22 loss=0.5027 val_loss=0.5766 val_acc=0.7215
+epoch 4/22 loss=0.4914 val_loss=0.5694 val_acc=0.7178
+epoch 5/22 loss=0.4829 val_loss=0.5718 val_acc=0.7129
+epoch 6/22 loss=0.4745 val_loss=0.5653 val_acc=0.7172
+epoch 7/22 loss=0.4724 val_loss=0.5635 val_acc=0.7178
+epoch 8/22 loss=0.4686 val_loss=0.5644 val_acc=0.7221
+epoch 9/22 loss=0.4638 val_loss=0.5640 val_acc=0.7190
+epoch 10/22 loss=0.4598 val_loss=0.5635 val_acc=0.7234
+epoch 11/22 loss=0.4557 val_loss=0.5664 val_acc=0.7190
+epoch 12/22 loss=0.4503 val_loss=0.5726 val_acc=0.7209
+early stop at epoch 12
+fold 3 deep_acc=0.7240 gbm_acc=0.7394
+epoch 1/22 loss=0.5771 val_loss=0.5961 val_acc=0.6815
+epoch 2/22 loss=0.5135 val_loss=0.5865 val_acc=0.6845
+epoch 3/22 loss=0.4901 val_loss=0.5767 val_acc=0.6975
+epoch 4/22 loss=0.4862 val_loss=0.5697 val_acc=0.6999
+epoch 5/22 loss=0.4795 val_loss=0.5710 val_acc=0.7012
+epoch 6/22 loss=0.4723 val_loss=0.5795 val_acc=0.6969
+epoch 7/22 loss=0.4698 val_loss=0.5712 val_acc=0.7055
+epoch 8/22 loss=0.4625 val_loss=0.5747 val_acc=0.7006
+epoch 9/22 loss=0.4638 val_loss=0.5656 val_acc=0.7055
+epoch 10/22 loss=0.4571 val_loss=0.5680 val_acc=0.7098
+epoch 11/22 loss=0.4535 val_loss=0.5600 val_acc=0.7098
+epoch 12/22 loss=0.4536 val_loss=0.5639 val_acc=0.7092
+epoch 13/22 loss=0.4511 val_loss=0.5689 val_acc=0.6987
+epoch 14/22 loss=0.4432 val_loss=0.5672 val_acc=0.7036
+epoch 15/22 loss=0.4452 val_loss=0.5612 val_acc=0.7135
+epoch 16/22 loss=0.4430 val_loss=0.5714 val_acc=0.7043
+early stop at epoch 16
+epoch 1/22 loss=0.5785 val_loss=0.5908 val_acc=0.6938
+epoch 2/22 loss=0.5088 val_loss=0.5765 val_acc=0.7055
+epoch 3/22 loss=0.4959 val_loss=0.5859 val_acc=0.6993
+epoch 4/22 loss=0.4864 val_loss=0.5778 val_acc=0.7055
+epoch 5/22 loss=0.4805 val_loss=0.5661 val_acc=0.7184
+epoch 6/22 loss=0.4742 val_loss=0.5679 val_acc=0.7160
+epoch 7/22 loss=0.4712 val_loss=0.5650 val_acc=0.7172
+epoch 8/22 loss=0.4646 val_loss=0.5655 val_acc=0.7147
+epoch 9/22 loss=0.4621 val_loss=0.5739 val_acc=0.7043
+epoch 10/22 loss=0.4591 val_loss=0.5630 val_acc=0.7190
+epoch 11/22 loss=0.4536 val_loss=0.5620 val_acc=0.7227
+epoch 12/22 loss=0.4487 val_loss=0.5658 val_acc=0.7141
+epoch 13/22 loss=0.4495 val_loss=0.5673 val_acc=0.7092
+epoch 14/22 loss=0.4451 val_loss=0.5660 val_acc=0.7129
+epoch 15/22 loss=0.4437 val_loss=0.5635 val_acc=0.7153
+epoch 16/22 loss=0.4444 val_loss=0.5614 val_acc=0.7184
+epoch 17/22 loss=0.4388 val_loss=0.5624 val_acc=0.7160
+epoch 18/22 loss=0.4411 val_loss=0.5626 val_acc=0.7141
+epoch 19/22 loss=0.4376 val_loss=0.5633 val_acc=0.7123
+epoch 20/22 loss=0.4383 val_loss=0.5638 val_acc=0.7153
+epoch 21/22 loss=0.4369 val_loss=0.5640 val_acc=0.7135
+early stop at epoch 21
+fold 4 deep_acc=0.7209 gbm_acc=0.7406
+OOF deep alone acc (t=0.5) = 0.71763
+OOF gbm alone  acc (t=0.5) = 0.74030
+OOF blend acc w=0.16 t=0.415 = 0.74215
+building inner-KFold OOF target encodings for training rows
+epoch 1/28 loss=0.6343
+epoch 2/28 loss=0.5281
+epoch 3/28 loss=0.5054
+epoch 4/28 loss=0.4938
+epoch 5/28 loss=0.4866
+epoch 6/28 loss=0.4826
+epoch 7/28 loss=0.4763
+epoch 8/28 loss=0.4722
+epoch 9/28 loss=0.4662
+epoch 10/28 loss=0.4647
+epoch 11/28 loss=0.4609
+epoch 12/28 loss=0.4583
+epoch 13/28 loss=0.4544
+epoch 14/28 loss=0.4543
+epoch 15/28 loss=0.4519
+epoch 16/28 loss=0.4477
+epoch 17/28 loss=0.4464
+epoch 18/28 loss=0.4438
+epoch 19/28 loss=0.4435
+epoch 20/28 loss=0.4406
+epoch 21/28 loss=0.4381
+epoch 22/28 loss=0.4405
+epoch 23/28 loss=0.4365
+epoch 24/28 loss=0.4339
+epoch 25/28 loss=0.4362
+epoch 26/28 loss=0.4357
+epoch 27/28 loss=0.4324
+epoch 28/28 loss=0.4306
+epoch 1/28 loss=0.5681
+epoch 2/28 loss=0.5137
+epoch 3/28 loss=0.4981
+epoch 4/28 loss=0.4911
+epoch 5/28 loss=0.4840
+epoch 6/28 loss=0.4776
+epoch 7/28 loss=0.4722
+epoch 8/28 loss=0.4718
+epoch 9/28 loss=0.4643
+epoch 10/28 loss=0.4587
+epoch 11/28 loss=0.4555
+epoch 12/28 loss=0.4533
+epoch 13/28 loss=0.4514
+epoch 14/28 loss=0.4509
+epoch 15/28 loss=0.4459
+epoch 16/28 loss=0.4450
+epoch 17/28 loss=0.4421
+epoch 18/28 loss=0.4382
+epoch 19/28 loss=0.4381
+epoch 20/28 loss=0.4339
+epoch 21/28 loss=0.4326
+epoch 22/28 loss=0.4320
+epoch 23/28 loss=0.4314
+epoch 24/28 loss=0.4320
+epoch 25/28 loss=0.4279
+epoch 26/28 loss=0.4295
+epoch 27/28 loss=0.4267
+epoch 28/28 loss=0.4291
+epoch 1/28 loss=0.5694
+epoch 2/28 loss=0.5165
+epoch 3/28 loss=0.5030
+epoch 4/28 loss=0.4937
+epoch 5/28 loss=0.4859
+epoch 6/28 loss=0.4780
+epoch 7/28 loss=0.4761
+epoch 8/28 loss=0.4715
+epoch 9/28 loss=0.4683
+epoch 10/28 loss=0.4627
+epoch 11/28 loss=0.4579
+epoch 12/28 loss=0.4578
+epoch 13/28 loss=0.4541
+epoch 14/28 loss=0.4510
+epoch 15/28 loss=0.4487
+epoch 16/28 loss=0.4455
+epoch 17/28 loss=0.4397
+epoch 18/28 loss=0.4411
+epoch 19/28 loss=0.4434
+epoch 20/28 loss=0.4377
+epoch 21/28 loss=0.4386
+epoch 22/28 loss=0.4346
+epoch 23/28 loss=0.4321
+epoch 24/28 loss=0.4346
+epoch 25/28 loss=0.4320
+epoch 26/28 loss=0.4296
+epoch 27/28 loss=0.4317
+epoch 28/28 loss=0.4252
+model artifacts saved
+Final Validation Score: 0.74215

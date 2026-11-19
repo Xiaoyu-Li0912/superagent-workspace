@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-b308946f-ae15-4d01-9e00-ec87e8cd238a",
+  "created": 1795007523,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Execution failed immediately with a SyntaxError: invalid character '—' (U+2014) at line 32 of solution.py. The submitted file appears to be corrupted with diff/prose artifacts (e.g. '=======' conflict markers and documentation text) embedded in the Python source, preventing any parsing or execution.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Intended approach: a stacking ensemble (CatBoost with native categoricals + LightGBM with native categoricals + HistGradientBoosting with ordinal-encoded categoricals), each generating 5-fold out-of-fold probabilities via StratifiedKFold (shuffle, seed 42), blended by a LogisticRegression meta-learner with an OOF-tuned decision threshold. Stateful preprocessing (category mappings, models, label mapping) was to be persisted under --model and reloaded read-only in predict, plus leakage-safe feature engineering (coupon_children, coupon_marital, income_per_child, age_bucket_x_children, venue_nonpref). However, the actual file was malformed with diff markers and prose text, so the code never compiled or ran.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution failed with a SyntaxError due to invalid character '—' (em dash) at line 32. This indicates the file is malformed—the code contains prose/markdown mixed into the Python file (the docstring merge markers like \"=======\" and prose text). So it's a bug.\n\nMetric null, lower_is_better false (accuracy maximized).",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution failed with a SyntaxError due to invalid character '—' (em dash) at line 32. This indicates the file is malformed—the code contains prose/markdown mixed into the Python file (the docstring merge markers like \"=======\" and prose text). So it's a bug.\n\nMetric null, lower_is_better false (accuracy maximized)."
+        }
+      },
+      "provider_specific_fields": {}
+    }
+  ],
+  "usage": {
+    "completion_tokens": 330,
+    "prompt_tokens": 1826,
+    "total_tokens": 2156,
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "dc4cc6dbb6d1431f9e182ded08afff99",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 6.562996139000461,
+  "diagnostics": "RuntimeError: Candidate train exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 811, in <module>\n    run_training(args.data, args.model)\n  File \"/solution.py\", line 710, in run_training\n    X_tr = _prepare_features(\n           ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 578, in _prepare_features\n    cat_categories[c] = sorted(pd.unique(vals).tolist())\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: '<' not supported between instances of 'float' and 'str'\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-10h-20261118-194123/candidates/dc4cc6dbb6d1431f9e182ded08afff99"
+}

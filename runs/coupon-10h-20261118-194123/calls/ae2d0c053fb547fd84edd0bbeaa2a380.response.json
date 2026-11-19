@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-443dfa12-bf82-4cf2-9f30-632932faedaf",
+  "created": 1795015920,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The training and prediction pipeline executed successfully, achieving a trusted validation accuracy of 0.7650. A fresh-process reload of the saved model bundle also passed, confirming that all preprocessing, models, and label mapping were persisted and reloadable.\", \"metric\": 0.76502463, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing builds a deterministic feature engineer (CouponFeatureEngineer) that extracts ordinal encodings (age, income, education, time), frequency encodes venue visits, computes engagement aggregates, and creates interaction categoricals; target encoding is CV-safe (fold-fit) to avoid leakage. Three base learners are trained per fold for 5-fold stratified CV: LightGBM (native categoricals + TE numerics), CatBoost (native categoricals), and a PyTorch embedding-MLP trained with focal loss. Out-of-fold probabilities feed a LogisticRegression stacker, with an optional context-conditioned variant selected by OOF accuracy, and a threshold is swept (0.2-0.8) to maximize accuracy. Models are then refit on full training data (3 seeds each), the best stacker/threshold is persisted with joblib, and predictions are generated in a new process using the loaded pipeline.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution succeeded with validation accuracy 0.765. No bugs reported. Fresh-process reload passed.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution succeeded with validation accuracy 0.765. No bugs reported. Fresh-process reload passed."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 290,
+    "prompt_tokens": 11075,
+    "total_tokens": 11365,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

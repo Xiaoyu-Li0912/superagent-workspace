@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-bc91d1d3-1d48-4d3d-9ace-6d36f95d157e",
+  "created": 1794993230,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training completed successfully and produced a trusted validation accuracy of 0.68916256. A fresh-process reload also passed, confirming the persisted model and preprocessing artifacts are usable for prediction.\", \"metric\": 0.68916256, \"lower_is_better\": false, \"code_summary\": \"The pipeline performs leakage-safe feature engineering with ordinal mappings, frequency-derived features, missingness flags, nominal encodings, and interaction encodings fitted only on training data. It trains an FT-Transformer with categorical embeddings and continuous token projections, using stratified CV, mixup, label-smoothed BCE, AdamW, cosine warmup scheduling, early stopping, and OOF threshold search. The final model is refit on all training rows and prediction reloads saved preprocessing state and model weights to output original labels with row_id ordering preserved.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need evaluate execution output: \"Trusted validation accuracy=0.68916256; fresh-process reload passed.\" No bug. metric 0.68916256. lower_is_better false. summary concise. code_summary methods. Need ensure valid JSON no markdown.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer only JSON. Need evaluate execution output: \"Trusted validation accuracy=0.68916256; fresh-process reload passed.\" No bug. metric 0.68916256. lower_is_better false. summary concise. code_summary methods. Need ensure valid JSON no markdown."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 244,
+    "prompt_tokens": 10094,
+    "total_tokens": 10338,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

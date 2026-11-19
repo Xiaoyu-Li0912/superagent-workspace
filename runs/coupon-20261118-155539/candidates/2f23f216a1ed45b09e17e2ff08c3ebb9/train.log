@@ -1,0 +1,3002 @@
+TE smoothing strength = 25.0
+OOF TE inner-KFold seed = 42 (5 folds, shuffle=True)
+Traceback (most recent call last):
+  File "/solution.py", line 978, in <module>
+    main()
+  File "/solution.py", line 943, in main
+    oof_deep, oof_tree = run_oof(
+                         ^^^^^^^^
+  File "/solution.py", line 712, in run_oof
+    fe = FeatureEngineer().fit(features_df.iloc[tr], y=y_int[tr])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 184, in fit
+    self.transform(df)
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 288, in transform
+    comp = self._raw_te_components(df)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 189, in _raw_te_components
+    out = self.transform(df)
+          ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 230, in transform
+    s = self._normalize(self._col_or_nan(df, c, n))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 134, in _normalize
+    out = s.astype(str).str.strip()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/strings/accessor.py", line 142, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/strings/accessor.py", line 2622, in strip
+    result = self._data.array._str_strip(to_strip)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/strings/object_array.py", line 496, in _str_strip
+    return self._str_map(lambda x: x.strip(to_strip))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/arrays/string_.py", line 475, in _str_map
+    return self._str_map_nan_semantics(f, na_value=na_value, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/arrays/string_.py", line 602, in _str_map_nan_semantics
+    return self._str_map_str_or_object(dtype, na_value, arr, f, mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/arrays/string_.py", line 529, in _str_map_str_or_object
+    if is_string_dtype(dtype) and not is_object_dtype(dtype):
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py", line 710, in is_string_dtype
+    return _is_dtype(arr_or_dtype, condition)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py", line 1724, in _is_dtype
+    return condition(dtype)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py", line 703, in condition
+    if is_string_or_object_np_dtype(dtype):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py", line 657, in is_string_or_object_np_dtype
+    return dtype == object or dtype.kind in "SU"
+           ^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded

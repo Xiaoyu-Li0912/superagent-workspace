@@ -1,0 +1,8 @@
+{
+  "candidate_id": "430f4743f04640e79649eaed90f7de9c",
+  "status": "valid",
+  "metric": 0.7532019704433498,
+  "elapsed_seconds": 50.763034150999374,
+  "diagnostics": "Trusted validation accuracy=0.75320197; fresh-process reload passed.",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/430f4743f04640e79649eaed90f7de9c"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-e1b398d2-58c5-4eb6-bcd7-5452bfd2db76",
+  "created": 1794993242,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<ds_safety>[用户未成年]否\n[分类]其他\n[判定]模型回答围绕用户提供的机器学习竞赛代码给出改进方案，讨论的是数据预处理、模型架构等技术内容，不涉及任何政治或色情话题。\n[规则]无</ds_safety>Mental Health : safe\nPolitical Content : safe\nSafe",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<ds_safety>[用户未成年]否\n[分类]其他\n[判定]模型回答围绕用户提供的机器学习竞赛代码给出改进方案，讨论的是数据预处理、模型架构等技术内容，不涉及任何政治或色情话题。\n[规则]无</ds_safety>Mental Health : safe\nPolitical Content : safe\nSafe"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 14229,
+    "total_tokens": 14299,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

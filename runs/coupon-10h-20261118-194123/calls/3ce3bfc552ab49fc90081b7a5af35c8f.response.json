@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-aa00331b-6b66-4426-9e8a-8ab980b6a784",
+  "created": 1795018831,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<ds_safety>[用户未成年]否\n[分类]其他\n[判定]用户提交的是机器学习竞赛改进计划请求，内容涉及技术方案、模型架构与验证方法，未涉及政治敏感内容或极端恶意政治表述。\n[规则]无</ds_safety>",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<ds_safety>[用户未成年]否\n[分类]其他\n[判定]用户提交的是机器学习竞赛改进计划请求，内容涉及技术方案、模型架构与验证方法，未涉及政治敏感内容或极端恶意政治表述。\n[规则]无</ds_safety>"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 13397,
+    "total_tokens": 13456,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

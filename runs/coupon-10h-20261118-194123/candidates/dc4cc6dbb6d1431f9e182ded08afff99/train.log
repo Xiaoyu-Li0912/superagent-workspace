@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/solution.py", line 811, in <module>
+    run_training(args.data, args.model)
+  File "/solution.py", line 710, in run_training
+    X_tr = _prepare_features(
+           ^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 578, in _prepare_features
+    cat_categories[c] = sorted(pd.unique(vals).tolist())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'float' and 'str'

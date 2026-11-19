@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-03c5758c-5a30-4ed6-9697-43eb63cb87ee",
+  "created": 1794994088,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<budget:token_budget>2000</budience>|im_end|>",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<budget:token_budget>2000</budience>|im_end|>"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 13248,
+    "total_tokens": 13268,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

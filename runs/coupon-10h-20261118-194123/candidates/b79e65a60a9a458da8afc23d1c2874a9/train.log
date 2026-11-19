@@ -1,0 +1,14 @@
+[train] rows=8117 cat=24 num=48 te=8 cb=18 pos_rate=0.5684 sum_card=258
+[fold 0] lgb=0.7475 cb=0.7543 fm=0.7248
+[fold 1] lgb=0.7260 cb=0.7383 fm=0.7204
+[fold 2] lgb=0.7449 cb=0.7332 fm=0.7110
+[fold 3] lgb=0.7628 cb=0.7326 fm=0.7363
+[fold 4] lgb=0.7591 cb=0.7394 fm=0.7326
+[OOF] LGB    acc=0.750031 @ t=0.47
+[OOF] CB     acc=0.740914 @ t=0.51
+[OOF] FM     acc=0.725145 @ t=0.49
+[OOF] SoftV  acc=0.756314 @ t=0.48
+[OOF] MetaL  acc=0.750647 @ t=0.54
+[select] chosen=softvote acc=0.756314 @ t=0.48
+[train] saved bundle to /model
+Final Validation Score: 0.756314

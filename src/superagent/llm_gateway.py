@@ -10,7 +10,7 @@ import urllib.request
 import uuid
 
 from .audit import write_json
-from .budget import BudgetStop
+from .budget import BudgetPending, BudgetStop
 from .contracts import CANDIDATE_CONTRACT
 
 
@@ -18,12 +18,42 @@ class TransientLLMError(RuntimeError):
     """A bounded network recovery attempt failed without proving the call was free."""
 
 
+def request_input_bound(payload, context_limit, mode="request_bytes"):
+    """Conservative byte-level text bound, not a provider-certified token count."""
+    if mode not in ("request_bytes", "full_context"):
+        raise ValueError("input_reservation_mode must be request_bytes or full_context")
+    if type(context_limit) is not int or context_limit <= 0:
+        raise ValueError("context_tokens_upper_bound must be a positive integer")
+    text_fields = {"role", "content"}
+    supported = {"model", "messages", "max_tokens", "temperature", "stream", "stop",
+                 "top_p", "frequency_penalty", "presence_penalty", "seed",
+                 "thinking", "reasoning_effort"}
+    messages = payload["messages"]
+    plain_text = all(set(m) <= text_fields and isinstance(m.get("content"), str)
+                     and m.get("role") in ("system", "user", "assistant") for m in messages)
+    thinking = payload.get("thinking", {"type": "disabled"})
+    known_thinking = (isinstance(thinking, dict) and set(thinking) == {"type"}
+                      and thinking["type"] in ("enabled", "disabled"))
+    if mode == "full_context" or not plain_text or not known_thinking or not set(payload) <= supported:
+        return context_limit, {"method": "full_context", "input_tokens_upper": context_limit}
+    # Byte-level tokenizers cannot exceed one token per UTF-8 byte of text.
+    # Count the whole envelope as well, plus allowance for hidden chat framing.
+    size = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+    overhead = 4096 + 256 * len(messages)
+    upper = min(context_limit, size + overhead)
+    return upper, {"method": "request_bytes_v1", "payload_utf8_bytes": size,
+                   "template_allowance_tokens": overhead, "input_tokens_upper": upper}
+
+
 class Gateway:
     def __init__(self, policy, ledger, audit, max_output_tokens=8192, request_timeout_seconds=240,
                  network_retry_attempts=0, network_retry_backoff_seconds=0,
-                 network_cooldown_seconds=0):
+                 network_cooldown_seconds=0, input_reservation_mode="request_bytes"):
         self.policy, self.ledger, self.audit = policy, ledger, audit
         self.max_output_tokens = max_output_tokens
+        if input_reservation_mode not in ("request_bytes", "full_context"):
+            raise ValueError("input_reservation_mode must be request_bytes or full_context")
+        self.input_reservation_mode = input_reservation_mode
         if type(self.max_output_tokens) is not int or self.max_output_tokens <= 0:
             raise ValueError("max_output_tokens must be a positive integer")
         if (type(request_timeout_seconds) not in (int, float) or not math.isfinite(request_timeout_seconds)
@@ -73,12 +103,24 @@ class Gateway:
         if self.deadline is not None and time.monotonic() >= self.deadline:
             self._halt("time_limit", "Search deadline reached")
 
-    def _check_budget(self, output_limit):
-        self._check_running()
-        try:
-            self.ledger.check_dispatch(self.policy["context_tokens_upper_bound"], output_limit)
-        except BudgetStop as error:
-            self._halt(error.reason, str(error))
+    def _budget(self, input_limit, output_limit, *, reserve=False):
+        waiting = False
+        while True:
+            self._check_running()
+            try:
+                operation = self.ledger.reserve if reserve else self.ledger.check_dispatch
+                result = operation(input_limit, output_limit)
+                if waiting:
+                    self.audit.event("budget_resumed")
+                return result
+            except BudgetPending:
+                if not waiting:
+                    self.audit.event("budget_waiting", input_tokens_upper=input_limit,
+                                     output_tokens_upper=output_limit)
+                    waiting = True
+                self.stopped.wait(timeout=0.25)
+            except BudgetStop as error:
+                self._halt(error.reason, str(error))
 
     def _admit(self):
         # After a transport failure, only one new request probes the service.
@@ -140,22 +182,21 @@ class Gateway:
         payload.update(provider_options or {})
         if stop_tokens:
             payload["stop"] = stop_tokens
+        input_limit, reservation = request_input_bound(
+            payload, self.policy["context_tokens_upper_bound"], self.input_reservation_mode)
+        reservation["output_tokens_upper"] = output_limit
         request = urllib.request.Request(self.url, data=json.dumps(payload).encode(),
                                          headers={"Authorization": "Bearer " + self.key, "Content-Type": "application/json"})
         logical_id = uuid.uuid4().hex
         previous_call = None
-        # Full context reservation is deliberately conservative and independent of tokenizer guesses.
         for attempt in range(self.network_retry_attempts + 1):
-            self._check_budget(output_limit)
+            self._budget(input_limit, output_limit)
             probe, epoch = self._admit()
-            try:
-                self._check_running()
-                call_id = self.ledger.reserve(self.policy["context_tokens_upper_bound"], output_limit)
-            except BudgetStop as error:
-                self._halt(error.reason, str(error))
+            call_id = self._budget(input_limit, output_limit, reserve=True)
             try:
                 self.audit.event("llm_reserved", call_id=call_id, model=payload["model"],
-                                 logical_id=logical_id, attempt=attempt + 1, retry_of=previous_call)
+                                 logical_id=logical_id, attempt=attempt + 1, retry_of=previous_call,
+                                 reservation=reservation)
                 write_json(self.audit.root / "calls" / f"{call_id}.request.json", payload)
             except OSError:
                 self.ledger.unknown(call_id)
@@ -182,7 +223,7 @@ class Gateway:
                 if self.ledger.max_unknown_calls == 0:
                     self._halt("uncertain_usage", "Strict mode: request failed; reservation retained")
                 self._unhealthy(probe)
-                self._check_budget(output_limit)
+                self._budget(input_limit, output_limit)
                 if attempt >= self.network_retry_attempts:
                     raise TransientLLMError("Request failed; reservation retained after bounded recovery") from None
                 previous_call = call_id
@@ -214,6 +255,8 @@ class Gateway:
                     for name in self.policy.get("allowed_response_models", [self.policy["official_family"]])):
                 self._halt("model_policy_error", "Provider response model outside documented alias mapping")
             self.audit.event("llm_settled", call_id=call_id, usage=usage, response_model=returned_model)
+            if usage["prompt_tokens"] > input_limit or usage["completion_tokens"] > output_limit:
+                self._halt("reservation_exceeded", "Provider usage exceeded the request token bound; reconcile before continuing")
             self._healthy(probe, epoch)
             choice = result["choices"][0]
             if choice.get("finish_reason") == "length":

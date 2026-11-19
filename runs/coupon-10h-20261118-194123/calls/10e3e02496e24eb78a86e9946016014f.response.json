@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-c15c13b7-e9b7-4204-bed6-fee497cc0b73",
+  "created": 1795020292,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and prediction completed successfully. Trusted validation accuracy was 0.76995074, and a fresh-process reload of the persisted model passed, confirming the saved bundle is usable in a new process. No exceptions or crashes occurred.\", \"metric\": 0.76995074, \"lower_is_better\": false, \"code_summary\": \"Data processing maps ordinal categoricals (age, income, education, time, expiration, frequency) to numeric codes, cleans/coerces types, and engineers features including social_index, matched_venue_freq, distance_level, affinity_ratio, and coupon interaction categoricals. Target encoding with prior smoothing is fit on training rows, using inner-OOF encoding for train rows to avoid leakage, and persisted maps are transformed (never refit) at prediction. Models: CatBoost (native categoricals), LightGBM (numeric TE + ordinal-encoded low-cardinality categoricals), and HistGradientBoosting, all retrained on 100% of training data using iteration counts estimated from 5-fold CV (two seeds). A logistic-regression stacker over OOF logit probabilities produces final predictions, with threshold chosen via inner CV. Predictions are mapped back to original labels and written as row_id,prediction in input order.\"}",
+        "role": "assistant",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": null
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 275,
+    "prompt_tokens": 10393,
+    "total_tokens": 10668,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

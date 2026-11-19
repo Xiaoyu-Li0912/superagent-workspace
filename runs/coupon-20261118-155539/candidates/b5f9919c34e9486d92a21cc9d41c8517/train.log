@@ -1,0 +1,24 @@
+TE smoothing strength = 25.0
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 0 deep_acc=0.7161 | hgb_a:0.7482 hgb_b:0.7395 hgb_c:0.7371 et:0.7420 lgb:0.7401 cat:0.7451
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 1 deep_acc=0.7260 | hgb_a:0.7401 hgb_b:0.7352 hgb_c:0.7358 et:0.7278 lgb:0.7463 cat:0.7395
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 2 deep_acc=0.6919 | hgb_a:0.7431 hgb_b:0.7443 hgb_c:0.7049 et:0.7110 lgb:0.7418 cat:0.7338
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 3 deep_acc=0.7240 | hgb_a:0.7455 hgb_b:0.7455 hgb_c:0.7474 et:0.7338 lgb:0.7505 cat:0.7431
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 4 deep_acc=0.7086 | hgb_a:0.7338 hgb_b:0.7425 hgb_c:0.7301 et:0.7351 lgb:0.7406 cat:0.7431
+stacked OOF matrix shape = (8117, 7) names=['cat', 'et', 'hgb_a', 'hgb_b', 'hgb_c', 'lgb']
+stacking meta-CV acc = 0.74695 at t = 0.4625
+Final stacked validation accuracy = 0.74695 (t=0.4625)
+building inner-KFold OOF target encodings for training rows
+[zoo] xgboost unavailable: No module named 'xgboost'
+  fitted tree: hgb_a
+  fitted tree: hgb_b
+  fitted tree: hgb_c
+  fitted tree: et
+  fitted tree: lgb
+  fitted tree: cat
+model artifacts saved
+Final Validation Score: 0.74695

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-590ebf08-df68-4992-bb57-2f2c430a2306",
+  "created": 1794996548,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The training and fresh-process prediction reload completed successfully. The held-out validation accuracy was 0.75270936, indicating the ensemble pipeline generalized reasonably on the provided task.\", \"metric\": 0.75270936, \"lower_is_better\": false, \"code_summary\": \"The solution loads training features and labels, applies a leakage-safe FeatureEngineer with ordinal mappings, nominal interaction vocabularies, missing-value indicators, and engineered counts/buckets. It trains an ensemble of two FT-Transformer variants and a LightGBM or sklearn gradient-boosted fallback using stratified CV for OOF blend and threshold selection, then refits on all training rows and persists preprocessing state, model weights, GBDT model, and blend config. Prediction reloads the persisted pipeline in a new process, performs FT-Transformer and GBDT inference, blends probabilities or ranks, applies the saved threshold, maps class indices back to original labels, and writes row_id,prediction in input order.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need evaluate execution output. It says trusted validation accuracy=0.75270936; fresh-process reload passed. No bugs. metric number 0.75270936, lower_is_better false. summary concise. code_summary. Ensure valid JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer only JSON. Need evaluate execution output. It says trusted validation accuracy=0.75270936; fresh-process reload passed. No bugs. metric number 0.75270936, lower_is_better false. summary concise. code_summary. Ensure valid JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 273,
+    "prompt_tokens": 12866,
+    "total_tokens": 13139,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,282 @@
+[
+  {
+    "candidate_id": "1063e81b8a354532824204b92dd467b6",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 2.509609014000489,
+    "diagnostics": "RuntimeError: Candidate train exited 1:\n[train] loading training data from /data\n[train] rows=8117 raw_features=21\n[train] labels=[0, 1] pos_rate=0.5684\nTraceback (most recent call last):\n  File \"/solution.py\", line 937, in <module>\n    main()\n  File \"/solution.py\", line 930, in main\n    score = train_pipeline(args.data, args.model)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 754, in train_pipeline\n    fe = FeatureEngineer().fit(df)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 304, in fit\n    self.state_[\"feature_columns\"] = list(self.transform(df).columns)\n                                          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 310, in transform\n    raise RuntimeError(\"FeatureEngineer.transform called before fit\")\nRuntimeError: FeatureEngineer.transform called before fit\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/1063e81b8a354532824204b92dd467b6"
+  },
+  {
+    "candidate_id": "143193814459454f9e3b57896e2cdf00",
+    "status": "valid",
+    "metric": 0.7576354679802956,
+    "elapsed_seconds": 21.58676460300012,
+    "diagnostics": "Trusted validation accuracy=0.75763547; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/143193814459454f9e3b57896e2cdf00"
+  },
+  {
+    "candidate_id": "48225ebbd5a946dd88f9b1e654e08e2b",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 42.58648045500013,
+    "diagnostics": "RuntimeError: Candidate predict exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 831, in <module>\n    _main()\n  File \"/solution.py\", line 827, in _main\n    run_predict(args.data, args.model, args.output)\n  File \"/solution.py\", line 778, in run_predict\n    model.load_state_dict(state)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 2647, in load_state_dict\n    raise RuntimeError(\nRuntimeError: Error(s) in loading state_dict for CouponMoE:\n\tsize mismatch for last_gate: copying a param with shape torch.Size([1624, 6]) from checkpoint, the shape in current model is torch.Size([1, 6]).\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/48225ebbd5a946dd88f9b1e654e08e2b"
+  },
+  {
+    "candidate_id": "4cd0d59ac2a242a98abb4f78d9c3d45b",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 309.87373348599976,
+    "diagnostics": "RuntimeError: Candidate train exited 152:\n/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)\n/solution.py:612: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:208.)\n  return torch.from_numpy(xc), torch.from_numpy(xn.astype(np.float32))\n/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)\n/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/4cd0d59ac2a242a98abb4f78d9c3d45b"
+  },
+  {
+    "candidate_id": "c03b4d8ee126498d950a278259c6ed42",
+    "status": "valid",
+    "metric": 0.767487684729064,
+    "elapsed_seconds": 412.8230353529998,
+    "diagnostics": "Trusted validation accuracy=0.76748768; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/c03b4d8ee126498d950a278259c6ed42"
+  },
+  {
+    "candidate_id": "c682aa2c70de49cc89cd3e995b2c135d",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 600.0723736149994,
+    "diagnostics": "TimeoutError: Candidate train exceeded 600s",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/c682aa2c70de49cc89cd3e995b2c135d"
+  },
+  {
+    "candidate_id": "d3aba3c756064e2e912139368ecaa9e3",
+    "status": "valid",
+    "metric": 0.6891625615763547,
+    "elapsed_seconds": 392.36160517400003,
+    "diagnostics": "Trusted validation accuracy=0.68916256; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/d3aba3c756064e2e912139368ecaa9e3"
+  },
+  {
+    "candidate_id": "e3540f8df169452b8234ac58f1368cc1",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.03151018199969258,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 484)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/e3540f8df169452b8234ac58f1368cc1"
+  },
+  {
+    "candidate_id": "d7873652149f414295f3ba0d92ea5d64",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.028332802000477386,
+    "diagnostics": "SyntaxError: closing parenthesis '}' does not match opening parenthesis '(' on line 501 (solution.py, line 506)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/d7873652149f414295f3ba0d92ea5d64"
+  },
+  {
+    "candidate_id": "e73d82ea8f8f4377b924807228bbf394",
+    "status": "valid",
+    "metric": 0.7448275862068966,
+    "elapsed_seconds": 24.641887388000214,
+    "diagnostics": "Trusted validation accuracy=0.74482759; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/e73d82ea8f8f4377b924807228bbf394"
+  },
+  {
+    "candidate_id": "3746c09435d0405aa4aefb281339eba6",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.013595967000583187,
+    "diagnostics": "SyntaxError: invalid character '∈' (U+2208) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/3746c09435d0405aa4aefb281339eba6"
+  },
+  {
+    "candidate_id": "e7031131b25f4f058996fc71f0f15b02",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.017860852000012528,
+    "diagnostics": "SyntaxError: invalid character '∈' (U+2208) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/e7031131b25f4f058996fc71f0f15b02"
+  },
+  {
+    "candidate_id": "56a6d885120a4a51a52944bae4518902",
+    "status": "valid",
+    "metric": 0.7334975369458128,
+    "elapsed_seconds": 26.16114756800016,
+    "diagnostics": "Trusted validation accuracy=0.73349754; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/56a6d885120a4a51a52944bae4518902"
+  },
+  {
+    "candidate_id": "cb2343abbd58402f9c76a745d8ddc0f1",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.01314051000008476,
+    "diagnostics": "SyntaxError: invalid character '∈' (U+2208) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/cb2343abbd58402f9c76a745d8ddc0f1"
+  },
+  {
+    "candidate_id": "d71f3a584fdb4d0e8a5d2a4f8f11952e",
+    "status": "valid",
+    "metric": 0.7182266009852217,
+    "elapsed_seconds": 36.17548175800039,
+    "diagnostics": "Trusted validation accuracy=0.71822660; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/d71f3a584fdb4d0e8a5d2a4f8f11952e"
+  },
+  {
+    "candidate_id": "366f7b7669414661ac15269f91c9d279",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.01614534799955436,
+    "diagnostics": "SyntaxError: invalid character '∈' (U+2208) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/366f7b7669414661ac15269f91c9d279"
+  },
+  {
+    "candidate_id": "2f23f216a1ed45b09e17e2ff08c3ebb9",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 22.24414470100055,
+    "diagnostics": "RuntimeError: Candidate train exited 1:\n  ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 288, in transform\n    comp = self._raw_te_components(df)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 189, in _raw_te_components\n    out = self.transform(df)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 230, in transform\n    s = self._normalize(self._col_or_nan(df, c, n))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 134, in _normalize\n    out = s.astype(str).str.strip()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/strings/accessor.py\", line 142, in wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/strings/accessor.py\", line 2622, in strip\n    result = self._data.array._str_strip(to_strip)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/strings/object_array.py\", line 496, in _str_strip\n    return self._str_map(lambda x: x.strip(to_strip))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/arrays/string_.py\", line 475, in _str_map\n    return self._str_map_nan_semantics(f, na_value=na_value, dtype=dtype)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/arrays/string_.py\", line 602, in _str_map_nan_semantics\n    return self._str_map_str_or_object(dtype, na_value, arr, f, mask)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/arrays/string_.py\", line 529, in _str_map_str_or_object\n    if is_string_dtype(dtype) and not is_object_dtype(dtype):\n       ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py\", line 710, in is_string_dtype\n    return _is_dtype(arr_or_dtype, condition)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py\", line 1724, in _is_dtype\n    return condition(dtype)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py\", line 703, in condition\n    if is_string_or_object_np_dtype(dtype):\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/pandas/core/dtypes/common.py\", line 657, in is_string_or_object_np_dtype\n    return dtype == object or dtype.kind in \"SU\"\n           ^^^^^^^^^^^^^^^\nRecursionError: maximum recursion depth exceeded\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/2f23f216a1ed45b09e17e2ff08c3ebb9"
+  },
+  {
+    "candidate_id": "cb46b4e78c6b436d98c3eaf3f15a3a8f",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.017042950999893947,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 1)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/cb46b4e78c6b436d98c3eaf3f15a3a8f"
+  },
+  {
+    "candidate_id": "e3d320328f0346f9a815c3e4e6ed9fa5",
+    "status": "valid",
+    "metric": 0.7576354679802956,
+    "elapsed_seconds": 47.143867710999984,
+    "diagnostics": "Trusted validation accuracy=0.75763547; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/e3d320328f0346f9a815c3e4e6ed9fa5"
+  },
+  {
+    "candidate_id": "9cccf70b0d43471a8bd2b33105e9bbea",
+    "status": "valid",
+    "metric": 0.7527093596059113,
+    "elapsed_seconds": 25.709275032999358,
+    "diagnostics": "Trusted validation accuracy=0.75270936; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/9cccf70b0d43471a8bd2b33105e9bbea"
+  },
+  {
+    "candidate_id": "cce57961bc41411bb7ca5277f40d9597",
+    "status": "valid",
+    "metric": 0.7527093596059113,
+    "elapsed_seconds": 137.6330861509996,
+    "diagnostics": "Trusted validation accuracy=0.75270936; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/cce57961bc41411bb7ca5277f40d9597"
+  },
+  {
+    "candidate_id": "430f4743f04640e79649eaed90f7de9c",
+    "status": "valid",
+    "metric": 0.7532019704433498,
+    "elapsed_seconds": 50.763034150999374,
+    "diagnostics": "Trusted validation accuracy=0.75320197; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/430f4743f04640e79649eaed90f7de9c"
+  },
+  {
+    "candidate_id": "78786d44d87e478497a5f68c6ea70d5d",
+    "status": "valid",
+    "metric": 0.7364532019704434,
+    "elapsed_seconds": 26.511889154999153,
+    "diagnostics": "Trusted validation accuracy=0.73645320; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/78786d44d87e478497a5f68c6ea70d5d"
+  },
+  {
+    "candidate_id": "fc5f5c8825d141028a6e460e54f9e946",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.01714201000140747,
+    "diagnostics": "SyntaxError: invalid character '×' (U+00D7) (solution.py, line 8)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/fc5f5c8825d141028a6e460e54f9e946"
+  },
+  {
+    "candidate_id": "b7a94da803a943599f03a21bc4231f86",
+    "status": "valid",
+    "metric": 0.7467980295566502,
+    "elapsed_seconds": 33.73696928499885,
+    "diagnostics": "Trusted validation accuracy=0.74679803; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/b7a94da803a943599f03a21bc4231f86"
+  },
+  {
+    "candidate_id": "57059ba936304e668b1fb2b9044dd17b",
+    "status": "valid",
+    "metric": 0.7458128078817734,
+    "elapsed_seconds": 18.006320879001578,
+    "diagnostics": "Trusted validation accuracy=0.74581281; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/57059ba936304e668b1fb2b9044dd17b"
+  },
+  {
+    "candidate_id": "b5f9919c34e9486d92a21cc9d41c8517",
+    "status": "valid",
+    "metric": 0.7497536945812808,
+    "elapsed_seconds": 70.26778075000038,
+    "diagnostics": "Trusted validation accuracy=0.74975369; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/b5f9919c34e9486d92a21cc9d41c8517"
+  },
+  {
+    "candidate_id": "abc448475c6c4f91ab8e70be6031a72b",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.02194645999952627,
+    "diagnostics": "SyntaxError: invalid character '—' (U+2014) (solution.py, line 3)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/abc448475c6c4f91ab8e70be6031a72b"
+  },
+  {
+    "candidate_id": "5ac9d02744844ed3b1ff94262a27295f",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.012963888000740553,
+    "diagnostics": "SyntaxError: unterminated string literal (detected at line 3) (solution.py, line 3)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/5ac9d02744844ed3b1ff94262a27295f"
+  },
+  {
+    "candidate_id": "df48790246c74e42a85897517fe66c1a",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.017296440999416518,
+    "diagnostics": "SyntaxError: invalid decimal literal (solution.py, line 4)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/df48790246c74e42a85897517fe66c1a"
+  },
+  {
+    "candidate_id": "0ad919445ecb494daa6efc28c3f18636",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 5.010919943000772,
+    "diagnostics": "RuntimeError: Candidate train exited 1:\nn_train=8117 pos_rate=0.5684\n[zoo] xgboost unavailable: No module named 'xgboost'\nTraceback (most recent call last):\n  File \"_catboost.pyx\", line 2687, in _catboost.get_cat_factor_bytes_representation\n  File \"_catboost.pyx\", line 2180, in _catboost.get_id_object_bytes_string_representation\n_catboost.CatBoostError: bad object for id: nan\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/solution.py\", line 802, in <module>\n    main()\n  File \"/solution.py\", line 777, in main\n    oof = run_oof(features, y_int, n_splits=5, seed=42)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 643, in run_oof\n    mdl = _fit_one(spec_item, df_tr, df_tr_cat, y_int[tr])\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/solution.py\", line 574, in _fit_one\n    mdl.fit(X, y_tr, cat_features=cat_idx)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/catboost/core.py\", line 5547, in fit\n    self._fit(X, y, cat_features, text_features, embedding_features, None, graph, sample_weight, None, None, None, None, baseline, use_best_model,\n  File \"/opt/superagent-env/lib/python3.12/site-packages/catboost/core.py\", line 2701, in _fit\n    train_params = self._prepare_train_params(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/catboost/core.py\", line 2581, in _prepare_train_params\n    train_pool = _build_train_pool(X, y, cat_features, text_features, embedding_features, pairs, graph,\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/catboost/core.py\", line 1540, in _build_train_pool\n    train_pool = Pool(X, y, cat_features=cat_features, text_features=text_features, embedding_features=embedding_features, pairs=pairs, graph=graph, weight=sample_weight, group_id=group_id,\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/superagent-env/lib/python3.12/site-packages/catboost/core.py\", line 863, in __init__\n    self._init(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, graph, weight,\n  File \"/opt/superagent-env/lib/python3.12/site-packages/catboost/core.py\", line 1518, in _init\n    self._init_pool(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, graph, weight,\n  File \"_catboost.pyx\", line 4695, in _catboost._PoolBase._init_pool\n  File \"_catboost.pyx\", line 4753, in _catboost._PoolBase._init_pool\n  File \"_catboost.pyx\", line 4541, in _catboost._PoolBase._init_features_order_layout_pool\n  File \"_catboost.pyx\", line 3170, in _catboost._set_features_order_data_pd_data_frame\n  File \"_catboost.pyx\", line 3070, in _catboost._set_features_order_data_frame_generic_categorical_column\n  File \"_catboost.pyx\", line 2694, in _catboost.get_cat_factor_bytes_representation\n_catboost.CatBoostError: Invalid type for cat_feature[non-default value idx=12,feature_idx=57]=nan : cat_features must be integer or string, real number values and NaN values should be converted to string.\n",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/0ad919445ecb494daa6efc28c3f18636"
+  },
+  {
+    "candidate_id": "5888eead5a0740d7a4798a07d6ee2cec",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.025462502000664244,
+    "diagnostics": "SyntaxError: invalid decimal literal (solution.py, line 4)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/5888eead5a0740d7a4798a07d6ee2cec"
+  },
+  {
+    "candidate_id": "926680bc1f5e4d04a3a989242832979e",
+    "status": "valid",
+    "metric": 0.7522167487684729,
+    "elapsed_seconds": 29.398791604000508,
+    "diagnostics": "Trusted validation accuracy=0.75221675; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/926680bc1f5e4d04a3a989242832979e"
+  },
+  {
+    "candidate_id": "c243ad7c9b68466292768d6b5ed2b89f",
+    "status": "valid",
+    "metric": 0.7586206896551724,
+    "elapsed_seconds": 37.22490079700037,
+    "diagnostics": "Trusted validation accuracy=0.75862069; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/c243ad7c9b68466292768d6b5ed2b89f"
+  },
+  {
+    "candidate_id": "48fdf6ca0e4047a5b78513ba39009d1a",
+    "status": "failed",
+    "metric": null,
+    "elapsed_seconds": 0.04489284200099064,
+    "diagnostics": "SyntaxError: invalid syntax (solution.py, line 410)",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/48fdf6ca0e4047a5b78513ba39009d1a"
+  }
+]

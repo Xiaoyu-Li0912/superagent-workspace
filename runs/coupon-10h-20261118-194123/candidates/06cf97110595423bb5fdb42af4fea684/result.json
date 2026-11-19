@@ -1,0 +1,8 @@
+{
+  "candidate_id": "06cf97110595423bb5fdb42af4fea684",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 0.020273755999369314,
+  "diagnostics": "SyntaxError: invalid character '—' (U+2014) (solution.py, line 15)",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-10h-20261118-194123/candidates/06cf97110595423bb5fdb42af4fea684"
+}

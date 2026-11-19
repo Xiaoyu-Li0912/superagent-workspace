@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-1bf39298-81ca-4c76-9fbb-1a8f1e1764e9",
+  "created": 1795016367,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<｜DSML｜ parameter name=\"missing\">No error message was provided.</parameter>\n\n<｜DSML｜ parameter name=\"description\" string=\"true\">Fix syntax error in solution.py — the previous version contains unresolved SEARCH/REPLACE diff markers and duplicated blocks around line 95, so the file is not valid Python.</｜DSML｜ parameter>\n<｜DSML｜ parameter name=\"line\">95</｜DSML｜ parameter>\n</｜DSML｜ invoke>\n</｜DSML｜ calls>",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<｜DSML｜ parameter name=\"missing\">No error message was provided.</parameter>\n\n<｜DSML｜ parameter name=\"description\" string=\"true\">Fix syntax error in solution.py — the previous version contains unresolved SEARCH/REPLACE diff markers and duplicated blocks around line 95, so the file is not valid Python.</｜DSML｜ parameter>\n<｜DSML｜ parameter name=\"line\">95</｜DSML｜ parameter>\n</｜DSML｜ invoke>\n</｜DSML｜ calls>"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 11814,
+    "total_tokens": 11901,
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

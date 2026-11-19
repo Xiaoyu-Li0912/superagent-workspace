@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-39e6811e-a2c0-43f2-9f11-dae377f9aec4",
+  "created": 1795019863,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<ds_safety>[用户未成年]否\n[分类]其他\n[判定]用户请求为机器学习竞赛的改进方案讨论，内容围绕表格数据建模、特征工程和模型优化，不涉及政治敏感内容，属于正常技术讨论。\n[规则]无</ds_safety>",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<ds_safety>[用户未成年]否\n[分类]其他\n[判定]用户请求为机器学习竞赛的改进方案讨论，内容围绕表格数据建模、特征工程和模型优化，不涉及政治敏感内容，属于正常技术讨论。\n[规则]无</ds_safety>"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 13191,
+    "total_tokens": 13252,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

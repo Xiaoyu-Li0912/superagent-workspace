@@ -1,0 +1,8 @@
+[train] rows=8117 base=21 cat=14 te=8 classes=2
+[train] fold 1/5 done
+[train] fold 2/5 done
+[train] fold 3/5 done
+[train] fold 4/5 done
+[train] fold 5/5 done
+[train] oof acc=0.75052 w=0.45 thr=0.450
+[train] saved model to /model

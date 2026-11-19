@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-ecad04f1-8dcc-440a-9e95-8a260ac28e85",
+  "created": 1795016984,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "<ds_safety>[用户未成年]否\n[分类]色情\n[判定]内容为机器学习模型改进的技术计划，不涉及政治或色情元素，安全。\n[规则]无</ds_safety>Safe",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "<ds_safety>[用户未成年]否\n[分类]色情\n[判定]内容为机器学习模型改进的技术计划，不涉及政治或色情元素，安全。\n[规则]无</ds_safety>Safe"
+        },
+        "content": null
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 10422,
+    "total_tokens": 10470,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

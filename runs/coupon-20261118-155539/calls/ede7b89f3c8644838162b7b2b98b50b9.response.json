@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-56fa4620-49d0-41ec-ab49-dae3129c8e7a",
+  "created": 1794992539,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"The training process crashed, exiting with code 152 (128+24, SIGXCPU), which indicates the process exceeded the CPU time/resource limit. The log shows only PyTorch warnings (TransformerEncoder nested-tensor and non-writable NumPy tensor) before termination, and no training epochs, CV folds, or validation metrics were reported. No predictions or metric were produced.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"The pipeline implements a leakage-safe FeatureEngineer (ordinal mappings for income/education/age/frequency features, nominal vocab encodings for coupon/occupation/maritalStatus, coupon-time and coupon-expiration interaction encodings, visit-count derived features) fitted on training rows only. An FT-Transformer (feature tokenizer with categorical embeddings and continuous projection, CLS token, positional encoding, nn.TransformerEncoder encoder, MLP head) is trained with label-smoothed BCE-with-logits, AdamW, warmup+cosine LR schedule, gradient clipping, and optional mixup augmentation. Training runs 5-fold StratifiedKFold CV with early stopping, OOF threshold search, then refits on all rows; artifacts (config.json with FE state, feature columns, cat/cont splits, cards, cont stats, label values, threshold, and model.pt) are persisted, and predict reloads them in a new process for inference and original-label mapping. The approach is methodologically sound but the model/CV budget exceeds the host's CPU time limit.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution failed with exit code 152, which is likely a timeout (SIGXCPU) or memory kill. Exit status 152 typically means killed by signal 24 (SIGXCPU) - 128+24=152. So the training exceeded the 600s time limit. This is a bug/resource failure.\n\nActually 152 = 128 + 24 = SIGXCPU (CPU time limit exceeded). So the candidate train timed out.\n\nMetric is null. is_bug: true.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution failed with exit code 152, which is likely a timeout (SIGXCPU) or memory kill. Exit status 152 typically means killed by signal 24 (SIGXCPU) - 128+24=152. So the training exceeded the 600s time limit. This is a bug/resource failure.\n\nActually 152 = 128 + 24 = SIGXCPU (CPU time limit exceeded). So the candidate train timed out.\n\nMetric is null. is_bug: true."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 434,
+    "prompt_tokens": 10190,
+    "total_tokens": 10624,
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -21,6 +21,8 @@ from .runner import Sandbox
 
 
 def validate_runtime(runtime):
+    if runtime.get("input_reservation_mode", "request_bytes") not in ("request_bytes", "full_context"):
+        raise ValueError("input_reservation_mode must be request_bytes or full_context")
     for key in ("steps", "max_calls", "candidate_memory_mb", "candidate_cpus", "max_output_tokens"):
         if type(runtime[key]) is not int or runtime[key] <= 0:
             raise ValueError(f"{key} must be a positive integer")
@@ -66,7 +68,8 @@ def run_search(root, task, data_root, run, runtime, policy):
     try:
         gateway = Gateway(policy, ledger, audit, runtime["max_output_tokens"], runtime.get("request_timeout_seconds", 240),
                           runtime.get("network_retry_attempts", 0), runtime.get("network_retry_backoff_seconds", 0),
-                          runtime.get("network_cooldown_seconds", 0))
+                          runtime.get("network_cooldown_seconds", 0),
+                          runtime.get("input_reservation_mode", "request_bytes"))
         gateway.deadline = time.monotonic() + runtime["time_limit_seconds"]
         search = create_search(root / "third_party/MLEvolve", run, runtime, profile, task["description"], gateway, results, audit)
     except BaseException as error:

@@ -1,0 +1,2 @@
+[predict] blended alpha_nn=0.10 (NN=3, GBDT=3)
+[predict] wrote 2030 rows -> /output/predictions.csv

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "c682aa2c70de49cc89cd3e995b2c135d",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 600.0723736149994,
+  "diagnostics": "TimeoutError: Candidate train exceeded 600s",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/c682aa2c70de49cc89cd3e995b2c135d"
+}

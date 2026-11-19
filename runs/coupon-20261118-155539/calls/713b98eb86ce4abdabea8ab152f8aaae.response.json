@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-cbc795dc-61dd-4e35-92e1-610af30f7243",
+  "created": 1794992052,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"The predict subcommand failed with a RuntimeError during load_state_dict because the registered buffer 'last_gate' has shape (1,6) in a freshly constructed CouponMoE but was saved in the checkpoint with shape (1624,6). This is caused by the forward pass overwriting the buffer with gate.detach() (batch-sized), so the saved state dict contains a mismatched buffer.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Loads features/labels/schema, fits a leakage-safe FeatureEngineer (ordinal/one-hot encodings, coupon-venue frequency matching, time cyclicals, distance/direction and interaction features) on training rows only. Trains a coupon-conditioned mixture-of-experts network (DCN-v2 cross layers + gated softmax experts + wide head) with AdamW/OneCycleLR across 5 stratified folds, early stopping on fold validation accuracy, saved per-fold weights and scalers. Also trains per-fold LightGBM models, blends NN and LGB out-of-fold probabilities via grid search, saves FE state, scalers, weights, blend weight, and label mapping to model_dir. Predict reloads these artifacts, averages fold probabilities, blends with LGB if present, thresholds at 0.5, and writes row_id,prediction to CSV. The failure occurs because the 'last_gate' buffer is overwritten with batch-shaped values during training, so the checkpoint shape mismatches the freshly built model's buffer.\"}",
+        "role": "assistant",
+        "reasoning_content": "The error is clear: last_gate buffer shape mismatch. The buffer is registered with shape (1, num_experts) but during training forward pass, `self.last_gate = gate.detach()` replaces it with actual batch shape (1624, 6). This gets saved in state_dict, so predict fails.\n\nis_bug = true, metric = null.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The error is clear: last_gate buffer shape mismatch. The buffer is registered with shape (1, num_experts) but during training forward pass, `self.last_gate = gate.detach()` replaces it with actual batch shape (1624, 6). This gets saved in state_dict, so predict fails.\n\nis_bug = true, metric = null."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 405,
+    "prompt_tokens": 9374,
+    "total_tokens": 9779,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

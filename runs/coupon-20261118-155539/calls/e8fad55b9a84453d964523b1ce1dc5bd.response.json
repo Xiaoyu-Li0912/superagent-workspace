@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-cb00a45f-d143-494a-9f5e-db3463776949",
+  "created": 1794996712,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The training and fresh-process prediction pipeline executed successfully. Trusted validation accuracy reached 0.73645320, and the reload of saved artifacts in a new process passed, confirming the persisted feature engineers, TabM ensemble, and GBDT models load and predict correctly.\", \"metric\": 0.7364532, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing: schema-driven column selection, stateless row-wise numeric/mapping features (age, income, education, time, expiration, frequency ordinals, distance, coupon-type flags) plus smoothed out-of-fold target encodings for coupon/interaction keys. Model: a TabM batch-ensemble MLP (shared rank-1-perturbed blocks with K=4 heads, GELU, LayerNorm, dropout) trained with label-smoothed cross-entropy, AdamW, cosine schedule, gradient clipping, and early stopping, blended with a HistGradientBoosting branch over an ordinal/median-imputed feature encoder. Validation: 5-fold stratified OOF training with per-fold feature engineers, OOF blending of MLP and GBDT probabilities, and full artifacts (feature engineers, state dicts, GBDT bundle, label mapping) persisted for read-only fresh-process inference writing row_id,prediction.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution succeeded with validation accuracy 0.73645320 and fresh-process reload passed. No bugs.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution succeeded with validation accuracy 0.73645320 and fresh-process reload passed. No bugs."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 301,
+    "prompt_tokens": 11949,
+    "total_tokens": 12250,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

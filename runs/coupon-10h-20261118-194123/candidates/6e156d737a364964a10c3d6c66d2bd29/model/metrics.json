@@ -1,0 +1,8 @@
+{
+  "oof_accuracy": 0.7396821485770605,
+  "threshold": 0.525,
+  "blend_w_nn": 0.4,
+  "refit_epochs": 14,
+  "n_refit": 3,
+  "has_gbdt": true
+}

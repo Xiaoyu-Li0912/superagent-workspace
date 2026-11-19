@@ -1,0 +1,20 @@
+{
+  "model": "DeepSeek-V4.1-Flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "\nCOURSE CONTRACT OVERRIDES ANY KAGGLE OR UPSTREAM INSTRUCTIONS:\nThe FINAL assembled solution.py must implement argparse subcommands:\n  python solution.py train --data /data --model /model\n  python solution.py predict --data /data --model /model --output /output/predictions.csv\nTrain input: /data/features.csv, /data/labels.csv (one column 'label'), /data/schema.json.\nPredict input: /data/features.csv, /data/schema.json; NO labels. Never use validation\nor test labels for training or preprocessing. Training gets ONLY training rows.\nSave ALL learned preprocessing, model, and label mapping under --model. Prediction\nruns in a NEW PROCESS with --model read-only and must load, not refit, the pipeline.\nfeatures.csv has no target and row order is authoritative. Output exactly columns\nrow_id,prediction; row_id is 0..N-1 in input order; prediction is an ORIGINAL label.\nUse the installed packages reported by the host environment and the standard library.\nExecution resources/packages are described by the host environment, not a course\nprohibition on GPU/deep learning. No internet or pip installs in candidate sandboxes.\nFor images, features contains sandbox-relative image paths.\nUse schema modality/feature names and training data, not a dataset name lookup.\nThe supervisor computes accuracy independently on held-out predictions and provides\naggregate feedback. Internal holdout/CV on TRAINING rows is allowed, but do not\ninvent supervisor validation scores or use held-out validation labels.\nDo NOT create Kaggle submissions, read ./input, or access unknown files.\nThe final script needs both subcommands protected by if __name__ == '__main__'.\nPersist a complete usable model within the host's configured resource limits.\nDuring staged generation, output only the requested module; during diff generation\nor code review, use the requested SEARCH/REPLACE format. This contract constrains\nthe final assembled script, not the intermediate agent response format.\n"
+    },
+    {
+      "role": "system",
+      "content": "# Task\n\nRemove ONLY useless environment information from the task description below. Keep all core task content.\n\n# Instructions\n\n- **What to REMOVE** (not related to the essence of the task):\n- • Internet access restrictions (e.g., 'Internet access: disabled', 'no internet')\n- • URLs and web links (e.g., 'https://...')\n- • Time/execution limits (e.g., 'time limit: 3 or xx hours', '≤ xx hours')\n- • Notebook-related mentions (e.g., 'Jupyter notebook', '.ipynb')\n- • Rankings, bonuses, and other irrelevant information\n- \n- **What to KEEP** (preserve exactly):\n- • Task goal and requirements\n- • Dataset description and data format\n- • Evaluation metric definition\n- • Submission format requirements\n- • All other task-specific information\n- \n- **Output**: Return ONLY the cleaned task description text, no explanations.\n\n\n# Task Description to Clean\n\nPredict acceptance of a coupon from categorical customer and trip features.\n"
+    }
+  ],
+  "max_tokens": 32768,
+  "temperature": 1.0,
+  "stream": false,
+  "thinking": {
+    "type": "enabled"
+  },
+  "reasoning_effort": "high"
+}

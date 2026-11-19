@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-6a6ae0bd-eaf1-4d72-9f55-d8ecd025fd70",
+  "created": 1795013921,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training crashed during the first CV fold in `_prepare_features` when sorting per-column unique categorical values, raising `TypeError: '<' not supported between instances of 'float' and 'str'`. The mixed types come from `astype(str)` producing the string 'nan' for some rows while other numeric-like values remain mixed after earlier coercion logic in `CouponFeatureEngineer`. No model was saved and prediction could not run.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Pipeline: schema/CSV loading; a custom CouponFeatureEngineer that canonicalizes coupon venues, parses ordinal age/income/education/time, computes engagement/distance/interaction features, and frequency-encodes categoricals fit on train only; 5-fold stratified CV (fit inside each fold) training LightGBM with native categoricals; OOF threshold tuning; final refit with 5-seed bagged LightGBM on all training rows; bundle persisted via joblib; predict loads bundle, averages seed probabilities, applies tuned threshold, and maps back to original labels. Defined but unused paths include CatBoost and a DeepFM/focal-loss MLP. The crash occurred in `_prepare_features` because `sorted()` on mixed float/str categorical uniques is invalid.\"}",
+        "role": "assistant",
+        "reasoning_content": "The error is a TypeError when sorting categories because vals contains mixed float and str. Need to report is_bug true, metric null.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The error is a TypeError when sorting categories because vals contains mixed float and str. Need to report is_bug true, metric null."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 309,
+    "prompt_tokens": 8907,
+    "total_tokens": 9216,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[train] rows=8117 classes=[0, 1]
+[train] target-encoding cols=15 prior=0.5684 m=20
+[train] fold 1/5 done
+[train] fold 2/5 done
+[train] fold 3/5 done
+[train] fold 4/5 done
+[train] fold 5/5 done
+[train] OOF nn acc=0.7385
+[train] OOF nn=0.7385, gbdt=0.7364, et=0.7349 | blend weights=[0.6, 0.0, 0.4] acc=0.7450
+[train] saved bundle -> /model/bundle.pt (nn=4, gbdt=3, et=1, epochs=27)

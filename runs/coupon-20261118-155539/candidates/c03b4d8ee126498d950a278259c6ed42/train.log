@@ -1,0 +1,20 @@
+/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/opt/superagent-env/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[fold 0] cb=0.7543 lgbm=0.7488 mlp=0.7254 (cb_it=779, gb_it=1241)
+[fold 1] cb=0.7383 lgbm=0.7365 mlp=0.7149 (cb_it=744, gb_it=414)
+[fold 2] cb=0.7357 lgbm=0.7394 mlp=0.7018 (cb_it=574, gb_it=609)
+[fold 3] cb=0.7468 lgbm=0.7443 mlp=0.7344 (cb_it=988, gb_it=488)
+[fold 4] cb=0.7572 lgbm=0.7511 mlp=0.7203 (cb_it=972, gb_it=859)
+OOF singles: catboost=0.7465 lightgbm=0.7440 mlp=0.7194
+OOF ensemble weights=[0.1, 0.4, 0.5] threshold=0.50 accuracy=0.7508
+Final iterations: catboost=933 lightgbm=830
+Saved model artifacts to /model
+Final Validation Score: 0.7508

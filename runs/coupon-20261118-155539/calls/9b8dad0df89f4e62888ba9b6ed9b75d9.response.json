@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-6d40ba49-af11-4cac-9060-233d884a07a6",
+  "created": 1794996338,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and fresh-process prediction completed successfully. The trusted validation accuracy is 0.75270936, and the saved model reloaded correctly in a new process.\", \"metric\": 0.75270936, \"lower_is_better\": false, \"code_summary\": \"The pipeline loads schema-defined features and labels, builds leakage-safe feature engineering with median imputation, ordinal encodings, interaction/derived numeric features, and out-of-fold target encoding for training. It trains a 5-fold TabM-style batch-ensemble MLP with rank-1 head perturbations plus a HistGradientBoosting anchor branch, tunes an OOF accuracy blend weight, and saves fold feature engineers, PyTorch state dicts, and GBDT encoders/models. Prediction reloads all artifacts, averages fold probabilities, applies the learned blend, maps class indices back to original labels, and writes row_id,prediction in input order.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer JSON only. Need evaluate execution output: \"Trusted validation accuracy=0.75270936; fresh-process reload passed.\" So no bugs, metric 0.75270936, lower_is_better false. Summary concise. code_summary covering methods. Need ensure valid JSON. No markdown? \"Return only a JSON object\". We'll output raw JSON.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer JSON only. Need evaluate execution output: \"Trusted validation accuracy=0.75270936; fresh-process reload passed.\" So no bugs, metric 0.75270936, lower_is_better false. Summary concise. code_summary covering methods. Need ensure valid JSON. No markdown? \"Return only a JSON object\". We'll output raw JSON."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 280,
+    "prompt_tokens": 11462,
+    "total_tokens": 11742,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

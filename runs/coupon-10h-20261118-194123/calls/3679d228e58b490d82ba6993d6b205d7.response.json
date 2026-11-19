@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-28c1ccad-b930-4080-afe4-98c9168ca406",
+  "created": 1795007924,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training crashed during the first CV fold with an IndexError in _train_one_model. The boolean val_mask is a full-dataset mask of length 8117 but the training tensors were already subset to 6493 rows, so indexing Xt[val_mask] fails on shape mismatch. No predictions were produced and no metric was computed.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Coupon-response classification: preprocessing via a learned CouponFeatureEngineer (label-encoded categoricals, median-imputed and mapped numerics for time/age/income/frequency fields), a Normalizer for numerics, and a PyTorch embedding+MLP with BatchNorm/Dropout plus a HistGradientBoosting ensemble. Training uses 5-fold stratified OOF with early stopping, blend-weight search between NN and GBDT probabilities, then full-data refits saved into a torch bundle; prediction reassembles models and blends probabilities. The code also contains duplicated definitions of _prepare_fold, _save_bundle, _load_bundle, and run_predict, though the failure itself is the mask-shape indexing bug in the NN validation step.\"}",
+        "role": "assistant",
+        "reasoning_content": "The bug: val_mask is a full-length boolean mask (8117) but Xt is the training subset (6493). In _train_one_model, val_mask is passed from the full dataset but Xt is built from training subset y. Need to fix. But we just report.\n\nAlso there are duplicate function definitions (run_predict, _save_bundle, _load_bundle, _prepare_fold) - later ones override. The first _save_bundle doesn't accept gbdt_models param but the second overrides, so okay. run_predict similarly overridden.\n\nBut the crash is the val_mask shape mismatch.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The bug: val_mask is a full-length boolean mask (8117) but Xt is the training subset (6493). In _train_one_model, val_mask is passed from the full dataset but Xt is built from training subset y. Need to fix. But we just report.\n\nAlso there are duplicate function definitions (run_predict, _save_bundle, _load_bundle, _prepare_fold) - later ones override. The first _save_bundle doesn't accept gbdt_models param but the second overrides, so okay. run_predict similarly overridden.\n\nBut the crash is the val_mask shape mismatch."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 388,
+    "prompt_tokens": 8873,
+    "total_tokens": 9261,
+    "completion_tokens_details": {
+      "reasoning_tokens": 131
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

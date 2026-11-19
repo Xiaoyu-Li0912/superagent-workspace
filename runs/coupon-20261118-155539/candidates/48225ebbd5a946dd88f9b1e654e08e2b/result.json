@@ -1,0 +1,8 @@
+{
+  "candidate_id": "48225ebbd5a946dd88f9b1e654e08e2b",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 42.58648045500013,
+  "diagnostics": "RuntimeError: Candidate predict exited 1:\nTraceback (most recent call last):\n  File \"/solution.py\", line 831, in <module>\n    _main()\n  File \"/solution.py\", line 827, in _main\n    run_predict(args.data, args.model, args.output)\n  File \"/solution.py\", line 778, in run_predict\n    model.load_state_dict(state)\n  File \"/opt/superagent-env/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 2647, in load_state_dict\n    raise RuntimeError(\nRuntimeError: Error(s) in loading state_dict for CouponMoE:\n\tsize mismatch for last_gate: copying a param with shape torch.Size([1624, 6]) from checkpoint, the shape in current model is torch.Size([1, 6]).\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/48225ebbd5a946dd88f9b1e654e08e2b"
+}

@@ -1,0 +1,88 @@
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+/solution.py:455: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+[train] loading training data from /data
+[train] rows=8117 raw_features=21
+[train] labels=[0, 1] pos_rate=0.5684
+[train] gbdt_backend_available=True (lgbm=True, skb=True)
+[fold 0] train=5411 val=2706
+  epoch 01 loss 0.6748 val_acc 0.6589
+  epoch 02 loss 0.6382 val_acc 0.6837
+  epoch 03 loss 0.6149 val_acc 0.6711
+  epoch 04 loss 0.6107 val_acc 0.6892
+  epoch 05 loss 0.6151 val_acc 0.6948
+  epoch 06 loss 0.5827 val_acc 0.7018
+  epoch 07 loss 0.5979 val_acc 0.6911
+  epoch 08 loss 0.6005 val_acc 0.6981
+  epoch 01 loss 0.6635 val_acc 0.6803
+  epoch 02 loss 0.6211 val_acc 0.7036
+  epoch 03 loss 0.6037 val_acc 0.6973
+  epoch 04 loss 0.6068 val_acc 0.6973
+[fold 0] gbdt val_acc=0.7373
+[fold 1] train=5411 val=2706
+  epoch 01 loss 0.6849 val_acc 0.6116
+  epoch 02 loss 0.6478 val_acc 0.6578
+  epoch 03 loss 0.6207 val_acc 0.6759
+  epoch 04 loss 0.6070 val_acc 0.6774
+  epoch 05 loss 0.5983 val_acc 0.6752
+  epoch 06 loss 0.5929 val_acc 0.6796
+  epoch 07 loss 0.5817 val_acc 0.6766
+  epoch 08 loss 0.5881 val_acc 0.6840
+  epoch 09 loss 0.5832 val_acc 0.6792
+  epoch 10 loss 0.5806 val_acc 0.6848
+  epoch 11 loss 0.5802 val_acc 0.6840
+  epoch 12 loss 0.5780 val_acc 0.6848
+  epoch 01 loss 0.6633 val_acc 0.6486
+  epoch 02 loss 0.6200 val_acc 0.6766
+  epoch 03 loss 0.6038 val_acc 0.6744
+  epoch 04 loss 0.5989 val_acc 0.6774
+  epoch 05 loss 0.5860 val_acc 0.6855
+  epoch 06 loss 0.5757 val_acc 0.6896
+  epoch 07 loss 0.5799 val_acc 0.6840
+  epoch 08 loss 0.5986 val_acc 0.6729
+[fold 1] gbdt val_acc=0.7417
+[fold 2] train=5412 val=2705
+  epoch 01 loss 0.6830 val_acc 0.5860
+  epoch 02 loss 0.6286 val_acc 0.6765
+  epoch 03 loss 0.6084 val_acc 0.6558
+  epoch 04 loss 0.6200 val_acc 0.6865
+  epoch 05 loss 0.6169 val_acc 0.6924
+  epoch 06 loss 0.6024 val_acc 0.6876
+  epoch 07 loss 0.6096 val_acc 0.6928
+  epoch 08 loss 0.5838 val_acc 0.6939
+  epoch 09 loss 0.5824 val_acc 0.6906
+  epoch 10 loss 0.5897 val_acc 0.6891
+  epoch 01 loss 0.6551 val_acc 0.6484
+  epoch 02 loss 0.6265 val_acc 0.6824
+  epoch 03 loss 0.6132 val_acc 0.6832
+  epoch 04 loss 0.6015 val_acc 0.6895
+  epoch 05 loss 0.5986 val_acc 0.6965
+  epoch 06 loss 0.5870 val_acc 0.6913
+  epoch 07 loss 0.5783 val_acc 0.6884
+[fold 2] gbdt val_acc=0.7527
+[oof] FT[0] acc=0.6935 | fold mean=0.6935
+[oof] FT[1] acc=0.6966 | fold mean=0.6966
+[oof] GBDT acc=0.7439
+[oof] FT_avg acc=0.6983
+[oof] FT+GB avg acc=0.7349
+[oof] FT+GB rank-avg acc=0.7155
+[oof] best_blend={'w_gb': 0.8000000000000003, 'type': 'rank', 'thr': 0.3844662395268605, 'acc': 0.7442404829370457}
+[train] design matrix=(8117, 43) | cat=9 cont=34 | cards=[5, 25, 5, 25, 10, 45, 125, 10, 2]
+[final] FT[0] epochs=9
+[final] FT[1] epochs=6
+[train] saved config + models to /model
+Internal OOF accuracy (train-only): 0.7442
+Final Validation Score: 0.7442404829370457

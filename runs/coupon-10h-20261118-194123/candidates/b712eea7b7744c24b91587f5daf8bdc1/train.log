@@ -1,0 +1,33 @@
+train rows=8117 pos_rate=0.5684 classes=[np.int64(0), np.int64(1)]
+[fold 1/5]
+  epoch 01 loss 0.6653 val_acc 0.6897
+  epoch 02 loss 0.6173 val_acc 0.6927
+  epoch 03 loss 0.6031 val_acc 0.7143
+  epoch 04 loss 0.5946 val_acc 0.7161
+  epoch 05 loss 0.5838 val_acc 0.6989
+  epoch 06 loss 0.5832 val_acc 0.7254
+  epoch 07 loss 0.5784 val_acc 0.7192
+  epoch 08 loss 0.5733 val_acc 0.7241
+  epoch 09 loss 0.5754 val_acc 0.7229
+  epoch 10 loss 0.5664 val_acc 0.7297
+  epoch 11 loss 0.5649 val_acc 0.7260
+  epoch 12 loss 0.5562 val_acc 0.7241
+  epoch 13 loss 0.5627 val_acc 0.7278
+  epoch 14 loss 0.5548 val_acc 0.7211
+  epoch 15 loss 0.5516 val_acc 0.7266
+  epoch 16 loss 0.5498 val_acc 0.7155
+  epoch 17 loss 0.5465 val_acc 0.7272
+  epoch 18 loss 0.5434 val_acc 0.7235
+  -> fold 1 NN val_acc 0.7297 (epoch 10)
+Traceback (most recent call last):
+  File "/solution.py", line 864, in <module>
+    main()
+  File "/solution.py", line 857, in main
+    acc = run_train(args.data, args.model)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 696, in run_train
+    gbdt.fit(Xg_tr, y_int[tr], categorical_features=gbdt_mask)
+  File "/opt/superagent-env/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseHistGradientBoosting.fit() got an unexpected keyword argument 'categorical_features'

@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-715910e0-4d52-44db-8518-fbd1724d1c4e",
+  "created": 1794994167,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The pipeline ran successfully, with trusted validation accuracy of 0.7448 and a fresh-process reload check passing, confirming that persisted artifacts load and predict correctly in a new process. No execution errors, exceptions, or crashes were observed.\", \"metric\": 0.74482759, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing uses a stateful FeatureEngineer fit only on training rows: ordinal mappings for age/income/education/time/expiration, frequency mappings for dining habits, median/mode imputation, nominal one-hot encoding for coupon/gender/marital status/occupation, plus engineered features (distance buckets, direction-close interaction, coupon-habit match, expiry-distance and children-age interactions). Models include a bagged field-aware DeepFM (embedding-based linear + FM + deep MLP with label-smoothing BCE, positive weighting, AdamW, cosine LR, early stopping) and a HistGradientBoostingClassifier anchor. Validation uses 5-fold StratifiedKFold OOF predictions with per-fold fitted preprocessing/scaling, followed by grid search over blend weight and threshold, then final refit on all training rows with persisted FeatureEngineer, scaler stats, GBM, DeepFM state dicts, blend weight, threshold, and label mapping for fresh-process prediction.\"}",
+        "role": "assistant",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": null
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 284,
+    "prompt_tokens": 8740,
+    "total_tokens": 9024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

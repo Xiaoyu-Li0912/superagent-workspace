@@ -139,14 +139,20 @@ label_column: churn
 
 算法开关、搜索策略、记忆和融合阈值在 `third_party/MLEvolve/config/config.yaml`，不是外层 runtime 的隐藏开关。CLI 只有 `--steps`、`--budget-rmb` 可以覆盖这些对应默认值；其余限制改 runtime 文件，或用 `--runtime` 指向自己的配置副本。`--policy` 指定模型合规/价格策略，不要仅更换 API 模型名而不核对发布日期、单价和来源。
 
-预算按**已结算 + 未知/在途预留**约束。每个新 run 独立记账，程序不会自动累加所有历史尝试；课程每任务 20 元应人工跨尝试累计，失败调用也计入。下例要求输入真实的剩余授权预算，不默认再花 20 元。配置不等于付费授权。
+预算按**已结算 + 未知/在途预留**约束。按组员于 2026-11-18 确认的口径，20 元限制针对一次任务运行，不将开发阶段不同独立实验合并扣减；同一轮的全部 Agent、重试及失败请求仍共享预算，不能通过重开目录重置同一轮额度。每个新 run 独立记账；下例输入本轮获授权预算（不超过 20 元）。配置不等于付费授权。
+
+新运行默认 `input_reservation_mode: request_bytes`：纯文本请求按完整请求的 UTF-8 字节数加消息模板余量估计输入上界，再加本次最大输出费用预留，不再每次都占满百万 token 上下文。它不是提供方认证的精确 token 计数；不支持的请求格式退回完整上下文预留，也可显式配置 `full_context`。如果只是并发在途请求暂时占用余额，会等待结算后再检查；已结算加未知费用确实不足时仍停止。正常请求按实际 usage 结算，未知费用不清零，历史账本不改。计算及验证边界见 [AI 运行参考](docs/agent-runtime.md#当前请求级预留)。
+
+本机长运行配置为 `configs/runtime.local.yaml`：500 步、36000 秒（10 小时）、1000 次调用、20 元，未知用量阈值也为 1000，不再先于调用上限独立停机。未知费用仍完整预留，网络冷却/重试、预算、鉴权、模型合规和沙箱保护保留。10 小时是搜索窗口，不保证预算或服务故障下仍能跑满；已在途请求收尾可能使进程超过窗口。下方命令要复用此配置时，将 `--runtime` 改为 `configs/runtime.local.yaml`。
+
+最近一轮 `runs/coupon-10h-20261118-194123/` 已正常冻结：实际约 5 小时 14 分钟，49 个候选、25 个有效，最佳验证 accuracy **76.9951%**。7 次 HTTP 504 保留未知费用，预算预留触发提前收尾；最终已结算 8.494555 元、未知预留 8.257536 元、在途 0。用户随后授权最终 test，2537 条样本的 accuracy 为 **77.7690%**，结果见该 run 的 `final_result.json`，预测见 `final_output/predictions.csv`；不将 test 反馈给搜索。完整过程见 [AI 运行参考](docs/agent-runtime.md#本次实际运行)。当前没有继续运行或自动重跑。
 
 ```bash
 read -r -s -p 'API key: ' SUPERAGENT_API_KEY
 printf '\n'
 export SUPERAGENT_API_KEY
 export SUPERAGENT_BASE_URL='https://aigc-api.hkust-gz.edu.cn/api/v2'
-read -r -p 'Remaining authorized budget (RMB, <=20): ' RUN_BUDGET_RMB
+read -r -p 'Authorized budget for this run (RMB, <=20): ' RUN_BUDGET_RMB
 DATA_ROOT="$(realpath ../final_project_tasks/final_project_tasks/in_vehicle_coupon_recommendation)"
 RUN_DIR="runs/coupon-$(date +%Y%m%d-%H%M%S)"
 superagent run \
@@ -214,7 +220,9 @@ superagent evaluate --run-dir "$RUN_DIR" --data-root "$DATA_ROOT"
 
 ### 7. 完整实验记录与 GitHub 分享
 
-按本组要求，**直接纳入整个现有 `runs/`**，不是节选、汇总导出或仅成功实验：包括 8 次尝试、原始请求响应、账本、候选代码、全部候选模型、日志、导出数据、验证标签，以及早先已生成的最终评测文件。当前共 926 个文件，约 462.88 MiB，没有单文件超过 100 MiB；后续实验增加后需重新核查 GitHub 限制。下载与克隆会比较大。
+按本组要求，**直接纳入整个现有 `runs/`**，不是节选、汇总导出或仅成功实验：包括原始请求响应、账本、候选代码、全部候选模型、日志、导出数据、验证标签及已生成的最终评测文件。此前 main 提交包含 8 次尝试、926 个文件、约 462.88 MiB；本次 `fix/request-budget-reservations-20261119` 分支另收录 2 次新实验及监督日志。新实验目录分别约 251.49 MiB、974.93 MiB，均在请求级预留修正前运行，不是新版效果证据；后续上传仍需检查大文件、凭据与分享权限。下载与克隆会比较大。
+
+本分支新增的 5 个模型文件超过 GitHub 普通文件的 100 MiB 上限，使用 Git LFS 保存原始内容，其余实验文件仍直接入 Git。要取得本分支的完整模型，在已安装 Git LFS 的环境执行 `git lfs install`，切换本分支后执行 `git lfs pull`；不要把 LFS 指针文本误当模型。Git LFS 存储和下载受 GitHub 配额限制，网页源码 ZIP 不保证包含实际 LFS 对象。
 
 历史 run 混有早期简化适配与后来的机制恢复版，不能把旧成绩当成当前实现成绩。逐次配置、失败原因和费用见 [实验历程](docs/agent-runtime.md#本次实际运行)；输出逐文件归属见下方[文件结构](#文件结构)。保留原始字节和已有评测锁，分析时不要手改历史记录，也不要加载不可信来源的 pickle/joblib 模型。
 
@@ -328,7 +336,7 @@ superagent evaluate --run-dir "$RUN_DIR" --data-root "$DATA_ROOT"
 ### 当前状态与下一步
 
 - 已修正外层简化，算法默认值与主要机制回归 third_party；真实记忆模型已缓存并完成组件验证，恢复版已完成一次冻结。各次配置、指标和费用统一见 [AI 运行参考](docs/agent-runtime.md)，旧简化版成绩不代表当前版本。
-- 当前新配置为 100 步、8 小时、400 次派发、20 元，并加入有界网络重试、冷却、累计 unknown 阈值、检查点与受控收尾；45 项离线测试通过，尚未用新配置收费运行。不修改历史账本，不把预留当扣款，不自动汇总跨 run 预算，也不自动启动新实验。
+- 共享配置为 100 步、8 小时、400 次派发、20 元；本机 10 小时配置已运行并冻结，最终 test 为 77.7690%，详见上文。最新外层修正加入请求级预留和在途预算等待，52 项离线测试通过，尚未以修正后的计费策略启动收费实验。不修改历史账本，不把预留当扣款，不自动汇总跨 run 预算，也不自动启动新实验。
 - 三人最终选型、认领和可投入工时尚未确认。优先接手现有实现、约定接口；数据/预测和运行控制可并行，完成后集成验证。
 - 待开发/复核：上游分析 schema 的 number/null 矛盾、生成的语法错误、空正文/截断和资源失败，以及新可靠性策略的真实长运行效果；跨进程自动续跑仍未实现。正式模型 build 和课程价格口径待确认，未知用量不得清零。
 - 待验收：标题任务自主运行、获准开发样例上的图像/多分类、关键改进对照和另一位组员复跑。验收以可信指标、可重载模型、可重算费用及运行证据为准。
@@ -498,7 +506,7 @@ cli.py -> orchestrator.py -> mlevolve_adapter.py -> MLEvolve AgentSearch
 - **`evaluate`：** 调用 `orchestrator.final_evaluate()`，对冻结结果执行一次性最终测试；不是继续搜索或调参命令。
 - **`audit`：** 根据运行时保存的配置打开 `cost.sqlite`，重新导出 `cost_summary.json`。这是本地账本核对，不访问学校 API 管理平台。
 - **输入/输出：** 输入来自命令参数、配置和环境变量；命令结果以 JSON 打印。搜索、预测、评测的具体磁盘产物由下层模块生成。`--key-stdin` 可从私有标准输入读取密钥；CLI **不会自动加载 `.env`**。
-- **什么时候改：** 新增命令、命令参数或配置覆盖方式时改。当前参数检查要求步数等计数为正整数、预算 `0 < budget <= 20`；没有把步数硬编码限制为 100。该预算约束只覆盖本轮，仍须人工累计各次尝试以满足课程每任务 20 元上限。
+- **什么时候改：** 新增命令、命令参数或配置覆盖方式时改。当前参数检查要求步数等计数为正整数、预算 `0 < budget <= 20`；没有把步数硬编码限制为 100。按组员确认口径，预算覆盖本轮全部 Agent 和重试，不扣减其他独立开发实验；同一轮不能通过重开目录重置额度。
 
 ##### 2.3 `contracts.py`：约定候选程序怎么交付、结果怎么表示
 
@@ -571,16 +579,16 @@ cli.py -> orchestrator.py -> mlevolve_adapter.py -> MLEvolve AgentSearch
 
 - **核心对象：** `Gateway`；`generate()`、`query()` 适配上游调用形式，统一进入 `call()`。`normalize_prompt()`、`stringify()` 负责把不同提示结构转换成消息格式。
 - **输入：** 上游 messages、temperature、输出 token 限制、schema、stop 和 provider options，加上模型策略、账本、审计对象。密钥与 API 地址来自监督进程环境变量，不传给候选。
-- **请求前：** 检查停止信号/deadline 和模型策略声明，加入课程协议，限制输出长度，按完整配置上下文上界加输出上限预留预算；余额或调用额度不足就不发请求。预留值不等于已经花掉的费用。
+- **请求前：** 检查停止信号/deadline 和模型策略声明，加入课程协议和 schema 后，由 `request_input_bound()` 计算纯文本完整请求的 UTF-8 字节上界加模板余量（不超过配置上下文），加本次输出上限预留预算；不支持的格式或 `full_context` 模式沿用完整上下文。若只是并发在途预留暂占余额，等待结算再检查，等待遵守 deadline/停止信号；永久预算或调用额度不足不发请求。预留不是已花费用，也不是精确 token 预测。
 - **实际请求：** 向 `/chat/completions` 发送非流式 HTTP 请求，单次网络 timeout 由 `request_timeout_seconds` 控制，当前配置 1200 秒；网络重试次数、退避与冷却均由 runtime 显式配置。当前不再写死关闭 thinking，相关参数沿上游 model profile 传递。
-- **请求后：** 保存原始响应；检查输入/输出/总 token 一致，按 usage 结算；检查返回模型别名，再解析正文。需要 schema 时，将 schema 作为文本要求附加并用 `jsonschema` 校验，不是原生工具调用。
+- **请求后：** 保存原始响应；检查输入/输出/总 token 一致，按 usage 结算；检查返回模型别名，再解析正文。输入或输出实际 token 超出各自预留上界时停止并要求核对，不因总费用尚够而隐去。需要 schema 时，将 schema 作为文本要求附加并用 `jsonschema` 校验，不是原生工具调用。
 - **异常规则：** 临时传输错误保留完整预留，并按明确配置有界重试；每次实际派发单独记账，以 `logical_id`、`retry_of` 关联。恢复额度耗尽则停止新请求；鉴权/usage/模型策略等非临时错误立即停止。截断、空正文、正文 JSON/schema 错误保留已结算费用，不将其重标为 unknown；上游仍可按原生成/解析异常路径另行调用。
-- **直接输出：** `calls/<call_id>.request.json`、`.response.json`，以及账本和事件日志记录；成功向上游返回文本或结构化结果。请求文件不含 Authorization 密钥，但可能含提示、代码和训练概况，原始日志仍需谨慎分享。
+- **直接输出：** `calls/<call_id>.request.json`、`.response.json`，以及账本和事件日志；`llm_reserved` 记录上界计算依据，`budget_waiting` / `budget_resumed` 记录预算等待与恢复。成功向上游返回文本或结构化结果。请求文件不含 Authorization 密钥，但可能含提示、代码和训练概况，原始日志仍需谨慎分享。
 - **什么时候改：** API 协议、模型参数映射、usage/返回结构或错误处理变化时改，不在此替换 Agent 的推理流程。`verified`、发布日期与别名检查依赖本地策略声明，不能独立证明学校底层实际模型 build；deadline 也不会即时取消已经在途的网络请求。
 
 ##### 2.10 `budget.py`：独立、持久化的调用账本
 
-- **核心对象：** `Ledger`，底层是 `cost.sqlite` 的 `calls`、`policy`、`recovery_policy` 表；`BudgetStop` 表示应停止继续派发请求，并带可区分的停止原因。旧账本无恢复策略表时按严格模式解释，不修改历史费用。
+- **核心对象：** `Ledger`，底层是 `cost.sqlite` 的 `calls`、`policy`、`recovery_policy` 表；`BudgetStop` 表示应停止派发，`BudgetPending` 区分可等待在途结算释放的暂时预算不足，由网关等待而不触发全局停机。旧账本无恢复策略表时按严格模式解释，不修改历史费用。
 - **`reserve()`：** 用 SQLite 写事务串行检查并发调用的预算、调用数和累计未知用量阈值，将已结算和仍占用的预留一起计入；为下一次请求生成独立 ID。`max_unknown_calls: 0` 保持旧版首次 unknown 后停止；当前配置 3 允许阈值以内恢复，成功不清零 unknown。
 - **`settle()`：** 根据实际输入/输出 token 和单价结算，正常释放多余预留；如果服务端用量超过预留，记为 unknown 并停止，不掩盖超量事实。`unknown()` 将未能确认的调用保留为未决费用。
 - **`summary()`：** 返回预算上限、已结算金额、unknown 预留、在途预留、已知 token、未决笔数和逐笔明细；由调用者写入 `cost_summary.json`。`charged_or_reserved_rmb` **不是全部已经确认扣款的金额**。

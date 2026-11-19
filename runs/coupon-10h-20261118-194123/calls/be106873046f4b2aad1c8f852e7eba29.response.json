@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-5381af99-30fa-410b-b927-2d3613e0f2f4",
+  "created": 1795014319,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The pipeline executed successfully in a fresh-process reload check and produced a trusted validation accuracy of 0.75369458. No execution errors, exceptions, or crashes were reported.\", \"metric\": 0.75369458, \"lower_is_better\": false, \"code_summary\": \"The solution performs leakage-safe feature engineering with ordinal mappings, binary indicators, coupon-venue affinity features, nominal combinations, and smoothed target encoding fitted only on training rows. It trains an ensemble of a DCN-MoE neural network with categorical embeddings, cross layers, and gated mixture-of-experts, plus HistGradientBoosting and ExtraTrees base learners. Validation uses stratified 5-fold out-of-fold predictions to tune blend weights and a decision threshold, then refits all components on the full training set and persists preprocessing, model weights, blending parameters, threshold, and label mapping for read-only prediction in a fresh process.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need evaluate execution. Output says trusted validation accuracy=0.75369458; fresh-process reload passed. No failure. is_bug false. metric 0.75369458. lower_is_better false (accuracy). Summary 2-3 sentences. code_summary concise covering preprocessing, feature engineering, model, validation. Must be valid JSON. Ensure no markdown.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer only JSON. Need evaluate execution. Output says trusted validation accuracy=0.75369458; fresh-process reload passed. No failure. is_bug false. metric 0.75369458. lower_is_better false (accuracy). Summary 2-3 sentences. code_summary concise covering preprocessing, feature engineering, model, validation. Must be valid JSON. Ensure no markdown."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 281,
+    "prompt_tokens": 13318,
+    "total_tokens": 13599,
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-d552fc3c-0e8f-4b7d-b7a3-e3bf195952dd",
+  "created": 1794998932,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"Training and fresh-process prediction completed successfully. Trusted validation accuracy was 0.75221675, and the persisted pipeline reloaded correctly in a new process.\", \"metric\": 0.75221675, \"lower_is_better\": false, \"code_summary\": \"The code loads features, labels, and schema, converts numeric/categorical columns with a fitted preprocessor, and applies label coding. It uses leakage-safe out-of-fold target encoding for categorical interactions, then trains blended LightGBM and HistGradientBoosting ensembles across multiple seeds. A 5-fold stratified OOF search selects blend weight and classification threshold, after which final models and preprocessing artifacts are pickled for reuse during prediction.\"}",
+        "role": "assistant",
+        "reasoning_content": "We need answer only JSON. Need infer execution success, metric 0.75221675 accuracy, lower_is_better false. is_bug false. Summary concise. code_summary mention preprocessing, target encoding, LGBM/HGB ensemble, threshold, CV, pickle. Ensure JSON valid.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "We need answer only JSON. Need infer execution success, metric 0.75221675 accuracy, lower_is_better false. is_bug false. Summary concise. code_summary mention preprocessing, target encoding, LGBM/HGB ensemble, threshold, CV, pickle. Ensure JSON valid."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 216,
+    "prompt_tokens": 6922,
+    "total_tokens": 7138,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

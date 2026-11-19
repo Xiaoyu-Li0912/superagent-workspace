@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-af585785-ac60-4467-be54-68ca7fbd17ae",
+  "created": 1794992068,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The root cause: `last_gate` is a registered buffer, but `CouponMoE.forward()` **reassigns** it to a batched tensor (`self.last_gate = gate.detach()`). So the checkpoint saved by `model.state_dict()` contains a buffer of shape `(batch, num_experts)` (here `(1624, 6)`) instead of the initial `(1, 6)`. At predict time, the freshly-built model has the `(1, 6)` shape, causing a strict load mismatch.\n\nThe minimal, targeted fix:\n1. Strip non-parameter buffers (`last_gate`, and defensively `aux_load_balance`) from the saved state dict.\n2. Load with `strict=False` both when restoring the best state inside training and when loading in the fresh predict process.\n\nThese keep the real model weights and all learned preprocessing intact.\n\n<<<<<<< SEARCH\n        if acc > best_acc + 1e-6:\n            best_acc = acc\n            best_state = copy.deepcopy(model.state_dict())\n            patience = 0\n=======\n        if acc > best_acc + 1e-6:\n            best_acc = acc\n            # Exclude runtime-only buffers (e.g. `last_gate` is resized every\n            # forward pass) so the checkpoint stays shape-stable across processes.\n            best_state = {\n                k: v.detach().clone()\n                for k, v in model.state_dict().items()\n                if k != \"last_gate\" and not k.endswith(\".last_gate\")\n            }\n            patience = 0\n>>>>>>> REPLACE\n\n<<<<<<< SEARCH\n    model.load_state_dict(best_state)\n    model.eval()\n    with torch.no_grad():\n        va_probs = F.softmax(model(Xva_t), dim=-1).numpy()[:, 1]\n    return best_state, mu, sd, va_probs, best_acc\n=======\n    model.load_state_dict(best_state, strict=False)\n    model.eval()\n    with torch.no_grad():\n        va_probs = F.softmax(model(Xva_t), dim=-1).numpy()[:, 1]\n    return best_state, mu, sd, va_probs, best_acc\n>>>>>>> REPLACE\n\n<<<<<<< SEARCH\n        state = torch.load(\n            os.path.join(model_dir, meta[\"nn_files\"][fi]), map_location=\"cpu\"\n        )\n        model.load_state_dict(state)\n        model.eval()\n=======\n        state = torch.load(\n            os.path.join(model_dir, meta[\"nn_files\"][fi]), map_location=\"cpu\"\n        )\n        state = {\n            k: v for k, v in state.items()\n            if k != \"last_gate\" and not k.endswith(\".last_gate\")\n        }\n        model.load_state_dict(state, strict=False)\n        model.eval()\n>>>>>>> REPLACE\n\nSummary of the plan:\n- The crash is caused by a runtime-resized buffer (`CouponMoE.last_gate`) being serialized into the checkpoint with a batch-dependent shape. \n- We now save only stable, batched-invariant entries of the state dict (dropping `last_gate`), and use `strict=False` on both reload paths (in-training best-state restore and fresh-process predict) so a missing/short buffer can never break loading.\n- All actual model parameters, fold scalers, feature engineer JSON, and blend weights remain unchanged, so task semantics and accuracy are preserved.",
+        "role": "assistant",
+        "reasoning_content": "\"Last gate\" is a registered buffer that gets resized during forward (batched). I save the full state_dict including this buffer, so at load time it's the validation-set-gate shape, not [1,6].\n\nSmallest correct fix: exclude non-parameter buffers like last_gate/aux_load_balance from the saved state, or handle strict=False. But aux_load_balance is not a buffer; last_gate is. Simplest: save only parameters.\n\nAlso gate_feature_idx param default None; fine.\n\nFix _train_neural_fold to save model.state_dict() filtered, and predict load_state_dict(strict=False) or filter. Both. Let's produce diff.\n\nAlso note val_probs returned always index 1; ok.\n\nProvide two edits:\n1. In _train_neural_fold: best_state = {k:v for k,v in model.state_dict().items() if 'last_gate' not in k and 'aux_load_balance' not in k}  (at the deepcopy line).\n2. In run_predict: model.load_state_dict(state, strict=False).\n\nWait if last_gate excluded, strict=False fine. Do both.\n\nAlso checkpoint saved at end: model.load_state_dict(best_state) at line after loop -> need strict=False there too since last_gate missing from best_state. Actually best_state built from full state_dict currently. If we filter then load_state_dict(best_state) will fail missing key. So add strict=False there too. Let's show all three edits.\n\nEdit 1: \n```\n        if acc > best_acc + 1e-6:\n            best_acc = acc\n            best_state = copy.deepcopy(model.state_dict())\n```\nreplace with filtered.\n\nEdit 2: model.load_state_dict(best_state) in _train_neural_fold.\n\nEdit 3: predict load.\n\nAlso best_state could remain None if never improved — but first epoch always improves since best_acc=-1. Fine, but guard.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "\"Last gate\" is a registered buffer that gets resized during forward (batched). I save the full state_dict including this buffer, so at load time it's the validation-set-gate shape, not [1,6].\n\nSmallest correct fix: exclude non-parameter buffers like last_gate/aux_load_balance from the saved state, or handle strict=False. But aux_load_balance is not a buffer; last_gate is. Simplest: save only parameters.\n\nAlso gate_feature_idx param default None; fine.\n\nFix _train_neural_fold to save model.state_dict() filtered, and predict load_state_dict(strict=False) or filter. Both. Let's produce diff.\n\nAlso note val_probs returned always index 1; ok.\n\nProvide two edits:\n1. In _train_neural_fold: best_state = {k:v for k,v in model.state_dict().items() if 'last_gate' not in k and 'aux_load_balance' not in k}  (at the deepcopy line).\n2. In run_predict: model.load_state_dict(state, strict=False).\n\nWait if last_gate excluded, strict=False fine. Do both.\n\nAlso checkpoint saved at end: model.load_state_dict(best_state) at line after loop -> need strict=False there too since last_gate missing from best_state. Actually best_state built from full state_dict currently. If we filter then load_state_dict(best_state) will fail missing key. So add strict=False there too. Let's show all three edits.\n\nEdit 1: \n```\n        if acc > best_acc + 1e-6:\n            best_acc = acc\n            best_state = copy.deepcopy(model.state_dict())\n```\nreplace with filtered.\n\nEdit 2: model.load_state_dict(best_state) in _train_neural_fold.\n\nEdit 3: predict load.\n\nAlso best_state could remain None if never improved — but first epoch always improves since best_acc=-1. Fine, but guard."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1160,
+    "prompt_tokens": 12814,
+    "total_tokens": 13974,
+    "completion_tokens_details": {
+      "reasoning_tokens": 410
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "steps": 500,
+  "time_limit_seconds": 36000,
+  "candidate_timeout_seconds": 600,
+  "candidate_memory_mb": 4096,
+  "candidate_cpus": 2,
+  "request_timeout_seconds": 1200,
+  "max_output_tokens": 32768,
+  "max_calls": 1000,
+  "budget_rmb": 20.0,
+  "max_unknown_calls": 1000,
+  "network_retry_attempts": 2,
+  "network_retry_backoff_seconds": 30,
+  "network_cooldown_seconds": 120,
+  "seed": 42,
+  "model": "DeepSeek-V4.1-Flash",
+  "upstream_environment": {
+    "agent.search.num_gpus": 0,
+    "agent.memory_embedding_device": "cpu"
+  }
+}

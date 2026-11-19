@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-cebf9850-18ae-4392-a88d-dd808e57242f",
+  "created": 1795009671,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training crashed on the first cross-validation fold when calling HistGradientBoostingClassifier.fit with the unsupported 'categorical_features' keyword argument, which this sklearn version's BaseHistGradientBoosting.fit does not accept. The neural network portion of fold 1 trained successfully reaching a validation accuracy of ~0.730 at epoch 10, but no model bundle was ever saved and no predictions were produced.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Feature engineering parses ordinal encodings of frequency/age/income/education/time/expiration, binary indicators, distance level, frequency aggregates, coupon-venue affinity features, and nominal categorical strings plus coupon-time/expiration/temperature crosses. A CouponFeatureEngineer fits numeric medians and column order on training rows only, and a CategoricalIndexer builds category vocabularies per fold for leakage-safe CV. The ensemble combines a DCN-MoE neural network (embeddings, cross layers, deep tower, gated mixture-of-experts with a shared head, label-smoothed BCE, AdamW + cosine schedule, early stopping on fold accuracy, seed-averaged refit) with a HistGradientBoostingClassifier on the same engineered matrix. Blend weight and decision threshold are tuned on 5-fold out-of-fold predictions by accuracy, then the full pipeline is refit on all training rows and persisted as a torch bundle (.pt) plus metrics.json; predict reloads the bundle and writes row_id,prediction CSV. The run failed at the GBDT fit step due to an unsupported 'categorical_features' argument.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution failed due to a TypeError in sklearn's HistGradientBoostingClassifier.fit - the categorical_features argument is not supported in this sklearn version. is_bug = true, metric = null, lower_is_better = false (accuracy).",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution failed due to a TypeError in sklearn's HistGradientBoostingClassifier.fit - the categorical_features argument is not supported in this sklearn version. is_bug = true, metric = null, lower_is_better = false (accuracy)."
+        }
+      },
+      "provider_specific_fields": {}
+    }
+  ],
+  "usage": {
+    "completion_tokens": 400,
+    "prompt_tokens": 9896,
+    "total_tokens": 10296,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

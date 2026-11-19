@@ -1,0 +1,24 @@
+TE smoothing strength = 25.0
+OOF TE inner-KFold seed = 42 (5 folds, shuffle=True)
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 0 deep_acc=0.7254 tree_acc=0.7494 zoo=['hgb_a', 'hgb_b', 'hgb_c', 'lgb', 'cat']
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 1 deep_acc=0.7094 tree_acc=0.7463 zoo=['hgb_a', 'hgb_b', 'hgb_c', 'lgb', 'cat']
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 2 deep_acc=0.6969 tree_acc=0.7437 zoo=['hgb_a', 'hgb_b', 'hgb_c', 'lgb', 'cat']
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 3 deep_acc=0.7264 tree_acc=0.7498 zoo=['hgb_a', 'hgb_b', 'hgb_c', 'lgb', 'cat']
+[zoo] xgboost unavailable: No module named 'xgboost'
+fold 4 deep_acc=0.7049 tree_acc=0.7468 zoo=['hgb_a', 'hgb_b', 'hgb_c', 'lgb', 'cat']
+OOF deep alone acc (t=0.5) = 0.71258
+OOF treeZoo acc (t=0.5)    = 0.74720
+OOF blend acc w=0.00 t=0.490 = 0.74769
+building inner-KFold OOF target encodings for training rows
+[zoo] xgboost unavailable: No module named 'xgboost'
+  fitted tree: hgb_a
+  fitted tree: hgb_b
+  fitted tree: hgb_c
+  fitted tree: lgb
+  fitted tree: cat
+model artifacts saved
+Final Validation Score: 0.74769

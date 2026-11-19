@@ -1,0 +1,21 @@
+{
+  "candidate": {
+    "candidate_id": "c03b4d8ee126498d950a278259c6ed42",
+    "status": "valid",
+    "metric": 0.767487684729064,
+    "elapsed_seconds": 412.8230353529998,
+    "diagnostics": "Trusted validation accuracy=0.76748768; fresh-process reload passed.",
+    "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/c03b4d8ee126498d950a278259c6ed42"
+  },
+  "files": {
+    "model/catboost_0.cbm": "3302b7dcf1c8f2406b8cd5a62d4d4de39a305ae84c0f8c84d9b1768abcd08ecc",
+    "model/catboost_1.cbm": "cf97e182e39404fcbb26909b467a607b17229eb6f82637b72372c84e7d6d9ea6",
+    "model/catboost_2.cbm": "8a08dbcc05af96f5912ffcc270903b415ed9e1d07ac529f1b32dc9ea79fe6887",
+    "model/feature_engineer.joblib": "bd28c63876823f5aa90f6cc2819567be2fad99e8fd6db5c8a34679dfeb2ced12",
+    "model/lightgbm.joblib": "bf79f75db5741f98a81739fdf1fb42c52a91bb82f5178f16b44e6b9ed50e618d",
+    "model/meta.joblib": "b6f915401f45e8c84c870cbd76ee79cb5e0a5e1cdb37c1e396e41b95d44db249",
+    "model/mlp.pt": "ae2d0277d131c3b368f4dbcd7aa0b2af24b5232443f5514dee5fa1b184ca0142",
+    "solution.py": "e06de9cb7bc96b83252c8531634b77de879ee18ab16d2915804de74adc2c58b7"
+  },
+  "locked": true
+}

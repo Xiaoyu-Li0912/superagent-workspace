@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-0dbeab55-d442-4fe3-bff7-3f8ae65d430c",
+  "created": 1794998467,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"is_bug\": true,\n  \"summary\": \"Training exited with a non-zero status after CatBoost raised a CatBoostError: 'bad object for id: nan' when fitting on categorical features. NaN values were still present in a categorical column (feature_idx=57, cat_feature idx=12) even after the transform_native_cols string-replacement logic. XGBoost was also unavailable, and training never reached a validation metric.\",\n  \"metric\": null,\n  \"lower_is_better\": false,\n  \"code_summary\": \"The script loads features/labels plus schema JSON, then a stateful FeatureEngineer performs ordinal/frequency encodings, one-hot nominal columns, distance/habit/expiry interaction features, coupon-conditional centering, and leakage-safe target encodings using inner StratifiedKFold. It builds a GBDT ensemble (CatBoost with native categorical strings, LightGBM with numeric+TE frames, ExtraTrees, HistGradientBoosting, optional XGBoost), generates 5-fold OOF probabilities, stacks them with a logistic-regression meta-learner, and tunes a decision threshold via OOF accuracy. Artifacts (FE, fitted models, meta-learner, threshold, label mapping) are pickled to the model directory for a separate predict subcommand.\"\n}",
+        "role": "assistant",
+        "reasoning_content": "The training crashed because CatBoost got NaN in a categorical column. The transform_native_cols replaces \"nan\" strings, but maybe features have float NaN values that got str()'d to \"nan\" then replaced... Actually the code does `s.where(~s.isin([\"nan\",\"None\",\"\",\"NaN\"]), \"missing\")`. But if the column is float dtype with np.nan, `astype(str)` gives \"nan\" string, should be replaced. Hmm. But error says cat_feature idx=12 feature column 57 is nan. Possibly some values differ. Anyway, it's a bug.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The training crashed because CatBoost got NaN in a categorical column. The transform_native_cols replaces \"nan\" strings, but maybe features have float NaN values that got str()'d to \"nan\" then replaced... Actually the code does `s.where(~s.isin([\"nan\",\"None\",\"\",\"NaN\"]), \"missing\")`. But if the column is float dtype with np.nan, `astype(str)` gives \"nan\" string, should be replaced. Hmm. But error says cat_feature idx=12 feature column 57 is nan. Possibly some values differ. Anyway, it's a bug."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 408,
+    "prompt_tokens": 9205,
+    "total_tokens": 9613,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

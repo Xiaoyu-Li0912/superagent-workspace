@@ -1,0 +1,8 @@
+{
+  "candidate_id": "d7873652149f414295f3ba0d92ea5d64",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 0.028332802000477386,
+  "diagnostics": "SyntaxError: closing parenthesis '}' does not match opening parenthesis '(' on line 501 (solution.py, line 506)",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/d7873652149f414295f3ba0d92ea5d64"
+}

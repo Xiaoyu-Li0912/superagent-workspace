@@ -1,0 +1,8 @@
+{
+  "candidate_id": "4cd0d59ac2a242a98abb4f78d9c3d45b",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 309.87373348599976,
+  "diagnostics": "RuntimeError: Candidate train exited 152:\n/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)\n/solution.py:612: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:208.)\n  return torch.from_numpy(xc), torch.from_numpy(xn.astype(np.float32))\n/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)\n/solution.py:450: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)\n",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/4cd0d59ac2a242a98abb4f78d9c3d45b"
+}

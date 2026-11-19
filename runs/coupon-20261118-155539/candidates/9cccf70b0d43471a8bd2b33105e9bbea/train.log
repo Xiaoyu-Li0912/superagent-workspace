@@ -1,0 +1,34 @@
+/solution.py:842: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:208.)
+  proba = predict_proba(model, torch.from_numpy(X_va), batch_size=1024).numpy()
+[train] data=/data model=/model
+[train] n_rows=8117 n_classes=2 classes=['0', '1'] pos_rate=0.568
+[train] fold 1/5 n_tr=6493 n_va=1624
+      epoch 000 loss=0.7575 val_acc=0.6823 best=0.6823
+      epoch 010 loss=0.5500 val_acc=0.7217 best=0.7217
+      epoch 020 loss=0.5086 val_acc=0.7217 best=0.7272
+      early-stop @ epoch 25 (best=0.7272)
+[train]   fold 1 best_val_acc=0.7272 gbdt_acc=0.7475
+[train] fold 2/5 n_tr=6493 n_va=1624
+      epoch 000 loss=0.7536 val_acc=0.6693 best=0.6693
+      epoch 010 loss=0.5455 val_acc=0.7174 best=0.7248
+      epoch 020 loss=0.5094 val_acc=0.7284 best=0.7315
+      early-stop @ epoch 21 (best=0.7315)
+[train]   fold 2 best_val_acc=0.7315 gbdt_acc=0.7241
+[train] fold 3/5 n_tr=6494 n_va=1623
+      epoch 000 loss=0.7427 val_acc=0.6710 best=0.6710
+      epoch 010 loss=0.5409 val_acc=0.7024 best=0.7049
+      early-stop @ epoch 19 (best=0.7079)
+[train]   fold 3 best_val_acc=0.7079 gbdt_acc=0.7320
+[train] fold 4/5 n_tr=6494 n_va=1623
+      epoch 000 loss=0.7307 val_acc=0.6913 best=0.6913
+      epoch 010 loss=0.5441 val_acc=0.7270 best=0.7277
+      early-stop @ epoch 13 (best=0.7277)
+[train]   fold 4 best_val_acc=0.7277 gbdt_acc=0.7505
+[train] fold 5/5 n_tr=6494 n_va=1623
+      epoch 000 loss=0.7357 val_acc=0.6741 best=0.6741
+      epoch 010 loss=0.5472 val_acc=0.7184 best=0.7184
+      early-stop @ epoch 19 (best=0.7190)
+[train]   fold 5 best_val_acc=0.7190 gbdt_acc=0.7406
+[train] OOF accuracy: mlp=0.72268 gbdt=0.73894 blend=0.74301 (w_mlp=0.275) (mean_fold=0.72268 std=0.00841)
+[train] artifacts saved -> /model (19.9s)
+Final Validation Score: 0.7430085006775903

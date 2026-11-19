@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-54ce82cc-0a0c-4466-bf23-ea4d60084b75",
+  "created": 1794993224,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training did not complete: the candidate train command exceeded the 600s execution limit and was killed with a TimeoutError. No validation metric was produced, so the pipeline's accuracy could not be measured.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Loads features/labels/schema, fits a leakage-safe FeatureEngineer (ordinal encodings for age/education/income/frequency, cyclic time features, venue-coupon match features, distance/direction interactions, coupon-type flags) per fold. Trains 5-fold stratified CV with a coupon-conditioned mixture-of-experts model (DCN-v2 cross layers, gated MLP experts, wide+deep head) using AdamW, OneCycleLR, label smoothing and early stopping, plus a LightGBM anchor per fold; OOF probabilities are used to grid-search a blend weight. Persists per-fold feature engineers, scalers, NN states, LGB boosters and meta.json, and predict averages fold models then thresholds at 0.5 to map back to original class labels.\"}",
+        "role": "assistant",
+        "reasoning_content": "The training timed out at 600s. So is_bug should be true (execution failed due to timeout). Metric null. lower_is_better false (accuracy).",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The training timed out at 600s. So is_bug should be true (execution failed due to timeout). Metric null. lower_is_better false (accuracy)."
+        }
+      },
+      "provider_specific_fields": {}
+    }
+  ],
+  "usage": {
+    "completion_tokens": 274,
+    "prompt_tokens": 9458,
+    "total_tokens": 9732,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

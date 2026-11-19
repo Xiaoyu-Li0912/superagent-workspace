@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-bbcccba8-28a5-483c-9fd5-68a7d19ac267",
+  "created": 1795020267,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"Training crashed on the first NN fold with a shape mismatch in the deep tower: the constructed attention representation has dimension 32 (CLS token plus mean-pooled tokens, each emb_dim=16) while the first Linear layer expects only emb_dim=16 as budgeted in tower_in (2*d + emb_dim). Input 256x406 could not be multiplied by weight 390x256, so no model was trained or saved and no metric was produced.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Pipeline engineers ordinal/binary/nominal features plus interaction and coupon-venue affinity features, fits a median imputer, categorical vocabulary indexer, and smoothed OOF-style target encoders for categorical combos (all fit only on training folds). Model is a DCN with cross layers, per-feature embeddings, a transformer-style attention token mixer, and a deep tower feeding a shared head plus a gated mixture-of-experts head, trained with label-smoothed BCE under AdamW + cosine schedule and early stopping on fold accuracy. A HistGradientBoostingClassifier is trained on the same engineered matrix, OOF predictions from both learners drive a grid search over blend weight and decision threshold, then all components are refit on full training data and a bundle (preprocessing, encoders, NN state dicts, GBDT, threshold, label map) is persisted for fresh-process prediction outputting row_id,prediction.\"}",
+        "role": "assistant",
+        "reasoning_content": "The bug: attention output dim mismatch. In `_attn_repr`, pooled = concat of cls (emb_dim) and mean (emb_dim) -> 2*emb_dim = 32. But tower_in = 2*d + emb_dim where d = n_num + emb_dim*n_cat. So the expected attn dim is emb_dim (16), but actual is 32. Mismatch: 406 vs 390 = difference 16. Yes, attn returns 32 instead of 16.\n\nSo is_bug true, metric null, lower_is_better false (accuracy).",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The bug: attention output dim mismatch. In `_attn_repr`, pooled = concat of cls (emb_dim) and mean (emb_dim) -> 2*emb_dim = 32. But tower_in = 2*d + emb_dim where d = n_num + emb_dim*n_cat. So the expected attn dim is emb_dim (16), but actual is 32. Mismatch: 406 vs 390 = difference 16. Yes, attn returns 32 instead of 16.\n\nSo is_bug true, metric null, lower_is_better false (accuracy)."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 439,
+    "prompt_tokens": 11762,
+    "total_tokens": 12201,
+    "completion_tokens_details": {
+      "reasoning_tokens": 125
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

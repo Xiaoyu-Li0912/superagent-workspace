@@ -1,0 +1,33 @@
+[train] rows=8117 classes=[0, 1]
+Traceback (most recent call last):
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3816, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 172, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 201, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7726, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7734, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'expiration'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/solution.py", line 1286, in <module>
+    main()
+  File "/solution.py", line 1280, in main
+    run_train(args.data, args.model)
+  File "/solution.py", line 624, in run_train
+    fe = CouponFeatureEngineer().fit(features)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/solution.py", line 253, in fit
+    raw = self._raw(df)
+          ^^^^^^^^^^^^^
+  File "/solution.py", line 244, in _raw
+    cols_list = [out[p].tolist() for p in parts]
+                 ~~~^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/frame.py", line 4330, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/superagent-env/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3823, in get_loc
+    raise KeyError(key) from err
+KeyError: 'expiration'

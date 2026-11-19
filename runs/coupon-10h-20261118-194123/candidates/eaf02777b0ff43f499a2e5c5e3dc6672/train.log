@@ -1,0 +1,4 @@
+[train] rows=8117 n_classes=2 X=(8117, 67) labels=[0, 1] lgb=True
+[train] OOF hgb=0.7431 | et=0.7253 | lgb=0.7547
+[train] blend weights=[0.088, 0.361, 0.551] acc=0.7559
+[train] saved bundle -> /model/bundle.pkl (models=['hgb', 'et', 'lgb'])

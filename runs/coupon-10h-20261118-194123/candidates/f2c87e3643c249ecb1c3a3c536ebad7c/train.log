@@ -1,0 +1,8 @@
+[train] fold 0: best_iter=950 val_acc@0.5=0.7500
+[train] fold 1: best_iter=662 val_acc@0.5=0.7463
+[train] fold 2: best_iter=1014 val_acc@0.5=0.7474
+[train] fold 3: best_iter=774 val_acc@0.5=0.7640
+[train] fold 4: best_iter=946 val_acc@0.5=0.7622
+[train] OOF accuracy @0.5 = 0.7540
+[train] OOF accuracy @best(0.485) = 0.7563
+Final Validation Score: 0.7563139090797093

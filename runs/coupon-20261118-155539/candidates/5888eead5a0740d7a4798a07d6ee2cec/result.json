@@ -1,0 +1,8 @@
+{
+  "candidate_id": "5888eead5a0740d7a4798a07d6ee2cec",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 0.025462502000664244,
+  "diagnostics": "SyntaxError: invalid decimal literal (solution.py, line 4)",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/5888eead5a0740d7a4798a07d6ee2cec"
+}

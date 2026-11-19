@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-45b9c88e-3281-4448-8492-10e3ff8b5bc7",
+  "created": 1795016910,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": true, \"summary\": \"The candidate training script crashed immediately with a NameError because MODEL_CFG referenced MAX_EPOCHS, which was never defined in the module. Execution exited with code 1, so no model was trained and no validation metric was produced.\", \"metric\": null, \"lower_is_better\": false, \"code_summary\": \"Configuration-only patch that defines MODEL_CFG (emb_dim, cross layers, hidden layers, expert count, dropout, lr, weight decay, label smoothing) and adds MLP_CFG/MLP seed and epoch settings. The config references MAX_EPOCHS for total_epochs, but MAX_EPOCHS is not defined anywhere, causing an immediate NameError at import time before any preprocessing, feature engineering, model training, or validation could run.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution failed with NameError: MAX_EPOCHS is not defined. The MODEL_CFG references MAX_EPOCHS which was never defined. This is a bug.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution failed with NameError: MAX_EPOCHS is not defined. The MODEL_CFG references MAX_EPOCHS which was never defined. This is a bug."
+        }
+      },
+      "provider_specific_fields": {
+        "stop_reason": null,
+        "routed_experts": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 220,
+    "prompt_tokens": 1337,
+    "total_tokens": 1557,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_id": "366f7b7669414661ac15269f91c9d279",
+  "status": "failed",
+  "metric": null,
+  "elapsed_seconds": 0.01614534799955436,
+  "diagnostics": "SyntaxError: invalid character '∈' (U+2208) (solution.py, line 8)",
+  "artifact_dir": "/mnt/d/腾讯电脑管家软件搬家/桌面搬家/course/大三上/PPAI/project/superagent-workspace-backup-20261115/runs/coupon-20261118-155539/candidates/366f7b7669414661ac15269f91c9d279"
+}

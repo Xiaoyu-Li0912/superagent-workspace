@@ -1,0 +1,15 @@
+[train] fold 0 (seed=42): cat_it=2590 cat_acc=0.7586 hgb_it=214 hgb_acc=0.7365 lgb_it=562 lgb_acc=0.7518
+[train] fold 1 (seed=42): cat_it=1062 cat_acc=0.7432 hgb_it=182 hgb_acc=0.7284 lgb_it=611 lgb_acc=0.7414
+[train] fold 2 (seed=42): cat_it=934 cat_acc=0.7474 hgb_it=191 hgb_acc=0.7375 lgb_it=646 lgb_acc=0.7480
+[train] fold 3 (seed=42): cat_it=1667 cat_acc=0.7646 hgb_it=266 hgb_acc=0.7400 lgb_it=544 lgb_acc=0.7486
+[train] fold 4 (seed=42): cat_it=2433 cat_acc=0.7745 hgb_it=290 hgb_acc=0.7474 lgb_it=833 lgb_acc=0.7609
+[train] fold 0 (seed=1042): cat_it=983 cat_acc=0.7574 hgb_it=261 hgb_acc=0.7451 lgb_it=628 lgb_acc=0.7537
+[train] fold 1 (seed=1042): cat_it=1178 cat_acc=0.7549 hgb_it=254 hgb_acc=0.7340 lgb_it=596 lgb_acc=0.7451
+[train] fold 2 (seed=1042): cat_it=1556 cat_acc=0.7579 hgb_it=279 hgb_acc=0.7535 lgb_it=697 lgb_acc=0.7659
+[train] fold 3 (seed=1042): cat_it=1813 cat_acc=0.7560 hgb_it=319 hgb_acc=0.7425 lgb_it=632 lgb_acc=0.7572
+[train] fold 4 (seed=1042): cat_it=1001 cat_acc=0.7505 hgb_it=302 hgb_acc=0.7314 lgb_it=442 lgb_acc=0.7443
+[train] OOF meta acc@0.5=0.7616  inner-CV thr=0.505 -> 0.7615 (cat=0.7567, lgb=0.7566, hgb=0.7462)
+[train] final CatBoost retrained on 8117 rows, iters=1367
+[train] final LightGBM retrained on 8117 rows, iters=680
+[train] final HGB retrained on 8117 rows, iters=263
+Final Validation Score: 0.7614884860184115

@@ -1,0 +1,38 @@
+{
+  "id": "chatcmpl-216ab229-5a5a-4a1b-9050-094e5d58556b",
+  "created": 1795020478,
+  "model": "DeepSeek-V4.1-Flash",
+  "object": "chat.completion",
+  "system_fingerprint": "vllm-0.30.0-tp2-dp8-ep-c20a8593",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"is_bug\": false, \"summary\": \"The solution trained and predicted successfully, with the fresh-process reload check passing. Trusted validation accuracy was 0.7571, indicating the blended NN+GBDT pipeline with engineered ordinal/affinity features generalized to held-out data.\", \"metric\": 0.75714286, \"lower_is_better\": false, \"code_summary\": \"Data preprocessing builds ordinal encodings for frequency/age/income/education/time/expiration columns, binary flags, venue-affinity relative features, and nominal combo keys. A CouponFeatureEngineer (median imputation + column order), CategoricalIndexer (vocab), and smoothed out-of-fold TargetEncoder (fit per CV fold) prevent leakage. The model is a DCN with cross layers, per-feature embeddings, a transformer-style self-attention token mixer, and a Mixture-of-Experts + shared head tower, trained with label-smoothed BCE and cosine LR, blended with a HistGradientBoostingClassifier. Stratified 5-fold OOF probs drive joint grid search over blend weight and threshold; the final NN ensemble and GBDT are refit on all training rows and saved with the threshold, blend weight, and label mapping for fresh-process prediction output as row_id,prediction.\"}",
+        "role": "assistant",
+        "reasoning_content": "The execution completed successfully: trust validation accuracy 0.7571, fresh-process reload passed. No bugs apparent.\n\nMetric is accuracy, higher is better.",
+        "provider_specific_fields": {
+          "refusal": null,
+          "reasoning": "The execution completed successfully: trust validation accuracy 0.7571, fresh-process reload passed. No bugs apparent.\n\nMetric is accuracy, higher is better."
+        }
+      },
+      "provider_specific_fields": {
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 304,
+    "prompt_tokens": 11082,
+    "total_tokens": 11386,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}
